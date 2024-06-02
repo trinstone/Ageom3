@@ -58,6 +58,11 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormaKvizNivo.Designer.cs" />
+    <Compile Include="FormaKvizNivo1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FormaKvizNivo.resx</DependentUpon>
+    </Compile>
     <Compile Include="FormaSlobodanNivocs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,7 +86,10 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormaKvizNivo.resx" />
+    <EmbeddedResource Include="FormaKvizNivo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormaKvizNivo1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormaSlobodanNivocs.resx">
       <DependentUpon>FormaSlobodanNivocs.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +101,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Analiticka - formule.pdf" />
     <None Include="Properties\Settings.settings">
@@ -110,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="p1.txt" />
+    <None Include="Resources\Heart_corazón.svg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

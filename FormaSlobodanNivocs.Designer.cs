@@ -63,6 +63,8 @@
             // 
             // pbxSrce3
             // 
+            this.pbxSrce3.BackgroundImage = global::AgeomProj.Properties.Resources.Heart_corazón_svg;
+            this.pbxSrce3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbxSrce3.Location = new System.Drawing.Point(911, 19);
             this.pbxSrce3.Name = "pbxSrce3";
             this.pbxSrce3.Size = new System.Drawing.Size(39, 36);
@@ -71,6 +73,8 @@
             // 
             // pbxSrce2
             // 
+            this.pbxSrce2.BackgroundImage = global::AgeomProj.Properties.Resources.Heart_corazón_svg;
+            this.pbxSrce2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbxSrce2.Location = new System.Drawing.Point(956, 19);
             this.pbxSrce2.Name = "pbxSrce2";
             this.pbxSrce2.Size = new System.Drawing.Size(42, 36);
@@ -79,6 +83,8 @@
             // 
             // pbxSrce1
             // 
+            this.pbxSrce1.BackgroundImage = global::AgeomProj.Properties.Resources.Heart_corazón_svg;
+            this.pbxSrce1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbxSrce1.Location = new System.Drawing.Point(1004, 19);
             this.pbxSrce1.Name = "pbxSrce1";
             this.pbxSrce1.Size = new System.Drawing.Size(43, 36);

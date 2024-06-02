@@ -45,6 +45,7 @@ namespace AgeomProj
             RadnaPovrsina.IzracunajPolja(this, out gornjiLevi, out centar, out duzinaStr);
             visinaForme = this.Height;
             sirinaForme = this.Width;
+            VeLicinaLokacijaSvega();
             pocetakZadatka = DateTime.Now;
             timer1.Start();
         }
@@ -62,6 +63,96 @@ namespace AgeomProj
             pnlSveska.Width = sirinaForme;
             pnlSveska.Height = visinaForme;
             sveska = pnlSveska.CreateGraphics();
+            btnSveska.Left = 5;
+            btnPosalji.Left = 5;
+            btnPomoc.Left = 5;
+            btnSveska.Top = 5;
+            btnSveska.Height = duzinaStr / 10;
+            btnPomoc.Height = duzinaStr / 10;
+            btnPosalji.Height = duzinaStr / 10;
+            btnPomoc.Top = 10 + btnSveska.Height;
+            btnPosalji.Top = visinaForme - 45 - duzinaStr / 10;
+            lblTimer.Top = btnPomoc.Bottom + 5;
+            lblTimer.Left = 5;
+            tbxOdg1.Height = duzinaStr / 20;
+            tbxOdg2.Height = duzinaStr / 20;
+            tbxOdg3.Height = duzinaStr / 20;
+            tbxOdg1.Width = duzinaStr / 20 * 3;
+            tbxOdg2.Width = duzinaStr / 20 * 3;
+            tbxOdg3.Width = duzinaStr / 20 * 3;
+            lblOdg1.Left = 5;
+            lblOdg2.Left = 5;
+            lblOdg3.Left = 5;
+            tbxOdg1.Top = btnPosalji.Top - duzinaStr / 20 - 5;
+            tbxOdg2.Top = tbxOdg1.Top - duzinaStr / 20 - 5;
+            tbxOdg3.Top = tbxOdg2.Top - duzinaStr / 20 - 5;
+            lblOdg1.Top = tbxOdg1.Top;
+            lblOdg1.Width = tbxOdg1.Width;
+            lblOdg2.Top = tbxOdg2.Top;
+            lblOdg2.Width = tbxOdg2.Width;
+            lblOdg3.Top = tbxOdg3.Top;
+            lblOdg3.Width = tbxOdg3.Width;
+            pbxSrce1.Width = (int)1.5 * duzinaStr / 20;
+            pbxSrce1.Height = (int)1.5 * duzinaStr / 20;
+            pbxSrce2.Width = (int)1.5 * duzinaStr / 20;
+            pbxSrce2.Height = (int)1.5 * duzinaStr / 20;
+            pbxSrce3.Width = (int)1.5 * duzinaStr / 20;
+            pbxSrce3.Height = (int)1.5 * duzinaStr / 20;
+            pbxSrce1.Left = sirinaForme - 5 - pbxSrce1.Width;
+            pbxSrce2.Left = pbxSrce1.Left - 5 - pbxSrce2.Width;
+            pbxSrce3.Left = pbxSrce2.Left - 5 - pbxSrce3.Width;
+            pbxSrce1.Top = 5;
+            pbxSrce2.Top = 5;
+            pbxSrce3.Top = 5;
+            btnPomoc.Font = new Font("Georgia", duzinaStr / 45);
+            btnObrisi.Font = new Font("Georgia", duzinaStr / 45);
+            btnPosalji.Font = new Font("Georgia", duzinaStr / 45);
+            btnSveska.Font = new Font("Georgia", duzinaStr / 45);
+            tbxOdg1.Font = new Font("Georgia", duzinaStr / 45);
+            tbxOdg2.Font = new Font("Georgia", duzinaStr / 45);
+            tbxOdg3.Font = new Font("Georgia", duzinaStr / 45);
+            lblOdg1.Font = new Font("Georgia", duzinaStr / 45);
+            lblOdg2.Font = new Font("Georgia", duzinaStr / 45);
+            lblOdg3.Font = new Font("Georgia", duzinaStr / 45);
+            lblPitanje.Font = new Font("Georgia", duzinaStr / 45);
+            lblTimer.Font = new Font("Georgia", duzinaStr / 45);
+            if (sirinaForme > visinaForme)
+            {
+                if (gornjiLevi.X > duzinaStr / 20 * 3 + 10)
+                {
+                    tbxOdg1.Left = gornjiLevi.X - duzinaStr / 20 * 3 - 5;
+                    tbxOdg2.Left = gornjiLevi.X - duzinaStr / 20 * 3 - 5;
+                    tbxOdg3.Left = gornjiLevi.X - duzinaStr / 20 * 3 - 5;
+                    lblOdg1.Left = tbxOdg1.Left - lblOdg1.Width - 5;
+                    lblOdg2.Left = tbxOdg2.Left - lblOdg2.Width - 5;
+                    lblOdg3.Left = tbxOdg3.Left - lblOdg3.Width - 5;
+                    btnSveska.Width = gornjiLevi.X - 10;
+                    btnPomoc.Width = gornjiLevi.X - 10;
+                    btnPosalji.Width = gornjiLevi.X - 10;
+                }
+                else
+                {
+                    tbxOdg1.Left = 5;
+                    tbxOdg2.Left = 5;
+                    tbxOdg3.Left = 5;
+                    btnPosalji.Width = duzinaStr / 20 * 3;
+                    btnPomoc.Width = duzinaStr / 20 * 3;
+                    btnSveska.Width = duzinaStr / 20 * 3;
+                }
+            }
+            else
+            {
+                tbxOdg1.Left = 25;
+                tbxOdg2.Left = 25;
+                tbxOdg3.Left = 25;
+                btnSveska.Width = duzinaStr / 4;
+                btnPomoc.Width = duzinaStr / 4;
+                btnPosalji.Width = duzinaStr / 4;
+            }
+            btnObrisi.Height = btnSveska.Height;
+            btnObrisi.Width = btnSveska.Width;
+            btnObrisi.Top = btnPosalji.Top;
+            btnObrisi.Left = btnPosalji.Left;
         }
         private void frmSlobodanNivo_SizeChanged(object sender, EventArgs e)
         {
@@ -84,6 +175,26 @@ namespace AgeomProj
                 btnObrisi.Enabled = true;
                 btnObrisi.Visible = true;
                 otvorenaSveska = true;
+                btnPosalji.Visible = false;
+                btnPosalji.Enabled = false;
+                lblOdg1.Visible = false;
+                lblOdg2.Visible = false;
+                lblOdg3.Visible = false;
+                lblOdg1.Enabled = false;
+                lblOdg2.Enabled = false;
+                lblOdg3.Enabled = false;
+                tbxOdg1.Visible = false;
+                tbxOdg2.Visible = false;
+                tbxOdg3.Visible = false;
+                tbxOdg1.Enabled = false;
+                tbxOdg2.Enabled = false;
+                tbxOdg3.Enabled = false;
+                pbxSrce1.Enabled = false;
+                pbxSrce2.Enabled = false;
+                pbxSrce3.Enabled = false;
+                pbxSrce3.Visible = false;
+                pbxSrce2.Visible = false;
+                pbxSrce1.Visible = false;
                 btnSveska.Text = "NAZAD";
                 sveska = pnlSveska.CreateGraphics();
             }
@@ -94,6 +205,35 @@ namespace AgeomProj
                 btnObrisi.Enabled = false;
                 btnObrisi.Visible = false;
                 otvorenaSveska = false;
+                btnPosalji.Visible = true;
+                btnPosalji.Enabled = true;
+                lblOdg1.Visible = true;
+                lblOdg2.Visible = true;
+                lblOdg3.Visible = true;
+                lblOdg1.Enabled = true;
+                lblOdg2.Enabled = true;
+                lblOdg3.Enabled = true;
+                tbxOdg1.Visible = true;
+                tbxOdg2.Visible = true;
+                tbxOdg3.Visible = true;
+                tbxOdg1.Enabled = true;
+                tbxOdg2.Enabled = true;
+                tbxOdg3.Enabled = true;
+                if (nivo.TrenutniBrojSrca >= 1)
+                {
+                    pbxSrce1.Enabled = true;
+                    pbxSrce1.Visible = true;
+                }
+                if (nivo.TrenutniBrojSrca >= 2)
+                {
+                    pbxSrce2.Enabled = true;
+                    pbxSrce2.Visible = true;
+                }
+                if (nivo.TrenutniBrojSrca == 3)
+                {
+                    pbxSrce3.Enabled = true;
+                    pbxSrce3.Visible = true;
+                }
                 btnSveska.Text = "SVESKA";
             }
         }
@@ -239,6 +379,7 @@ namespace AgeomProj
                 {
                     indexZadatka++;
                     UcitajZadatak();
+                    pocetakZadatka = DateTime.Now;
                     tbxOdg2.Text = null;
                     tbxOdg1.Text = null;
                     tbxOdg3.Text = null;
