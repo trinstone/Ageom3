@@ -73,6 +73,9 @@ namespace AgeomProj
                 btnFormule.Visible = false;
                 btnFormule.Enabled = false;
             }
+
+
+            //TESTIRANJA
             PointF c = new PointF();
             c.X = 0;
             c.Y = 0;
@@ -80,7 +83,10 @@ namespace AgeomProj
             k.Nacrtaj(e.Graphics,centar,strKvad);
             Prava p = new Prava(c, 0, 1);
             p.Nacrtaj(e.Graphics, centar, strKvad);
-
+            Tacka t1 = new Tacka(new PointF(3, 3), "A");
+            Tacka t2 = new Tacka(new PointF(2, 7), "B");
+            Duz d = new Duz(t1, t2);
+            d.Nacrtaj(e.Graphics,centar,strKvad);
         }
 
 

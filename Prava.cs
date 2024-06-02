@@ -12,7 +12,7 @@ namespace AgeomProj
     public class Prava : IElementSZ//abc implicitni, kn eksplicitni
     {
         public SlobodanZadatak SlobodanZadatak { get; set; }
-        public PointF PozicijaEl { get; set; }
+        public PointF[] PozicijaEl { get; set; }
         public float N { get;}
         public float K { get;}
         public float A { get;}
@@ -20,13 +20,15 @@ namespace AgeomProj
         public float C { get;}
         public Prava( PointF pozicijaEl, float n, float k)
         {
-            PozicijaEl = pozicijaEl;
+            PozicijaEl = new PointF[1];
+            PozicijaEl[0] = pozicijaEl;
             N = n;
             K = k;
         }
         public Prava(PointF pozicijaEl, float a, float b, float c)
         {
-            PozicijaEl = pozicijaEl;
+            PozicijaEl = new PointF[1];
+            PozicijaEl[0] = pozicijaEl;
             A = a;
             B = b;
             C = c;
