@@ -13,10 +13,13 @@ namespace AgeomProj
         
         public FormaResenja FormaResenja {  get; }
         public IElementSZ[] elementiSZ { get; }
+        public PointF PocetnaPoz {  get; }
+        public PointF KrajnjaPoz { get; }
         public string[] parametri { get; }
         public string Hint { get; }
 
-        public SlobodanZadatak(string pitanje, TimeSpan vreme,string hint,FormaResenja formaResenja, string odgovor, params IElementSZ[] NacrtaniElementi) : base(pitanje, vreme, odgovor)
+        public SlobodanZadatak(string pitanje, TimeSpan vreme,string hint,FormaResenja formaResenja, string odgovor,
+            PointF pocetnaPoz, PointF krajnjaPoz, params IElementSZ[] NacrtaniElementi) : base(pitanje, vreme, odgovor)
         {
             elementiSZ = NacrtaniElementi;
             FormaResenja = formaResenja;

@@ -18,17 +18,13 @@ namespace AgeomProj
         public float A { get;}
         public float B { get;}
         public float C { get;}
-        public Prava( PointF pozicijaEl, float n, float k)
+        public Prava( float n, float k)
         {
-            PozicijaEl = new PointF[1];
-            PozicijaEl[0] = pozicijaEl;
             N = n;
             K = k;
         }
-        public Prava(PointF pozicijaEl, float a, float b, float c)
+        public Prava(float a, float b, float c)
         {
-            PozicijaEl = new PointF[1];
-            PozicijaEl[0] = pozicijaEl;
             A = a;
             B = b;
             C = c;

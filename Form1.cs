@@ -32,9 +32,7 @@ namespace AgeomProj
             pocetniMeni = true;
 
             //ODAVDE TESTIRAJTE NIVOE
-            SlobodanZadatak joj = new SlobodanZadatak(null, new TimeSpan(0, 0, 20), " ", FormaResenja.broj, " ", new Krug(new Point(2,2), 5), new Krug(new Point(-3, 2), 5));
-            SlobodanZadatak[] lele = new SlobodanZadatak[10];
-            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 0, joj);
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 0, "p1.txt");
             formaSlobZadatak = new frmSlobodanNivo(n);
             formaSlobZadatak.Show();
         }
