@@ -80,7 +80,7 @@ namespace AgeomProj
                                 }
                         }
                     }
-                    SlobodanZadatak a = new SlobodanZadatak(infoZad[0], TimeSpan.Parse(infoZad[1]), infoZad[2], (FormaResenja)(Convert.ToInt32(infoZad[3])), infoZad[4],pocetnaPoz,krajnjaPoz,elementi.ToArray());
+                    SlobodanZadatak a = new SlobodanZadatak(infoZad[0], TimeSpan.Parse("00:" + infoZad[1]), infoZad[2], (FormaResenja)(Convert.ToInt32(infoZad[3])), infoZad[4],pocetnaPoz,krajnjaPoz,elementi.ToArray());
                     zadaci[brojac] = a as T;
                     brojac++;
                 }
