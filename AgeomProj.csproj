@@ -54,6 +54,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormaKvizNivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaKvizNivo.Designer.cs" />
     <Compile Include="FormaSlobodanNivocs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +80,7 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormaKvizNivo.resx" />
     <EmbeddedResource Include="FormaSlobodanNivocs.resx">
       <DependentUpon>FormaSlobodanNivocs.cs</DependentUpon>
     </EmbeddedResource>

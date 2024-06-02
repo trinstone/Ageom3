@@ -16,7 +16,8 @@ namespace AgeomProj
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmUvod());
+            
+            new frmUvod();
         }
     }
 }
