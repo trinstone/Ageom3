@@ -17,11 +17,7 @@ namespace AgeomProj
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmUvod());
-            string[] netacni = { "", "" };
-            KvizZadatak joj = new KvizZadatak(null, new TimeSpan(0, 0, 0), " ", netacni);
-            KvizZadatak[] lele = new KvizZadatak[10];
-            Nivo<KvizZadatak> n = new Nivo<KvizZadatak>(0, 0, 0, joj);
-            Application.Run(new frmKvizNivo(n));
+            
         }
     }
 }
