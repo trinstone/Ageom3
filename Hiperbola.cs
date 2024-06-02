@@ -14,18 +14,14 @@ namespace AgeomProj
         public float B { get; }
         public SlobodanZadatak SlobodanZadatak { get; set; }
 
-        public Hiperbola(PointF centar, float a, float b)
+        public Hiperbola(float a, float b)
         {
-            PozicijaEl = new PointF[1];
-            PozicijaEl[0] = centar;
             A = a;
             B = b;
         }
         public void Nacrtaj(Graphics g, Point centar, int strKvad)
         {
             Pen olovka = new Pen(Color.Black, 3);
-            Tacka o = new Tacka(PozicijaEl[0], "O");
-            o.Nacrtaj(g, centar, strKvad);
             PointF[] leveGornje = new PointF[10];
             PointF[] leveDonje = new PointF[10];
             PointF[] DesneGornje = new PointF[10];
@@ -47,10 +43,10 @@ namespace AgeomProj
                 DesneGornje[i] = new PointF(centar.X + DesneGornje[i].X * strKvad, centar.Y - DesneGornje[i].Y * strKvad);
                 DesneDonje[i] = new PointF(centar.X + DesneDonje[i].X * strKvad, centar.Y - DesneDonje[i].Y * strKvad);
             }
-            g.DrawCurve(olovka, leveGornje);
-            g.DrawCurve(olovka, leveDonje);
-            g.DrawCurve(olovka, DesneGornje);
-            g.DrawCurve(olovka, DesneDonje);
+            g.DrawCurve(olovka, leveGornje, .4f);
+            g.DrawCurve(olovka, leveDonje, .4f);
+            g.DrawCurve(olovka, DesneGornje, .4f);
+            g.DrawCurve(olovka, DesneDonje, .4f);
         }
     }
 }

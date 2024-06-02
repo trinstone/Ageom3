@@ -188,10 +188,10 @@ namespace AgeomProj
             }
 
 
-            //TESTIRANJA
+            /*TESTIRANJA
             PointF c = new PointF();
-            c.X = 0;
-            c.Y = 0;
+            c.X = 1;
+            c.Y = 1;
             Krug k = new Krug(c, 5);
             k.Nacrtaj(e.Graphics,centar,strKvad);
             Prava p = new Prava(c, 0, 1);
@@ -202,8 +202,10 @@ namespace AgeomProj
             d.Nacrtaj(e.Graphics,centar,strKvad);
             Elipsa el = new Elipsa(c, 4, 2);
             el.Nacrtaj(e.Graphics, centar, strKvad);
-            Hiperbola hi = new Hiperbola(c, 5.2f, 3.5f);
+            Hiperbola hi = new Hiperbola(5.2f, 3.5f);
             hi.Nacrtaj(e.Graphics, centar, strKvad);
+            Parabola pa = new Parabola(1);
+            pa.Nacrtaj(e.Graphics, centar, strKvad);*/
         }
 
 

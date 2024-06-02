@@ -70,6 +70,7 @@
     <Compile Include="Krug.cs" />
     <Compile Include="KvizZadatak.cs" />
     <Compile Include="Nivo.cs" />
+    <Compile Include="Parabola.cs" />
     <Compile Include="Prava.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
