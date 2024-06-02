@@ -25,7 +25,7 @@ namespace AgeomProj
             } 
         }
         public T[] Zadaci { get; set; }
-        private void UnosIzFajla(string imeFajla)
+        public void UnosIzFajla(string imeFajla)
         {
             T[] zadaci = new T[4];
             StreamReader red = new StreamReader(imeFajla);
@@ -38,6 +38,15 @@ namespace AgeomProj
                     SlobodanZadatak a = new SlobodanZadatak(infoZad[0], TimeSpan.Parse(infoZad[1]), infoZad[2], (FormaResenja)(Convert.ToInt32(infoZad[3])), infoZad[4]);
                     zadaci[brojac] = a as T;
                     brojac++;
+                }
+            }
+            else if (typeof(T) == typeof(KvizZadatak))
+            {
+                while (!red.EndOfStream)
+                {
+                    string[] infoZad = red.ReadLine().Split('!');
+                    string[] netacniOdg = { infoZad[3], infoZad[4], infoZad[5] };
+                    KvizZadatak a = new KvizZadatak(infoZad[0], TimeSpan.Parse(infoZad[1]), infoZad[2], netacniOdg);
                 }
             }
             red.Close();
