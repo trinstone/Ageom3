@@ -180,6 +180,8 @@ namespace AgeomProj
             Tacka t2 = new Tacka(new PointF(2, 7), "B");
             Duz d = new Duz(t1, t2);
             d.Nacrtaj(e.Graphics,centar,strKvad);
+            Elipsa el = new Elipsa(c, 4,2);
+            el.Nacrtaj(e.Graphics, centar, strKvad);
         }
 
 
