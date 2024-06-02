@@ -64,6 +64,7 @@
     <Compile Include="FormaSlobodanNivocs.Designer.cs">
       <DependentUpon>FormaSlobodanNivocs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hiperbola.cs" />
     <Compile Include="ICrtanje.cs" />
     <Compile Include="IElementSZ.cs" />
     <Compile Include="Krug.cs" />
