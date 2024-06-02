@@ -29,7 +29,7 @@ namespace AgeomProj
         private void frmKvizNivo_Load(object sender, EventArgs e)
         {
             RadnaPovrsina.IzracunajPolja(this, out gornjiLevi, out centar, out duzinaStr);
-            while(indexZadatka<4)
+            while(indexZadatka<4)//OVO NE MOZE PREKO WHILEA
             {
                 KvizZadatak trenutni = nivo.Zadaci[indexZadatka];
                 (int index, string[]odgovori) = trenutni.PromesajOdgovore();
