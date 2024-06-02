@@ -35,6 +35,7 @@
             this.lblOdg2 = new System.Windows.Forms.Label();
             this.lblOdg1 = new System.Windows.Forms.Label();
             this.tmrKviz = new System.Windows.Forms.Timer(this.components);
+            this.lblTajmer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblPitanje
@@ -54,6 +55,7 @@
             this.lblOdg4.Size = new System.Drawing.Size(31, 13);
             this.lblOdg4.TabIndex = 1;
             this.lblOdg4.Text = "odg4";
+            this.lblOdg4.Click += new System.EventHandler(this.lblOdg4_Click);
             // 
             // lblOdg3
             // 
@@ -63,6 +65,7 @@
             this.lblOdg3.Size = new System.Drawing.Size(31, 13);
             this.lblOdg3.TabIndex = 2;
             this.lblOdg3.Text = "odg3";
+            this.lblOdg3.Click += new System.EventHandler(this.lblOdg3_Click);
             // 
             // lblOdg2
             // 
@@ -72,6 +75,7 @@
             this.lblOdg2.Size = new System.Drawing.Size(31, 13);
             this.lblOdg2.TabIndex = 3;
             this.lblOdg2.Text = "odg2";
+            this.lblOdg2.Click += new System.EventHandler(this.lblOdg2_Click);
             // 
             // lblOdg1
             // 
@@ -81,16 +85,28 @@
             this.lblOdg1.Size = new System.Drawing.Size(31, 13);
             this.lblOdg1.TabIndex = 4;
             this.lblOdg1.Text = "odg1";
+            this.lblOdg1.Click += new System.EventHandler(this.lblOdg1_Click);
             // 
             // tmrKviz
             // 
             this.tmrKviz.Interval = 1000;
+            this.tmrKviz.Tick += new System.EventHandler(this.tmrKviz_Tick);
+            // 
+            // lblTajmer
+            // 
+            this.lblTajmer.AutoSize = true;
+            this.lblTajmer.Location = new System.Drawing.Point(391, 227);
+            this.lblTajmer.Name = "lblTajmer";
+            this.lblTajmer.Size = new System.Drawing.Size(35, 13);
+            this.lblTajmer.TabIndex = 5;
+            this.lblTajmer.Text = "tajmer";
             // 
             // frmKvizNivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblTajmer);
             this.Controls.Add(this.lblOdg1);
             this.Controls.Add(this.lblOdg2);
             this.Controls.Add(this.lblOdg3);
@@ -114,5 +130,6 @@
         private System.Windows.Forms.Label lblOdg2;
         private System.Windows.Forms.Label lblOdg1;
         private System.Windows.Forms.Timer tmrKviz;
+        private System.Windows.Forms.Label lblTajmer;
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,11 +21,38 @@ namespace AgeomProj
         public int duzinaStr;
         public Point centar;
         public Nivo<KvizZadatak> nivo;
-        public int indexZadatka;
+        public int indexZadatka = 0;
+        public int indexTacnog;
+        DateTime pocetakZadatka;
+        public bool krajZadatka = false;
         private void frmKvizNivo_Load(object sender, EventArgs e)
         {
             //nivo.UnosIzFajla("");
             RadnaPovrsina.IzracunajPolja(this, out gornjiLevi, out centar, out duzinaStr);
+            while(indexZadatka<4)
+            {
+                KvizZadatak trenutni = nivo.Zadaci[indexZadatka];
+                (int index, string[]odgovori) = trenutni.PromesajOdgovore();
+                indexTacnog = index;
+                IspisiTekst(trenutni.Pitanje, odgovori);
+                pocetakZadatka = DateTime.Now;
+                tmrKviz.Start();
+                if(krajZadatka)
+                {
+                    tmrKviz.Stop();
+                    krajZadatka = false;
+                    indexZadatka++;
+                }     
+            }
+        }
+        public void IspisiTekst(string pitanje, string[]odgovori)
+        {
+            lblPitanje.Text = pitanje;
+            for (int i = 0; i < 4; i++)
+            {
+                Label a = (Label)this.Controls.Find("lbl" + "Odg" + (i + 1), true)[0];
+                a.Text = odgovori[i];
+            }
         }
         public void VelicinaLokacijaSvega()
         {
@@ -44,6 +72,9 @@ namespace AgeomProj
             lblOdg4.Left = levaStrana;
             lblOdg4.Top = lblOdg3.Bottom + duzinaStr / 20;
             lblOdg4.Font = new Font("Georgia", (int)(duzinaStr / 30));
+            lblTajmer.Left = levaStrana;
+            lblTajmer.Top = lblOdg4.Bottom + duzinaStr / 20;
+            lblTajmer.Font = new Font("Georgia", (int)(duzinaStr / 30));
         }
         public void OkviriOdgovora(PaintEventArgs e)
         {
@@ -87,6 +118,39 @@ namespace AgeomProj
             }
         }
 
-        
+        private void lblOdg1_Click(object sender, EventArgs e)
+        {
+            BojenjeOdgovora(indexTacnog);
+            krajZadatka = true;
+        }
+
+        private void lblOdg2_Click(object sender, EventArgs e)
+        {
+            BojenjeOdgovora(indexTacnog);
+            krajZadatka = true;
+        }
+
+        private void lblOdg3_Click(object sender, EventArgs e)
+        {
+            BojenjeOdgovora(indexTacnog);
+            krajZadatka = true;
+        }
+
+        private void lblOdg4_Click(object sender, EventArgs e)
+        {
+            BojenjeOdgovora(indexTacnog);
+            krajZadatka = true;
+        }
+
+        private void tmrKviz_Tick(object sender, EventArgs e)
+        {
+            TimeSpan ostalo = nivo.Zadaci[indexZadatka].VremeZadatak - (DateTime.Now - pocetakZadatka);
+            if (ostalo <= new TimeSpan(0, 0, 0))
+            {
+                tmrKviz.Stop();
+                //izgubio
+            }
+            else lblTajmer.Text = $"{ostalo.Minutes}:{ostalo.Seconds}";
+        }
     }
 }

@@ -8,12 +8,12 @@ namespace AgeomProj
 {
     public class KvizZadatak : Zadatak
     {
-        public string[] netacniOdgovori { get; set; }
+        public string[] netacniOdgovori {  get; set; }
         public KvizZadatak(string pitanje, TimeSpan vreme, string odgovor, string[] netacniOdgovori) : base(pitanje, vreme, odgovor)
         {
             this.netacniOdgovori = netacniOdgovori;
         }
-        public (int, string[]) PromesajOdgovore(string tacanOdg)
+        public (int, string[]) PromesajOdgovore()
         {
             string[] odgovori = new string[4];
             odgovori[0] = Odgovor;
@@ -22,7 +22,6 @@ namespace AgeomProj
             odgovori[3] = netacniOdgovori[2];
             Random random = new Random();
             int pozicijaTacnog = 0;
-
             for (int i = odgovori.Length - 1; i > 0; i--)
             {
                 int j = random.Next(0, i + 1);
