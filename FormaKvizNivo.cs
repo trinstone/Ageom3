@@ -16,6 +16,7 @@ namespace AgeomProj
         public frmKvizNivo(Nivo<KvizZadatak> nivo)
         {
             InitializeComponent();
+            this.nivo = nivo;
         }
         public Point gornjiLevi;
         public int duzinaStr;
@@ -27,7 +28,6 @@ namespace AgeomProj
         public bool krajZadatka = false;
         private void frmKvizNivo_Load(object sender, EventArgs e)
         {
-            //nivo.UnosIzFajla("");
             RadnaPovrsina.IzracunajPolja(this, out gornjiLevi, out centar, out duzinaStr);
             while(indexZadatka<4)
             {

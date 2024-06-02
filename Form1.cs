@@ -20,6 +20,7 @@ namespace AgeomProj
         bool meni = false;
         public Point centar;
         public Form formaSlobZadatak;
+        public Form formaKvizZadatak;
         Point a;//a je gornja tacka trougla igraj, b je donja
         Point b;
         public frmUvod()
@@ -350,7 +351,9 @@ namespace AgeomProj
         private void lblpKviz_Click(object sender, EventArgs e)
         {
             Nivo<KvizZadatak> n = new Nivo<KvizZadatak>(3, 3, 2);
-            n.UnosIzFajla("pa3.txt");
+            n.UnosIzFajla("pKviz.txt");
+            formaKvizZadatak = new frmKvizNivo(n);
+            formaKvizZadatak.Show();
         }
     }
 }

@@ -91,7 +91,9 @@ namespace AgeomProj
                 {
                     string[] infoZad = red.ReadLine().Split('!');
                     string[] netacniOdg = { infoZad[3], infoZad[4], infoZad[5] };
-                    KvizZadatak a = new KvizZadatak(infoZad[0], TimeSpan.Parse(infoZad[1]), infoZad[2], netacniOdg);
+                    KvizZadatak a = new KvizZadatak(infoZad[0], TimeSpan.Parse(infoZad[1]), infoZad[2], netacniOdg); 
+                    zadaci[brojac] = a as T;
+                    brojac++;
                 }
             }
             red.Close();
