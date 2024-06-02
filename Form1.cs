@@ -355,5 +355,29 @@ namespace AgeomProj
             formaKvizZadatak = new frmKvizNivo(n);
             formaKvizZadatak.Show();
         }
+
+        private void lblkKviz_Click(object sender, EventArgs e)
+        {
+            Nivo<KvizZadatak> n = new Nivo<KvizZadatak>(3, 3, 2);
+            n.UnosIzFajla("kKviz.txt");
+            formaKvizZadatak = new frmKvizNivo(n);
+            formaKvizZadatak.Show();
+        }
+
+        private void lblehKviz_Click(object sender, EventArgs e)
+        {
+            Nivo<KvizZadatak> n = new Nivo<KvizZadatak>(3, 3, 2);
+            n.UnosIzFajla("ehKviz.txt");
+            formaKvizZadatak = new frmKvizNivo(n);
+            formaKvizZadatak.Show();
+        }
+
+        private void lblpaKviz_Click(object sender, EventArgs e)
+        {
+            Nivo<KvizZadatak> n = new Nivo<KvizZadatak>(3, 3, 2);
+            n.UnosIzFajla("paKviz.txt");
+            formaKvizZadatak = new frmKvizNivo(n);
+            formaKvizZadatak.Show();
+        }
     }
 }

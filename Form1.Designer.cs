@@ -248,6 +248,7 @@
             this.lblpaKviz.Size = new System.Drawing.Size(60, 13);
             this.lblpaKviz.TabIndex = 19;
             this.lblpaKviz.Text = "NIVO KVIZ";
+            this.lblpaKviz.Click += new System.EventHandler(this.lblpaKviz_Click);
             // 
             // lblehKviz
             // 
@@ -257,6 +258,7 @@
             this.lblehKviz.Size = new System.Drawing.Size(60, 13);
             this.lblehKviz.TabIndex = 20;
             this.lblehKviz.Text = "NIVO KVIZ";
+            this.lblehKviz.Click += new System.EventHandler(this.lblehKviz_Click);
             // 
             // lblkKviz
             // 
@@ -266,6 +268,7 @@
             this.lblkKviz.Size = new System.Drawing.Size(60, 13);
             this.lblkKviz.TabIndex = 21;
             this.lblkKviz.Text = "NIVO KVIZ";
+            this.lblkKviz.Click += new System.EventHandler(this.lblkKviz_Click);
             // 
             // frmUvod
             // 
