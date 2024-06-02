@@ -9,6 +9,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace AgeomProj
 {
     public partial class frmUvod : Form
@@ -16,6 +17,7 @@ namespace AgeomProj
         public Point gornjiLevi;
         public int duzinaStr;
         bool pocetniMeni;
+        bool meni = false;
         public Point centar;
         public Form formaSlobZadatak;
         Point a;//a je gornja tacka trougla igraj, b je donja
@@ -58,6 +60,25 @@ namespace AgeomProj
                 lblIgraj.Enabled = true;
                 btnFormule.Visible = true;
                 btnFormule.Enabled = true;
+                lblPrava.Visible = false;
+                lblKrug.Visible = false;
+                lblElHi.Visible = false;
+                lblParabola.Visible = false;
+                lblp1.Visible = false;
+                lblp2.Visible = false;
+                lblp3.Visible = false;
+
+                lblk1.Visible = false;
+                lblk2.Visible = false;
+                lblk3.Visible = false;
+
+                lbleh1.Visible = false;
+                lbleh2.Visible = false;
+                lbleh3.Visible = false;
+
+                lblpa1.Visible = false;
+                lblpa2.Visible = false;
+                lblpa3.Visible = false;
                 a.X = centar.X - 5 * strKvad;
                 a.Y = centar.Y - 3 * strKvad;
                 b.X = centar.X - 5 * strKvad;
@@ -65,6 +86,78 @@ namespace AgeomProj
                 Pen trougaoIgraj = new Pen(Color.Black, 5);
                 Point[] crtanjeTrougao = { a, b, centar };
                 e.Graphics.DrawPolygon(trougaoIgraj, crtanjeTrougao);
+            }
+
+            else if (meni)
+            {
+                lblIgraj.Visible = false;
+                lblIgraj.Enabled = false;
+                btnFormule.Visible = false;
+                btnFormule.Enabled = false;
+                lblPrava.Visible = true;
+                lblKrug.Visible = true;
+                lblElHi.Visible = true;
+                lblParabola.Visible = true;
+                lblp1.Visible = true;
+                lblp2.Visible = true;
+                lblp3.Visible = true;
+
+                lblk1.Visible = true;
+                lblk2.Visible = true;
+                lblk3.Visible = true;
+
+                lbleh1.Visible = true;
+                lbleh2.Visible = true;
+                lbleh3.Visible = true;
+
+                lblpa1.Visible = true;
+                lblpa2.Visible = true;
+                lblpa3.Visible = true;
+                lblPrava.Font= new Font("Georgia", (int)(duzinaStr / 25));
+                lblKrug.Font = new Font("Georgia", (int)(duzinaStr / 25));
+                lblElHi.Font = new Font("Georgia", (int)(duzinaStr / 25));
+                lblParabola.Font = new Font("Georgia", (int)(duzinaStr / 25));
+                lblPrava.Location = new Point(gornjiLevi.X + strKvad, strKvad - 10);
+                lblKrug.Location = new Point(gornjiLevi.X + strKvad, 6 * strKvad - 10);
+                lblElHi.Location = new Point(gornjiLevi.X + strKvad, 11 * strKvad - 10);
+                lblParabola.Location = new Point(gornjiLevi.X + strKvad,16 * strKvad - 10);
+
+                lblp1.Font = new Font("Georgia", (int)(duzinaStr / 35));
+                lblp2.Font = new Font("Georgia", (int)(duzinaStr / 35));
+                lblp3.Font = new Font("Georgia", (int)(duzinaStr / 35));
+
+                lblk1.Font = new Font("Georgia", (int)(duzinaStr / 35));
+                lblk2.Font = new Font("Georgia", (int)(duzinaStr / 35));
+                lblk3.Font = new Font("Georgia", (int)(duzinaStr / 35));
+
+                lblpa1.Font = new Font("Georgia", (int)(duzinaStr / 35));
+                lblpa2.Font = new Font("Georgia", (int)(duzinaStr / 35));
+                lblpa3.Font = new Font("Georgia", (int)(duzinaStr / 35));
+
+                lbleh1.Font = new Font("Georgia", (int)(duzinaStr / 35));
+                lbleh2.Font = new Font("Georgia", (int)(duzinaStr / 35));
+                lbleh3.Font = new Font("Georgia", (int)(duzinaStr / 35));
+
+                lblp1.Location = new Point(gornjiLevi.X + strKvad,3 * strKvad );
+                lblp2.Location = new Point(gornjiLevi.X + 5* strKvad, 3 * strKvad);
+                lblp3.Location = new Point(gornjiLevi.X +9 * strKvad, 3 * strKvad);
+
+                lblk1.Location = new Point(gornjiLevi.X + strKvad, 8 * strKvad);
+                lblk2.Location = new Point(gornjiLevi.X + 5 * strKvad, 8 * strKvad);
+                lblk3.Location = new Point(gornjiLevi.X + 9 * strKvad, 8 * strKvad);
+
+                lbleh1.Location = new Point(gornjiLevi.X + strKvad, 13 * strKvad);
+                lbleh2.Location = new Point(gornjiLevi.X + 5 * strKvad, 13 * strKvad);
+                lbleh3.Location = new Point(gornjiLevi.X + 9 * strKvad, 13 * strKvad);
+
+                lblpa1.Location = new Point(gornjiLevi.X + strKvad, 18 * strKvad);
+                lblpa2.Location = new Point(gornjiLevi.X + 5 * strKvad, 18 * strKvad);
+                lblpa3.Location = new Point(gornjiLevi.X + 9 * strKvad, 18 * strKvad);
+
+                Pen olovka = new Pen(Color.Black, 5);
+                e.Graphics.DrawLine(olovka, gornjiLevi.X, 5 * strKvad, gornjiLevi.X + duzinaStr, 5 * strKvad);
+                e.Graphics.DrawLine(olovka, gornjiLevi.X, 10 * strKvad, gornjiLevi.X + duzinaStr, 10 * strKvad);
+                e.Graphics.DrawLine(olovka, gornjiLevi.X, 15 * strKvad, gornjiLevi.X + duzinaStr, 15 * strKvad);
             }
             else
             {
@@ -102,6 +195,7 @@ namespace AgeomProj
         private void lblIgraj_Click(object sender, EventArgs e)
         {
             pocetniMeni = false;
+            meni = true;
             this.Refresh();
         }
         public decimal PovrsinaTrougla(Point a, Point b, Point c)
@@ -123,6 +217,7 @@ namespace AgeomProj
             if (povrsinaGlavnog == (p1 + p2 + p3))
             {
                 pocetniMeni = false;
+                meni = true;
                 this.Refresh();
             }
         }
@@ -130,6 +225,11 @@ namespace AgeomProj
         private void btnFormule_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("Analiticka - formule.pdf");
+        }
+
+        private void lblp1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
