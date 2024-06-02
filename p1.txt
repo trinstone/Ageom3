@@ -1,4 +1,4 @@
-﻿Дата је дуж са теменима А(3, 2) и B(-1, -1).Одредити растојање тачака А и B.!01:30!Formula za rastojanje tacaka: |AB|=√(xa-xb)²+(ya-yb)²!broj!5
-Дуж АВ, где је А (-3, -2), B(9, 10) поделити тачком D у односу 5 : 7.!01:50!Formula za podelu duži u 入 odnosu: x=x’+入x’’/1+入 ;  y=y’+入y’’/1+入!tacka!D(2, 3)
-Тежиште троугла АВС поклапа се са координатним почетком, тачке А и В имају координате A(6, 0), B(0, - 2 ) . Одредити координате темена С.!02:15!Formula za tezisnu tacku: xt= (xa+xb+xc)/3; yt= (ya+yb+yc)/3!tacka!C(-6, 2)
-Одредити једначину праве која садржи координатни почетак и средиште дужи М1М2 ако је  М1(3, - 4 ) , М2(7, 6).!02:30!formula za jednačinu tačke kroz dve tačke: y - y1= y2 - y1/x2 - x1 * (x - x1)!pravaEks!y=⅕ x
+﻿Data je duž sa temenima A(3, 2) i B(-1, -1). Odrediti rastojanje tačaka A i B.!01:30!Formula za rastojanje tacaka: |AB|=√(xa-xb)²+(ya-yb)²!0!5!3;2!-1;-1!1!3;2!1!-1;-1
+Duž AB, gde je A (-3, -2), B(9, 10) podeliti tačkom D u odnosu 5 : 7.!01:50!Formula za podelu duži u odnosu: x=x’+λx’’/1+λ ; y=y’+λy’’/1+λ!1!2;3!-5;0!2;3!1!-3;-2!1!9;10
+Težište trougla ABC poklapa se sa koordinatnim početkom, tačke A i B imaju koordinate A(6, 0), B(0, -2). Odrediti koordinate temena C.!02:15!Formula za težišnu tačku: xt= (xa+xb+xc)/3, yt= (ya+yb+yc)/3!1!-6;2!-5;0!6;0!1!6;0!1!0;-2
+Odrediti jednačinu prave koja sadrži koordinatni početak i središte duži M1M2 ako je M1(3, -4), M2(7, 6).!02:30!Formula za jednačinu prave kroz dve tačke: y - y1= y2 - y1/x2 - x1 * (x - x1)!2!0.2;0!0;0!7;6!1!3;-4!1!7;6

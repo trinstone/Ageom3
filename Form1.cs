@@ -79,6 +79,11 @@ namespace AgeomProj
                 lblpa1.Visible = false;
                 lblpa2.Visible = false;
                 lblpa3.Visible = false;
+
+                lblpKviz.Visible = false;
+                lblkKviz.Visible = false;
+                lblehKviz.Visible = false;
+                lblpaKviz.Visible = false;
                 a.X = centar.X - 5 * strKvad;
                 a.Y = centar.Y - 3 * strKvad;
                 b.X = centar.X - 5 * strKvad;
@@ -113,6 +118,11 @@ namespace AgeomProj
                 lblpa1.Visible = true;
                 lblpa2.Visible = true;
                 lblpa3.Visible = true;
+
+                lblpKviz.Visible = true;
+                lblkKviz.Visible = true;
+                lblehKviz.Visible = true;
+                lblpaKviz.Visible = true;
                 lblPrava.Font= new Font("Georgia", (int)(duzinaStr / 25));
                 lblKrug.Font = new Font("Georgia", (int)(duzinaStr / 25));
                 lblElHi.Font = new Font("Georgia", (int)(duzinaStr / 25));
@@ -138,21 +148,31 @@ namespace AgeomProj
                 lbleh2.Font = new Font("Georgia", (int)(duzinaStr / 35));
                 lbleh3.Font = new Font("Georgia", (int)(duzinaStr / 35));
 
-                lblp1.Location = new Point(gornjiLevi.X + strKvad,3 * strKvad );
-                lblp2.Location = new Point(gornjiLevi.X + 5* strKvad, 3 * strKvad);
-                lblp3.Location = new Point(gornjiLevi.X +9 * strKvad, 3 * strKvad);
+                lblpKviz.Font = new Font("Georgia", (int)(duzinaStr / 35));
+                lblkKviz.Font = new Font("Georgia", (int)(duzinaStr / 35));
+                lblehKviz.Font = new Font("Georgia", (int)(duzinaStr / 35));
+                lblpaKviz.Font = new Font("Georgia", (int)(duzinaStr / 35));
 
-                lblk1.Location = new Point(gornjiLevi.X + strKvad, 8 * strKvad);
-                lblk2.Location = new Point(gornjiLevi.X + 5 * strKvad, 8 * strKvad);
-                lblk3.Location = new Point(gornjiLevi.X + 9 * strKvad, 8 * strKvad);
+                lblp1.Location = new Point(gornjiLevi.X + 6 * strKvad, 3 * strKvad);
+                lblp2.Location = new Point(gornjiLevi.X + 10 * strKvad, 3 * strKvad);
+                lblp3.Location = new Point(gornjiLevi.X + 14 * strKvad, 3 * strKvad);
 
-                lbleh1.Location = new Point(gornjiLevi.X + strKvad, 13 * strKvad);
-                lbleh2.Location = new Point(gornjiLevi.X + 5 * strKvad, 13 * strKvad);
-                lbleh3.Location = new Point(gornjiLevi.X + 9 * strKvad, 13 * strKvad);
+                lblk1.Location = new Point(gornjiLevi.X + 6 * strKvad, 8 * strKvad);
+                lblk2.Location = new Point(gornjiLevi.X + 10 * strKvad, 8 * strKvad);
+                lblk3.Location = new Point(gornjiLevi.X + 14 * strKvad, 8 * strKvad);
 
-                lblpa1.Location = new Point(gornjiLevi.X + strKvad, 18 * strKvad);
-                lblpa2.Location = new Point(gornjiLevi.X + 5 * strKvad, 18 * strKvad);
-                lblpa3.Location = new Point(gornjiLevi.X + 9 * strKvad, 18 * strKvad);
+                lbleh1.Location = new Point(gornjiLevi.X + 6 * strKvad, 13 * strKvad);
+                lbleh2.Location = new Point(gornjiLevi.X + 10 * strKvad, 13 * strKvad);
+                lbleh3.Location = new Point(gornjiLevi.X + 14 * strKvad, 13 * strKvad);
+
+                lblpa1.Location = new Point(gornjiLevi.X + 6 * strKvad, 18 * strKvad);
+                lblpa2.Location = new Point(gornjiLevi.X + 10 * strKvad, 18 * strKvad);
+                lblpa3.Location = new Point(gornjiLevi.X + 14 * strKvad, 18 * strKvad);
+
+                lblpKviz.Location = new Point(gornjiLevi.X + strKvad, 3 * strKvad);
+                lblkKviz.Location = new Point(gornjiLevi.X + strKvad, 8 * strKvad);
+                lblehKviz.Location = new Point(gornjiLevi.X + strKvad, 13 * strKvad);
+                lblpaKviz.Location = new Point(gornjiLevi.X + strKvad, 18 * strKvad);
 
                 Pen olovka = new Pen(Color.Black, 5);
                 e.Graphics.DrawLine(olovka, gornjiLevi.X, 5 * strKvad, gornjiLevi.X + duzinaStr, 5 * strKvad);
@@ -231,7 +251,104 @@ namespace AgeomProj
 
         private void lblp1_Click(object sender, EventArgs e)
         {
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3,3,1);
+            n.UnosIzFajla("p1.txt");
+            formaSlobZadatak = new frmSlobodanNivo(n);
+            formaSlobZadatak.Show();
+        }
 
+        private void lblp2_Click(object sender, EventArgs e)
+        {
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 2);
+            n.UnosIzFajla("p2.txt");
+            formaSlobZadatak = new frmSlobodanNivo(n);
+            formaSlobZadatak.Show();
+        }
+
+        private void lblp3_Click(object sender, EventArgs e)
+        {
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(1, 1, 3);
+            n.UnosIzFajla("p3.txt");
+            formaSlobZadatak = new frmSlobodanNivo(n);
+            formaSlobZadatak.Show();
+        }
+
+        private void lblk1_Click(object sender, EventArgs e)
+        {
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 1);
+            n.UnosIzFajla("k1.txt");
+            formaSlobZadatak = new frmSlobodanNivo(n);
+            formaSlobZadatak.Show();
+        }
+
+        private void lblk2_Click(object sender, EventArgs e)
+        {
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 2);
+            n.UnosIzFajla("k2.txt");
+            formaSlobZadatak = new frmSlobodanNivo(n);
+            formaSlobZadatak.Show();
+        }
+
+        private void lblk3_Click(object sender, EventArgs e)
+        {
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 3);
+            n.UnosIzFajla("k3.txt");
+            formaSlobZadatak = new frmSlobodanNivo(n);
+            formaSlobZadatak.Show();
+        }
+
+        private void lbleh1_Click(object sender, EventArgs e)
+        {
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 1);
+            n.UnosIzFajla("eh1.txt");
+            formaSlobZadatak = new frmSlobodanNivo(n);
+            formaSlobZadatak.Show();
+        }
+
+        private void lbleh2_Click(object sender, EventArgs e)
+        {
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 2);
+            n.UnosIzFajla("eh2.txt");
+            formaSlobZadatak = new frmSlobodanNivo(n);
+            formaSlobZadatak.Show();
+        }
+
+        private void lbleh3_Click(object sender, EventArgs e)
+        {
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 3);
+            n.UnosIzFajla("eh3.txt");
+            formaSlobZadatak = new frmSlobodanNivo(n);
+            formaSlobZadatak.Show();
+        }
+
+        private void lblpa1_Click(object sender, EventArgs e)
+        {
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 1);
+            n.UnosIzFajla("pa1.txt");
+            formaSlobZadatak = new frmSlobodanNivo(n);
+            formaSlobZadatak.Show();
+        }
+
+        private void lblpa2_Click(object sender, EventArgs e)
+        {
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 2);
+            n.UnosIzFajla("pa2.txt");
+            formaSlobZadatak = new frmSlobodanNivo(n);
+            formaSlobZadatak.Show();
+        }
+
+        private void lblpa3_Click(object sender, EventArgs e)
+        {
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 3);
+            n.UnosIzFajla("pa3.txt");
+            formaSlobZadatak = new frmSlobodanNivo(n);
+            formaSlobZadatak.Show();
+        }
+
+        private void lblpKviz_Click(object sender, EventArgs e)
+        {
+            Nivo<KvizZadatak> n = new Nivo<KvizZadatak>(3, 3, 2);
+            n.UnosIzFajla("pa3.txt");
         }
     }
 }

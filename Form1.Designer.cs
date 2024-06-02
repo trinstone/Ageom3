@@ -46,6 +46,10 @@
             this.lblpa1 = new System.Windows.Forms.Label();
             this.lblpa2 = new System.Windows.Forms.Label();
             this.lblpa3 = new System.Windows.Forms.Label();
+            this.lblpKviz = new System.Windows.Forms.Label();
+            this.lblpaKviz = new System.Windows.Forms.Label();
+            this.lblehKviz = new System.Windows.Forms.Label();
+            this.lblkKviz = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblIgraj
@@ -124,6 +128,7 @@
             this.lblp2.Size = new System.Drawing.Size(45, 13);
             this.lblp2.TabIndex = 7;
             this.lblp2.Text = "2. NIVO";
+            this.lblp2.Click += new System.EventHandler(this.lblp2_Click);
             // 
             // lblp3
             // 
@@ -133,6 +138,7 @@
             this.lblp3.Size = new System.Drawing.Size(45, 13);
             this.lblp3.TabIndex = 8;
             this.lblp3.Text = "3. NIVO";
+            this.lblp3.Click += new System.EventHandler(this.lblp3_Click);
             // 
             // lblk3
             // 
@@ -142,6 +148,7 @@
             this.lblk3.Size = new System.Drawing.Size(45, 13);
             this.lblk3.TabIndex = 9;
             this.lblk3.Text = "3. NIVO";
+            this.lblk3.Click += new System.EventHandler(this.lblk3_Click);
             // 
             // lblk1
             // 
@@ -151,6 +158,7 @@
             this.lblk1.Size = new System.Drawing.Size(45, 13);
             this.lblk1.TabIndex = 10;
             this.lblk1.Text = "1. NIVO";
+            this.lblk1.Click += new System.EventHandler(this.lblk1_Click);
             // 
             // lblk2
             // 
@@ -160,6 +168,7 @@
             this.lblk2.Size = new System.Drawing.Size(45, 13);
             this.lblk2.TabIndex = 11;
             this.lblk2.Text = "2. NIVO";
+            this.lblk2.Click += new System.EventHandler(this.lblk2_Click);
             // 
             // lbleh1
             // 
@@ -169,6 +178,7 @@
             this.lbleh1.Size = new System.Drawing.Size(45, 13);
             this.lbleh1.TabIndex = 12;
             this.lbleh1.Text = "1. NIVO";
+            this.lbleh1.Click += new System.EventHandler(this.lbleh1_Click);
             // 
             // lbleh2
             // 
@@ -178,6 +188,7 @@
             this.lbleh2.Size = new System.Drawing.Size(45, 13);
             this.lbleh2.TabIndex = 13;
             this.lbleh2.Text = "2. NIVO";
+            this.lbleh2.Click += new System.EventHandler(this.lbleh2_Click);
             // 
             // lbleh3
             // 
@@ -187,6 +198,7 @@
             this.lbleh3.Size = new System.Drawing.Size(45, 13);
             this.lbleh3.TabIndex = 14;
             this.lbleh3.Text = "3. NIVO";
+            this.lbleh3.Click += new System.EventHandler(this.lbleh3_Click);
             // 
             // lblpa1
             // 
@@ -196,6 +208,7 @@
             this.lblpa1.Size = new System.Drawing.Size(45, 13);
             this.lblpa1.TabIndex = 15;
             this.lblpa1.Text = "1. NIVO";
+            this.lblpa1.Click += new System.EventHandler(this.lblpa1_Click);
             // 
             // lblpa2
             // 
@@ -205,6 +218,7 @@
             this.lblpa2.Size = new System.Drawing.Size(45, 13);
             this.lblpa2.TabIndex = 16;
             this.lblpa2.Text = "2. NIVO";
+            this.lblpa2.Click += new System.EventHandler(this.lblpa2_Click);
             // 
             // lblpa3
             // 
@@ -214,12 +228,54 @@
             this.lblpa3.Size = new System.Drawing.Size(45, 13);
             this.lblpa3.TabIndex = 17;
             this.lblpa3.Text = "3. NIVO";
+            this.lblpa3.Click += new System.EventHandler(this.lblpa3_Click);
+            // 
+            // lblpKviz
+            // 
+            this.lblpKviz.AutoSize = true;
+            this.lblpKviz.Location = new System.Drawing.Point(553, 72);
+            this.lblpKviz.Name = "lblpKviz";
+            this.lblpKviz.Size = new System.Drawing.Size(60, 13);
+            this.lblpKviz.TabIndex = 18;
+            this.lblpKviz.Text = "NIVO KVIZ";
+            this.lblpKviz.Click += new System.EventHandler(this.lblpKviz_Click);
+            // 
+            // lblpaKviz
+            // 
+            this.lblpaKviz.AutoSize = true;
+            this.lblpaKviz.Location = new System.Drawing.Point(534, 165);
+            this.lblpaKviz.Name = "lblpaKviz";
+            this.lblpaKviz.Size = new System.Drawing.Size(60, 13);
+            this.lblpaKviz.TabIndex = 19;
+            this.lblpaKviz.Text = "NIVO KVIZ";
+            // 
+            // lblehKviz
+            // 
+            this.lblehKviz.AutoSize = true;
+            this.lblehKviz.Location = new System.Drawing.Point(549, 133);
+            this.lblehKviz.Name = "lblehKviz";
+            this.lblehKviz.Size = new System.Drawing.Size(60, 13);
+            this.lblehKviz.TabIndex = 20;
+            this.lblehKviz.Text = "NIVO KVIZ";
+            // 
+            // lblkKviz
+            // 
+            this.lblkKviz.AutoSize = true;
+            this.lblkKviz.Location = new System.Drawing.Point(534, 97);
+            this.lblkKviz.Name = "lblkKviz";
+            this.lblkKviz.Size = new System.Drawing.Size(60, 13);
+            this.lblkKviz.TabIndex = 21;
+            this.lblkKviz.Text = "NIVO KVIZ";
             // 
             // frmUvod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1030, 630);
+            this.Controls.Add(this.lblkKviz);
+            this.Controls.Add(this.lblehKviz);
+            this.Controls.Add(this.lblpaKviz);
+            this.Controls.Add(this.lblpKviz);
             this.Controls.Add(this.lblpa3);
             this.Controls.Add(this.lblpa2);
             this.Controls.Add(this.lblpa1);
@@ -269,6 +325,10 @@
         private System.Windows.Forms.Label lblpa1;
         private System.Windows.Forms.Label lblpa2;
         private System.Windows.Forms.Label lblpa3;
+        private System.Windows.Forms.Label lblpKviz;
+        private System.Windows.Forms.Label lblpaKviz;
+        private System.Windows.Forms.Label lblehKviz;
+        private System.Windows.Forms.Label lblkKviz;
     }
 }
 
