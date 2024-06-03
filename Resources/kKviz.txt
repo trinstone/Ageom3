@@ -1,4 +1,4 @@
-Koja je formula za uslov dodira kružnice i prave(y=kx+n)?!00:45!r²*(k²+1)=(kp - q + n)²!r²*(k²+1)=(kp + q + n)²!r²*(k²+1)=(kp - q + n)!r²*(k²+1)=(kp + q + n)
-Koja je formula za tangentu kruga ako znamo tačku dodira(x1,y1)?!00:45!(x-p)(x1-p)+(y-q)(y1-q)=r²!(x-p)+(x1-p)+(y-q)+(y1-q)=r²!(x-q)(x1-q)*(y-p)(y1-p)=r²!(x-p)(x1-p)+(y-q)(y1-q)=r
-Opšta jednačina kružnice je:!00:30!(x-p)²+(y-q)²=r²!(x+p)²+(y+q)²=r²!(x-p)+(y-q)=r!(x-p)+(y-q)=r²
-Ako je kružnica data u obliku x² + y² + dx + ey + f = 0, kolika je vrednost p?!00:45!p=-d/2!p=d/2!p=d/4!p=-d/4
+Koja je formula za uslov dodira kružnice i prave(y=kx+n)?!00:00:45!r²*(k²+1)=(kp - q + n)²!r²*(k²+1)=(kp + q + n)²!r²*(k²+1)=(kp - q + n)!r²*(k²+1)=(kp + q + n)
+Koja je formula za tangentu kruga ako znamo tačku dodira(x1,y1)?!00:00:45!(x-p)(x1-p)+(y-q)(y1-q)=r²!(x-p)+(x1-p)+(y-q)+(y1-q)=r²!(x-q)(x1-q)*(y-p)(y1-p)=r²!(x-p)(x1-p)+(y-q)(y1-q)=r
+Opšta jednačina kružnice je:!00:00:30!(x-p)²+(y-q)²=r²!(x+p)²+(y+q)²=r²!(x-p)+(y-q)=r!(x-p)+(y-q)=r²
+Ako je kružnica data u obliku x² + y² + dx + ey + f = 0, kolika je vrednost p?!00:00:45!p=-d/2!p=d/2!p=d/4!p=-d/4

@@ -99,7 +99,7 @@
             this.lblTajmer.Name = "lblTajmer";
             this.lblTajmer.Size = new System.Drawing.Size(35, 13);
             this.lblTajmer.TabIndex = 5;
-            this.lblTajmer.Text = "tajmer";
+            this.lblTajmer.Text = "";
             // 
             // frmKvizNivo
             // 
