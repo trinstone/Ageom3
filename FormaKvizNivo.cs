@@ -143,6 +143,7 @@ namespace AgeomProj
                 {
                     tmrKviz.Stop();
                     MessageBox.Show("Cestitamo! Uspesno ste presli nivo.");
+                    this.Close();
                 }
             }
             else
@@ -168,6 +169,7 @@ namespace AgeomProj
                 {
                     tmrKviz.Stop();
                     MessageBox.Show("Cestitamo! Uspesno ste presli nivo.");
+                    this.Close();
                 }
             }
             else
@@ -193,6 +195,7 @@ namespace AgeomProj
                 {
                     tmrKviz.Stop();
                     MessageBox.Show("Cestitamo! Uspesno ste presli nivo.");
+                    this.Close();
                 }
             }
             else
@@ -218,6 +221,7 @@ namespace AgeomProj
                 {
                     tmrKviz.Stop();
                     MessageBox.Show("Cestitamo! Uspesno ste presli nivo.");
+                    this.Close();
                 }
             }
             else
