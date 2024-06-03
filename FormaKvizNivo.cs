@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AgeomProj
@@ -26,19 +20,43 @@ namespace AgeomProj
         public int indexTacnog;
         DateTime pocetakZadatka;
         public bool krajZadatka = false;
+        KvizZadatak trenutni;
+        Stopwatch stoperica=new Stopwatch();    
         private void frmKvizNivo_Load(object sender, EventArgs e)
         {
             RadnaPovrsina.IzracunajPolja(this, out gornjiLevi, out centar, out duzinaStr);
+            if (indexZadatka==0)
+            {
+                trenutni = nivo.Zadaci[indexZadatka];
+                (int index, string[] odgovori) = trenutni.PromesajOdgovore();
+                indexTacnog = index;
+                trenutni = nivo.Zadaci[indexZadatka];
+                IspisiTekst(trenutni.Pitanje, odgovori);
+                
+                this.Refresh();
+
+            }
             pocetakZadatka = DateTime.Now;
             tmrKviz.Start();
         }
         public void UcitajZadatak()
         {
-            KvizZadatak trenutni = nivo.Zadaci[indexZadatka];
+            trenutni = nivo.Zadaci[indexZadatka];
             (int index, string[] odgovori) = trenutni.PromesajOdgovore();
             indexTacnog = index;
-            this.Refresh();
+            trenutni = nivo.Zadaci[indexZadatka];
             IspisiTekst(trenutni.Pitanje, odgovori);
+            
+            this.Refresh();
+
+        }
+        public void ObrisiBoje()
+        {
+            lblOdg1.BackColor = SystemColors.Control;
+            lblOdg2.BackColor = SystemColors.Control;
+            lblOdg3.BackColor = SystemColors.Control;
+            lblOdg4.BackColor = SystemColors.Control;
+
         }
         public void IspisiTekst(string pitanje, string[] odgovori)
         {
@@ -116,9 +134,10 @@ namespace AgeomProj
             {
                 if (indexZadatka < 3)
                 {
+                    ObrisiBoje();
                     indexZadatka++;
                     UcitajZadatak();
-                    pocetakZadatka = DateTime.Now;
+                    pocetakZadatka = DateTime.Now;                   
                 }
                 else
                 {
@@ -129,7 +148,7 @@ namespace AgeomProj
             else
             {
                 MessageBox.Show("Netacan odgovor! Kraj nivoa.");
-                nivo.TrenutniBrojSrca--;
+               this.Close();
             }
         }
 
@@ -139,7 +158,8 @@ namespace AgeomProj
             if (indexTacnog == 1)
             {
                 if (indexZadatka < 3)
-                {
+                {                    
+                    ObrisiBoje();
                     indexZadatka++;
                     UcitajZadatak();
                     pocetakZadatka = DateTime.Now;
@@ -153,7 +173,7 @@ namespace AgeomProj
             else
             {
                 MessageBox.Show("Netacan odgovor! Kraj nivoa.");
-                nivo.TrenutniBrojSrca--;
+                this.Close();
             }
         }
 
@@ -163,10 +183,11 @@ namespace AgeomProj
             if (indexTacnog == 2)
             {
                 if (indexZadatka < 3)
-                {
+                {                    
+                    ObrisiBoje();
                     indexZadatka++;
                     UcitajZadatak();
-                    pocetakZadatka = DateTime.Now;
+                    pocetakZadatka = DateTime.Now;                       
                 }
                 else
                 {
@@ -177,7 +198,7 @@ namespace AgeomProj
             else
             {
                 MessageBox.Show("Netacan odgovor! Kraj nivoa.");
-                nivo.TrenutniBrojSrca--;
+                this.Close();
             }
         }
 
@@ -187,7 +208,8 @@ namespace AgeomProj
             if (indexTacnog == 3)
             {
                 if (indexZadatka < 3)
-                {
+                {                   
+                    ObrisiBoje();
                     indexZadatka++;
                     UcitajZadatak();
                     pocetakZadatka = DateTime.Now;
@@ -201,7 +223,7 @@ namespace AgeomProj
             else
             {
                 MessageBox.Show("Netacan odgovor! Kraj nivoa.");
-                nivo.TrenutniBrojSrca--;
+                this.Close();
             }
         }
 
