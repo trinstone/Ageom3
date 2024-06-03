@@ -156,7 +156,7 @@ namespace AgeomProj
             lblPitanje.Top = 5;
             lblPitanje.Left = btnSveska.Right + 5;
             lblPitanje.Width = pbxSrce3.Left - 5 - lblPitanje.Left;
-            lblPitanje.Height = duzinaStr / 20 * 3;
+            lblPitanje.Height = duzinaStr / 20 * 2;
         }
         private void frmSlobodanNivo_SizeChanged(object sender, EventArgs e)
         {
@@ -309,58 +309,79 @@ namespace AgeomProj
                 case FormaResenja.broj:
                 case FormaResenja.tekst:
                     {
-                        BrojOdgovora(false, false);
-                        lblOdg1.Text = null;
-                        lblOdg2.Text = null;
-                        lblOdg3.Text = "Resenje:";
+                        if (!otvorenaSveska)
+                        {
+                            BrojOdgovora(false, false);
+                            lblOdg1.Text = null;
+                            lblOdg2.Text = null;
+                            lblOdg3.Text = "Resenje:";
+                        }
                         break;
                     }
                 case FormaResenja.tacka:
                     {
-                        BrojOdgovora(false, true);
-                        lblOdg1.Text = null;
-                        lblOdg2.Text = "X:";
-                        lblOdg3.Text = "Y:";
+                        if (!otvorenaSveska)
+                        {
+                            BrojOdgovora(false, true);
+                            lblOdg1.Text = null;
+                            lblOdg2.Text = "X:";
+                            lblOdg3.Text = "Y:";
+                        }
                         break;
                     }
                 case FormaResenja.pravaEks:
                     {
-                        BrojOdgovora(false, true);
-                        lblOdg1.Text = null;
-                        lblOdg2.Text = "K:";
-                        lblOdg3.Text = "N:";
+                        if (!otvorenaSveska)
+                        {
+                            BrojOdgovora(false, true);
+                            lblOdg1.Text = null;
+                            lblOdg2.Text = "K:";
+                            lblOdg3.Text = "N:";
+                        }
                         break;
                     }
                 case FormaResenja.pravaImp:
                     {
-                        BrojOdgovora(true, true);
-                        lblOdg1.Text = "A:";
-                        lblOdg2.Text = "B:";
-                        lblOdg3.Text = "C:";
+                        if (!otvorenaSveska)
+                        {
+                            BrojOdgovora(true, true);
+                            lblOdg1.Text = "A:";
+                            lblOdg2.Text = "B:";
+                            lblOdg3.Text = "C:";
+                        }
                         break;
                     }
                 case FormaResenja.krug:
                     {
-                        BrojOdgovora(true, true);
-                        lblOdg1.Text = "R:";
-                        lblOdg2.Text = "P:";
-                        lblOdg3.Text = "Q:";
+                        if (!otvorenaSveska)
+                        {
+                            BrojOdgovora(true, true);
+                            lblOdg1.Text = "P:";
+                            lblOdg2.Text = "Q:";
+                            lblOdg3.Text = "R²:";
+                        }
                         break;
                     }
                 case FormaResenja.elipsaHiperbola:
                     {
-                        BrojOdgovora(false, true);
-                        lblOdg1.Text = null;
-                        lblOdg2.Text = "A:";
-                        lblOdg3.Text = "B:";
+                        if (!otvorenaSveska)
+                        {
+                            BrojOdgovora(false, true);
+                            lblOdg1.Text = null;
+                            lblOdg2.Text = "A²:";
+                            lblOdg3.Text = "B²:";
+                        }
                         break;
                     }
                 case FormaResenja.parabola:
                     {
-                        BrojOdgovora(false, false);
-                        lblOdg1.Text = null;
-                        lblOdg2.Text = null;
-                        lblOdg3.Text = "P:";
+                        if (!otvorenaSveska)
+                        {
+                            BrojOdgovora(false, false);
+                            lblOdg1.Text = null;
+                            lblOdg2.Text = null;
+                            lblOdg3.Text = "P:";
+                        }
                         break;
                     }
                 default: break;
@@ -374,7 +395,7 @@ namespace AgeomProj
                 odg3 == nivo.Zadaci[indexZadatka].parametri[2])
             {
                 //transliranje
-                if (indexZadatka >= 4)
+                if (indexZadatka >= 3)
                 {
                     timer1.Stop();
                     //pobeda
@@ -383,6 +404,7 @@ namespace AgeomProj
                 {
                     indexZadatka++;
                     this.Refresh();
+                    VeLicinaLokacijaSvega();
                     pocetakZadatka = DateTime.Now;
                     tbxOdg1.Text = null;
                     tbxOdg2.Text = null;
