@@ -60,10 +60,10 @@ namespace AgeomProj
             lblKrug.Font = new Font("Georgia", (int)(duzinaStr / 25));
             lblElHi.Font = new Font("Georgia", (int)(duzinaStr / 25));
             lblParabola.Font = new Font("Georgia", (int)(duzinaStr / 25));
-            lblPrava.Location = new Point(gornjiLevi.X + strKvad, strKvad - 10);
-            lblKrug.Location = new Point(gornjiLevi.X + strKvad, 6 * strKvad - 10);
-            lblElHi.Location = new Point(gornjiLevi.X + strKvad, 11 * strKvad - 10);
-            lblParabola.Location = new Point(gornjiLevi.X + strKvad, 16 * strKvad - 10);
+            lblPrava.Location = new Point(gornjiLevi.X + strKvad, gornjiLevi.Y + strKvad - 10);
+            lblKrug.Location = new Point(gornjiLevi.X + strKvad, gornjiLevi.Y + 6 * strKvad - 10);
+            lblElHi.Location = new Point(gornjiLevi.X + strKvad, gornjiLevi.Y + 11 * strKvad - 10);
+            lblParabola.Location = new Point(gornjiLevi.X + strKvad, gornjiLevi.Y + 16 * strKvad - 10);
 
             lblp1.Font = new Font("Georgia", (int)(duzinaStr / 35));
             lblp2.Font = new Font("Georgia", (int)(duzinaStr / 35));
@@ -86,26 +86,26 @@ namespace AgeomProj
             lblehKviz.Font = new Font("Georgia", (int)(duzinaStr / 35));
             lblpaKviz.Font = new Font("Georgia", (int)(duzinaStr / 35));
 
-            lblp1.Location = new Point(gornjiLevi.X + 6 * strKvad, 3 * strKvad);
-            lblp2.Location = new Point(gornjiLevi.X + 10 * strKvad, 3 * strKvad);
-            lblp3.Location = new Point(gornjiLevi.X + 14 * strKvad, 3 * strKvad);
+            lblp1.Location = new Point(gornjiLevi.X + 6 * strKvad, gornjiLevi.Y + 3 * strKvad);
+            lblp2.Location = new Point(gornjiLevi.X + 10 * strKvad, gornjiLevi.Y + 3 * strKvad);
+            lblp3.Location = new Point(gornjiLevi.X + 14 * strKvad, gornjiLevi.Y + 3 * strKvad);
 
-            lblk1.Location = new Point(gornjiLevi.X + 6 * strKvad, 8 * strKvad);
-            lblk2.Location = new Point(gornjiLevi.X + 10 * strKvad, 8 * strKvad);
-            lblk3.Location = new Point(gornjiLevi.X + 14 * strKvad, 8 * strKvad);
+            lblk1.Location = new Point(gornjiLevi.X + 6 * strKvad, gornjiLevi.Y + 8 * strKvad);
+            lblk2.Location = new Point(gornjiLevi.X + 10 * strKvad, gornjiLevi.Y + 8 * strKvad);
+            lblk3.Location = new Point(gornjiLevi.X + 14 * strKvad, gornjiLevi.Y + 8 * strKvad);
 
-            lbleh1.Location = new Point(gornjiLevi.X + 6 * strKvad, 13 * strKvad);
-            lbleh2.Location = new Point(gornjiLevi.X + 10 * strKvad, 13 * strKvad);
-            lbleh3.Location = new Point(gornjiLevi.X + 14 * strKvad, 13 * strKvad);
+            lbleh1.Location = new Point(gornjiLevi.X + 6 * strKvad, gornjiLevi.Y + 13 * strKvad);
+            lbleh2.Location = new Point(gornjiLevi.X + 10 * strKvad, gornjiLevi.Y + 13 * strKvad);
+            lbleh3.Location = new Point(gornjiLevi.X + 14 * strKvad, gornjiLevi.Y + 13 * strKvad);
 
-            lblpa1.Location = new Point(gornjiLevi.X + 6 * strKvad, 18 * strKvad);
-            lblpa2.Location = new Point(gornjiLevi.X + 10 * strKvad, 18 * strKvad);
-            lblpa3.Location = new Point(gornjiLevi.X + 14 * strKvad, 18 * strKvad);
+            lblpa1.Location = new Point(gornjiLevi.X + 6 * strKvad, gornjiLevi.Y + 18 * strKvad);
+            lblpa2.Location = new Point(gornjiLevi.X + 10 * strKvad, gornjiLevi.Y + 18 * strKvad);
+            lblpa3.Location = new Point(gornjiLevi.X + 14 * strKvad, gornjiLevi.Y + 18 * strKvad);
 
-            lblpKviz.Location = new Point(gornjiLevi.X + strKvad, 3 * strKvad);
-            lblkKviz.Location = new Point(gornjiLevi.X + strKvad, 8 * strKvad);
-            lblehKviz.Location = new Point(gornjiLevi.X + strKvad, 13 * strKvad);
-            lblpaKviz.Location = new Point(gornjiLevi.X + strKvad, 18 * strKvad);
+            lblpKviz.Location = new Point(gornjiLevi.X + strKvad, gornjiLevi.Y + 3 * strKvad);
+            lblkKviz.Location = new Point(gornjiLevi.X + strKvad, gornjiLevi.Y + 8 * strKvad);
+            lblehKviz.Location = new Point(gornjiLevi.X + strKvad, gornjiLevi.Y + 13 * strKvad);
+            lblpaKviz.Location = new Point(gornjiLevi.X + strKvad, gornjiLevi.Y + 18 * strKvad);
         }
         private void frmUvod_Paint(object sender, PaintEventArgs e)
         {
@@ -192,9 +192,9 @@ namespace AgeomProj
                 lblpaKviz.Visible = true;
 
                 Pen olovka = new Pen(Color.Black, 5);
-                e.Graphics.DrawLine(olovka, gornjiLevi.X, 5 * strKvad, gornjiLevi.X + duzinaStr, 5 * strKvad);
-                e.Graphics.DrawLine(olovka, gornjiLevi.X, 10 * strKvad, gornjiLevi.X + duzinaStr, 10 * strKvad);
-                e.Graphics.DrawLine(olovka, gornjiLevi.X, 15 * strKvad, gornjiLevi.X + duzinaStr, 15 * strKvad);
+                e.Graphics.DrawLine(olovka, gornjiLevi.X, gornjiLevi.Y + 5 * strKvad, gornjiLevi.X + duzinaStr, gornjiLevi.Y + 5 * strKvad);
+                e.Graphics.DrawLine(olovka, gornjiLevi.X, gornjiLevi.Y + 10 * strKvad, gornjiLevi.X + duzinaStr, gornjiLevi.Y + 10 * strKvad);
+                e.Graphics.DrawLine(olovka, gornjiLevi.X, gornjiLevi.Y + 15 * strKvad, gornjiLevi.X + duzinaStr, gornjiLevi.Y + 15 * strKvad);
             }
             else
             {
