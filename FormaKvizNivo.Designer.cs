@@ -1,4 +1,6 @@
-﻿namespace AgeomProj
+﻿using System.Windows.Forms;
+
+namespace AgeomProj
 {
     partial class frmKvizNivo
     {
@@ -119,7 +121,58 @@
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmKvizNivo_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
-
+            //
+            
+            this.btnPonovofin = new System.Windows.Forms.Button();
+            this.lblFinito = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // btnPonovofin
+            // 
+            this.btnPonovofin.Location = new System.Drawing.Point(0, 0);
+            this.btnPonovofin.Name = "btnPonovofin";
+            this.btnPonovofin.Size = new System.Drawing.Size(75, 23);
+            this.btnPonovofin.TabIndex = 0;
+            this.btnPonovofin.Text = "PONOVO";
+            this.btnPonovofin.UseVisualStyleBackColor = true;
+            this.btnPonovofin.Click += new System.EventHandler(this.btnPonovofin_Click);
+            // 
+            // lblFinito
+            // 
+            this.lblFinito.AutoSize = true;
+            this.lblFinito.Location = new System.Drawing.Point(12, 76);
+            this.lblFinito.Name = "lblFinito";
+            this.lblFinito.Size = new System.Drawing.Size(34, 13);
+            this.lblFinito.TabIndex = 1;
+            this.lblFinito.Text = "KRAJ";
+            // 
+            // frmKvizNivo
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.lblFinito);
+            this.Controls.Add(this.btnPonovofin);
+            this.Name = "frmKvizNivo";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+            this.btnNZD = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnNZD
+            // 
+            this.btnNZD.Location = new System.Drawing.Point(0, 0);
+            this.btnNZD.Name = "btnNZD";
+            this.btnNZD.Size = new System.Drawing.Size(75, 23);
+            this.btnNZD.TabIndex = 0;
+            this.btnNZD.Text = "NAZAD";
+            this.btnNZD.UseVisualStyleBackColor = true;
+            this.btnNZD.Click += new System.EventHandler(this.btnNZD_Click);
+            // 
+            // frmKvizNivo
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnNZD);
+            this.Name = "frmKvizNivo";
+            this.ResumeLayout(false);
         }
 
         #endregion
@@ -131,5 +184,9 @@
         private System.Windows.Forms.Label lblOdg1;
         private System.Windows.Forms.Timer tmrKviz;
         private System.Windows.Forms.Label lblTajmer;
+        private System.Windows.Forms.Button btnNazadfin;
+        private System.Windows.Forms.Button btnPonovofin;
+        private Button btnNZD;
+        private System.Windows.Forms.Label lblFinito;
     }
 }

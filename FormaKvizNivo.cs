@@ -21,9 +21,7 @@ namespace AgeomProj
         DateTime pocetakZadatka;
         public bool krajZadatka = false;
         KvizZadatak trenutni;
-        private Label lblKraj;
-        private Button btnNazad;
-        private Button btnPonovo;
+        
         Stopwatch stoperica =new Stopwatch();    
         private void frmKvizNivo_Load(object sender, EventArgs e)
         {
@@ -90,18 +88,18 @@ namespace AgeomProj
             lblOdg4.Left = levaStrana;
             lblOdg4.Top = lblOdg3.Bottom + duzinaStr / 20;
             lblOdg4.Font = new Font("Georgia", (int)(duzinaStr / 30));
-            lblKraj.Font = new Font("Georgia", duzinaStr / 30);
-            btnPonovo.Font = new Font("Georgia", duzinaStr / 45);
-            btnNazad.Font = new Font("Georgia", duzinaStr / 45);
-            btnNazad.Height = duzinaStr / 10;
-            btnNazad.Width = duzinaStr / 5;
-            btnNazad.Top = gornjiLevi.Y + duzinaStr / 2;
-            btnNazad.Left = gornjiLevi.X + duzinaStr / 20 * 8;
-            btnPonovo.Height = duzinaStr / 10;
-            btnPonovo.Width = duzinaStr / 5;
-            btnPonovo.Top = gornjiLevi.Y + duzinaStr / 20 * 13;
-            btnPonovo.Left = gornjiLevi.X + duzinaStr / 20 * 8;
-            lblKraj.Top = gornjiLevi.Y + duzinaStr / 20 * 8;
+            lblFinito.Font = new Font("Georgia", duzinaStr / 30);
+            btnPonovofin.Font = new Font("Georgia", duzinaStr / 45);
+            btnNZD.Font = new Font("Georgia", duzinaStr / 45);
+            btnNZD.Height = duzinaStr / 10;
+            btnNZD.Width = duzinaStr / 5;
+            btnNZD.Top = gornjiLevi.Y + duzinaStr / 2;
+            btnNZD.Left = gornjiLevi.X + duzinaStr / 20 * 8;
+            btnPonovofin.Height = duzinaStr / 10;
+            btnPonovofin.Width = duzinaStr / 5;
+            btnPonovofin.Top = gornjiLevi.Y + duzinaStr / 20 * 13;
+            btnPonovofin.Left = gornjiLevi.X + duzinaStr / 20 * 8;
+            lblFinito.Top = gornjiLevi.Y + duzinaStr / 20 * 8;
             lblTajmer.Left = levaStrana;
             lblTajmer.Top = lblOdg4.Bottom + duzinaStr / 20;
             lblTajmer.Font = new Font("Georgia", (int)(duzinaStr / 30));
@@ -163,14 +161,14 @@ namespace AgeomProj
                 {
                     ObrisiBoje();
                     tmrKviz.Stop();
-                    lblKraj.Text = "Cestitamo! Pobedili ste :)";
+                    lblFinito.Text = "Cestitamo! Pobedili ste :)";
                     Kraj(false);
                 }
             }
             else
             {
                 tmrKviz.Stop();
-                lblKraj.Text = "Netacan odgovor! Izgubili ste :(";
+                lblFinito.Text = "Netacan odgovor! Izgubili ste :(";
                 Kraj(true);
             }
         }
@@ -190,14 +188,14 @@ namespace AgeomProj
                 {
                     ObrisiBoje();
                     tmrKviz.Stop();
-                    lblKraj.Text = "Cestitamo! Pobedili ste :)";
+                    lblFinito.Text = "Cestitamo! Pobedili ste :)";
                     Kraj(false);
                 }
             }
             else
             {
                 tmrKviz.Stop();
-                lblKraj.Text = "Netacan odgovor! Izgubili ste :(";
+                lblFinito.Text = "Netacan odgovor! Izgubili ste :(";
                 Kraj(true);
             }
         }
@@ -217,14 +215,14 @@ namespace AgeomProj
                 {
                     ObrisiBoje();
                     tmrKviz.Stop();
-                    lblKraj.Text = "Cestitamo! Pobedili ste :)";
+                    lblFinito.Text = "Cestitamo! Pobedili ste :)";
                     Kraj(false);
                 }
             }
             else
             {
                 tmrKviz.Stop();
-                lblKraj.Text = "Netacan odgovor! Izgubili ste :(";
+                lblFinito.Text = "Netacan odgovor! Izgubili ste :(";
                 Kraj(true);
             }
         }
@@ -245,14 +243,14 @@ namespace AgeomProj
                 {
                     ObrisiBoje();
                     tmrKviz.Stop();
-                    lblKraj.Text = "Cestitamo! Pobedili ste :)";
+                    lblFinito.Text = "Cestitamo! Pobedili ste :)";
                     Kraj(false);
                 }
             }
             else
             {
                 tmrKviz.Stop();
-                lblKraj.Text = "Netacan odgovor! Izgubili ste :(";
+                lblFinito.Text = "Netacan odgovor! Izgubili ste :(";
                 Kraj(true);
             }
         }
@@ -279,26 +277,26 @@ namespace AgeomProj
             lblOdg2.Enabled = false;
             lblOdg3.Enabled = false;
             lblOdg4.Enabled = false;
-            lblKraj.Visible = true;
-            lblKraj.Left = gornjiLevi.X + duzinaStr / 2 - lblKraj.Width / 2;
-            btnNazad.Visible = true;
-            btnNazad.Enabled = true;
-            btnPonovo.Visible = izgubio;
-            btnPonovo.Enabled = izgubio;
+            lblFinito.Visible = true;
+            lblFinito.Left = gornjiLevi.X + duzinaStr / 2 - lblFinito.Width / 2;
+            btnNZD.Visible = true;
+            btnNZD.Enabled = true;
+            btnPonovofin.Visible = izgubio;
+            btnPonovofin.Enabled = izgubio;
         }
-        
-        private void btnNazad_Click(object sender, EventArgs e)
+
+        private void btnNazadfin_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnPonovo_Click(object sender, EventArgs e)
+        private void btnPonovofin_Click(object sender, EventArgs e)
         {
-            lblKraj.Visible = false;
-            btnNazad.Visible = false;
-            btnNazad.Enabled = false;
-            btnPonovo.Visible = false;
-            btnPonovo.Enabled = false;
+            lblFinito.Visible = false;
+            btnNZD.Visible = false;
+            btnNZD.Enabled = false;
+            btnPonovofin.Visible = false;
+            btnPonovofin.Enabled = false;
             lblOdg1.Enabled = true;
             lblOdg2.Enabled = true;
             lblOdg3.Enabled = true;
@@ -307,6 +305,10 @@ namespace AgeomProj
             this.Refresh();
             pocetakZadatka = DateTime.Now;
             tmrKviz.Start();
+        }
+        private void btnNZD_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
