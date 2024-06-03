@@ -287,7 +287,14 @@ namespace AgeomProj
                 timer1.Stop();
                 //izgubio
             }
-            else lblTimer.Text = $"{ostalo.Minutes}:{ostalo.Seconds}";
+            else 
+            {
+                if(ostalo.Seconds>9)
+                   lblTimer.Text = $"{ostalo.Minutes}:{ostalo.Seconds}";
+                else
+                    lblTimer.Text = $"{ostalo.Minutes}:0{ostalo.Seconds}";
+            }
+            
         }
         private void BrojOdgovora(bool prvi, bool drugi)
         {
