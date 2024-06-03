@@ -22,13 +22,14 @@ namespace AgeomProj
         public void Nacrtaj(Graphics g, Point centar, int strKvad)
         {
             Pen olovka = new Pen(Color.Black, 3);
-            PointF[] leveGornje = new PointF[10];
-            PointF[] leveDonje = new PointF[10];
-            PointF[] DesneGornje = new PointF[10];
-            PointF[] DesneDonje = new PointF[10];
-            float Pomeraj = (10 - A) / 9;
+            int brTacaka = 10;
+            PointF[] leveGornje = new PointF[brTacaka];
+            PointF[] leveDonje = new PointF[brTacaka];
+            PointF[] DesneGornje = new PointF[brTacaka];
+            PointF[] DesneDonje = new PointF[brTacaka];
+            float Pomeraj = (10 - A) / brTacaka-1;
             //y=sqrt((x*x*b*b)/(a*a) - b*b)
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < brTacaka; i++)
             {
                 float x = Convert.ToSingle(Math.Round(-10 + i * Pomeraj,2));
                 leveGornje[i] = new PointF(x, Convert.ToSingle(Math.Sqrt((x * x * B * B) / (A * A) - B * B)));

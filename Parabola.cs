@@ -20,15 +20,19 @@ namespace AgeomProj
         public void Nacrtaj(Graphics g, Point centar, int strKvad)
         {
             Pen olovka = new Pen(Color.Black, 3);
-            PointF[] Gornje = new PointF[11];
-            PointF[] Donje = new PointF[11];
+            int brTacaka = 15;
+            PointF[] Gornje = new PointF[brTacaka];
+            PointF[] Donje = new PointF[brTacaka];
             //y=sqrt(2p*x)
-            for (int i = 0; i < 11; i++)
+            double Pomeraj = 11 / brTacaka;
+            double x = 0;
+            for (int i = 0; i < brTacaka; i++)
             {
-                Gornje[i] = new PointF(i, Convert.ToSingle(Math.Sqrt(2*P*i)));
-                Donje[i] = new PointF(i, -Gornje[i].Y);
+                Gornje[i] = new PointF((float)x, Convert.ToSingle(Math.Sqrt(2*P*x)));
+                Donje[i] = new PointF((float)x, -Gornje[i].Y);
+                x += Pomeraj;
             }
-            for (int i = 0; i < 11; i++)
+            for (int i = 0; i < brTacaka; i++)
             {
                 Gornje[i] = new PointF(centar.X + Gornje[i].X * strKvad, centar.Y - Gornje[i].Y * strKvad);
                 Donje[i] = new PointF(centar.X + Donje[i].X * strKvad, centar.Y - Donje[i].Y * strKvad);
