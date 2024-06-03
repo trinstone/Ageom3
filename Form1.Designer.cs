@@ -50,6 +50,8 @@
             this.lblpaKviz = new System.Windows.Forms.Label();
             this.lblehKviz = new System.Windows.Forms.Label();
             this.lblkKviz = new System.Windows.Forms.Label();
+            this.lblAgeom = new System.Windows.Forms.Label();
+            this.btnNazad = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblIgraj
@@ -270,11 +272,32 @@
             this.lblkKviz.Text = "NIVO KVIZ";
             this.lblkKviz.Click += new System.EventHandler(this.lblkKviz_Click);
             // 
+            // lblAgeom
+            // 
+            this.lblAgeom.AutoSize = true;
+            this.lblAgeom.Location = new System.Drawing.Point(0, 0);
+            this.lblAgeom.Name = "lblAgeom";
+            this.lblAgeom.Size = new System.Drawing.Size(46, 13);
+            this.lblAgeom.TabIndex = 22;
+            this.lblAgeom.Text = "AGEOM";
+            // 
+            // btnNazad
+            // 
+            this.btnNazad.Location = new System.Drawing.Point(32, 527);
+            this.btnNazad.Name = "btnNazad";
+            this.btnNazad.Size = new System.Drawing.Size(75, 23);
+            this.btnNazad.TabIndex = 23;
+            this.btnNazad.Text = "NAZAD";
+            this.btnNazad.UseVisualStyleBackColor = true;
+            this.btnNazad.Click += new System.EventHandler(this.btnNazad_Click);
+            // 
             // frmUvod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1030, 630);
+            this.Controls.Add(this.btnNazad);
+            this.Controls.Add(this.lblAgeom);
             this.Controls.Add(this.lblkKviz);
             this.Controls.Add(this.lblehKviz);
             this.Controls.Add(this.lblpaKviz);
@@ -332,6 +355,8 @@
         private System.Windows.Forms.Label lblpaKviz;
         private System.Windows.Forms.Label lblehKviz;
         private System.Windows.Forms.Label lblkKviz;
+        private System.Windows.Forms.Label lblAgeom;
+        private System.Windows.Forms.Button btnNazad;
     }
 }
 

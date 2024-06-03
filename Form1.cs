@@ -35,14 +35,77 @@ namespace AgeomProj
         }
         public void VeLicinaLokacijaSvega()
         {
-            lblIgraj.Font = new Font("Georgia", (int)(duzinaStr/20));
+            int strKvad = duzinaStr / 20;
+            lblIgraj.Font = new Font("Georgia", (int)(duzinaStr/15));
             lblIgraj.Left = centar.X + 5;
             lblIgraj.Top = centar.Y - lblIgraj.Width / 5;
+
             btnFormule.Width = (int)(3 * duzinaStr / 20);
             btnFormule.Height = (int)(1.5*duzinaStr/20);
             btnFormule.Left = centar.X + duzinaStr/2 - btnFormule.Width;
             btnFormule.Top = centar.Y + (int)(duzinaStr/2.5) - btnFormule.Height;  
             btnFormule.Font = new Font("Georgia", (int)(duzinaStr / 45));
+
+            lblAgeom.Font = new Font("Georgia", (int)(duzinaStr / 10));
+            lblAgeom.Left = centar.X - 5*duzinaStr/20;
+            lblAgeom.Top = centar.Y - lblAgeom.Width / 5 - 6*duzinaStr/20;
+
+            btnNazad.Width = (int)(3 * duzinaStr / 20);
+            btnNazad.Height = (int)(1.5 * duzinaStr / 20);
+            btnNazad.Left = 0;
+            btnNazad.Top = 0;
+            btnNazad.Font = new Font("Georgia", (int)(duzinaStr / 45));
+
+            lblPrava.Font = new Font("Georgia", (int)(duzinaStr / 25));
+            lblKrug.Font = new Font("Georgia", (int)(duzinaStr / 25));
+            lblElHi.Font = new Font("Georgia", (int)(duzinaStr / 25));
+            lblParabola.Font = new Font("Georgia", (int)(duzinaStr / 25));
+            lblPrava.Location = new Point(gornjiLevi.X + strKvad, strKvad - 10);
+            lblKrug.Location = new Point(gornjiLevi.X + strKvad, 6 * strKvad - 10);
+            lblElHi.Location = new Point(gornjiLevi.X + strKvad, 11 * strKvad - 10);
+            lblParabola.Location = new Point(gornjiLevi.X + strKvad, 16 * strKvad - 10);
+
+            lblp1.Font = new Font("Georgia", (int)(duzinaStr / 35));
+            lblp2.Font = new Font("Georgia", (int)(duzinaStr / 35));
+            lblp3.Font = new Font("Georgia", (int)(duzinaStr / 35));
+
+            lblk1.Font = new Font("Georgia", (int)(duzinaStr / 35));
+            lblk2.Font = new Font("Georgia", (int)(duzinaStr / 35));
+            lblk3.Font = new Font("Georgia", (int)(duzinaStr / 35));
+
+            lblpa1.Font = new Font("Georgia", (int)(duzinaStr / 35));
+            lblpa2.Font = new Font("Georgia", (int)(duzinaStr / 35));
+            lblpa3.Font = new Font("Georgia", (int)(duzinaStr / 35));
+
+            lbleh1.Font = new Font("Georgia", (int)(duzinaStr / 35));
+            lbleh2.Font = new Font("Georgia", (int)(duzinaStr / 35));
+            lbleh3.Font = new Font("Georgia", (int)(duzinaStr / 35));
+
+            lblpKviz.Font = new Font("Georgia", (int)(duzinaStr / 35));
+            lblkKviz.Font = new Font("Georgia", (int)(duzinaStr / 35));
+            lblehKviz.Font = new Font("Georgia", (int)(duzinaStr / 35));
+            lblpaKviz.Font = new Font("Georgia", (int)(duzinaStr / 35));
+
+            lblp1.Location = new Point(gornjiLevi.X + 6 * strKvad, 3 * strKvad);
+            lblp2.Location = new Point(gornjiLevi.X + 10 * strKvad, 3 * strKvad);
+            lblp3.Location = new Point(gornjiLevi.X + 14 * strKvad, 3 * strKvad);
+
+            lblk1.Location = new Point(gornjiLevi.X + 6 * strKvad, 8 * strKvad);
+            lblk2.Location = new Point(gornjiLevi.X + 10 * strKvad, 8 * strKvad);
+            lblk3.Location = new Point(gornjiLevi.X + 14 * strKvad, 8 * strKvad);
+
+            lbleh1.Location = new Point(gornjiLevi.X + 6 * strKvad, 13 * strKvad);
+            lbleh2.Location = new Point(gornjiLevi.X + 10 * strKvad, 13 * strKvad);
+            lbleh3.Location = new Point(gornjiLevi.X + 14 * strKvad, 13 * strKvad);
+
+            lblpa1.Location = new Point(gornjiLevi.X + 6 * strKvad, 18 * strKvad);
+            lblpa2.Location = new Point(gornjiLevi.X + 10 * strKvad, 18 * strKvad);
+            lblpa3.Location = new Point(gornjiLevi.X + 14 * strKvad, 18 * strKvad);
+
+            lblpKviz.Location = new Point(gornjiLevi.X + strKvad, 3 * strKvad);
+            lblkKviz.Location = new Point(gornjiLevi.X + strKvad, 8 * strKvad);
+            lblehKviz.Location = new Point(gornjiLevi.X + strKvad, 13 * strKvad);
+            lblpaKviz.Location = new Point(gornjiLevi.X + strKvad, 18 * strKvad);
         }
         private void frmUvod_Paint(object sender, PaintEventArgs e)
         {
@@ -55,10 +118,15 @@ namespace AgeomProj
                 lblIgraj.Enabled = true;
                 btnFormule.Visible = true;
                 btnFormule.Enabled = true;
+                lblAgeom.Visible = true;
+                lblAgeom.Enabled = true;
+                btnNazad.Visible = false;
+                btnNazad.Enabled = false;
                 lblPrava.Visible = false;
                 lblKrug.Visible = false;
                 lblElHi.Visible = false;
                 lblParabola.Visible = false;
+
                 lblp1.Visible = false;
                 lblp2.Visible = false;
                 lblp3.Visible = false;
@@ -94,6 +162,10 @@ namespace AgeomProj
                 lblIgraj.Enabled = false;
                 btnFormule.Visible = false;
                 btnFormule.Enabled = false;
+                btnNazad.Visible = true;
+                btnNazad.Enabled = true;
+                lblAgeom.Visible = false;
+                lblAgeom.Enabled = false;
                 lblPrava.Visible = true;
                 lblKrug.Visible = true;
                 lblElHi.Visible = true;
@@ -118,56 +190,6 @@ namespace AgeomProj
                 lblkKviz.Visible = true;
                 lblehKviz.Visible = true;
                 lblpaKviz.Visible = true;
-                lblPrava.Font= new Font("Georgia", (int)(duzinaStr / 25));
-                lblKrug.Font = new Font("Georgia", (int)(duzinaStr / 25));
-                lblElHi.Font = new Font("Georgia", (int)(duzinaStr / 25));
-                lblParabola.Font = new Font("Georgia", (int)(duzinaStr / 25));
-                lblPrava.Location = new Point(gornjiLevi.X + strKvad, strKvad - 10);
-                lblKrug.Location = new Point(gornjiLevi.X + strKvad, 6 * strKvad - 10);
-                lblElHi.Location = new Point(gornjiLevi.X + strKvad, 11 * strKvad - 10);
-                lblParabola.Location = new Point(gornjiLevi.X + strKvad,16 * strKvad - 10);
-
-                lblp1.Font = new Font("Georgia", (int)(duzinaStr / 35));
-                lblp2.Font = new Font("Georgia", (int)(duzinaStr / 35));
-                lblp3.Font = new Font("Georgia", (int)(duzinaStr / 35));
-
-                lblk1.Font = new Font("Georgia", (int)(duzinaStr / 35));
-                lblk2.Font = new Font("Georgia", (int)(duzinaStr / 35));
-                lblk3.Font = new Font("Georgia", (int)(duzinaStr / 35));
-
-                lblpa1.Font = new Font("Georgia", (int)(duzinaStr / 35));
-                lblpa2.Font = new Font("Georgia", (int)(duzinaStr / 35));
-                lblpa3.Font = new Font("Georgia", (int)(duzinaStr / 35));
-
-                lbleh1.Font = new Font("Georgia", (int)(duzinaStr / 35));
-                lbleh2.Font = new Font("Georgia", (int)(duzinaStr / 35));
-                lbleh3.Font = new Font("Georgia", (int)(duzinaStr / 35));
-
-                lblpKviz.Font = new Font("Georgia", (int)(duzinaStr / 35));
-                lblkKviz.Font = new Font("Georgia", (int)(duzinaStr / 35));
-                lblehKviz.Font = new Font("Georgia", (int)(duzinaStr / 35));
-                lblpaKviz.Font = new Font("Georgia", (int)(duzinaStr / 35));
-
-                lblp1.Location = new Point(gornjiLevi.X + 6 * strKvad, 3 * strKvad);
-                lblp2.Location = new Point(gornjiLevi.X + 10 * strKvad, 3 * strKvad);
-                lblp3.Location = new Point(gornjiLevi.X + 14 * strKvad, 3 * strKvad);
-
-                lblk1.Location = new Point(gornjiLevi.X + 6 * strKvad, 8 * strKvad);
-                lblk2.Location = new Point(gornjiLevi.X + 10 * strKvad, 8 * strKvad);
-                lblk3.Location = new Point(gornjiLevi.X + 14 * strKvad, 8 * strKvad);
-
-                lbleh1.Location = new Point(gornjiLevi.X + 6 * strKvad, 13 * strKvad);
-                lbleh2.Location = new Point(gornjiLevi.X + 10 * strKvad, 13 * strKvad);
-                lbleh3.Location = new Point(gornjiLevi.X + 14 * strKvad, 13 * strKvad);
-
-                lblpa1.Location = new Point(gornjiLevi.X + 6 * strKvad, 18 * strKvad);
-                lblpa2.Location = new Point(gornjiLevi.X + 10 * strKvad, 18 * strKvad);
-                lblpa3.Location = new Point(gornjiLevi.X + 14 * strKvad, 18 * strKvad);
-
-                lblpKviz.Location = new Point(gornjiLevi.X + strKvad, 3 * strKvad);
-                lblkKviz.Location = new Point(gornjiLevi.X + strKvad, 8 * strKvad);
-                lblehKviz.Location = new Point(gornjiLevi.X + strKvad, 13 * strKvad);
-                lblpaKviz.Location = new Point(gornjiLevi.X + strKvad, 18 * strKvad);
 
                 Pen olovka = new Pen(Color.Black, 5);
                 e.Graphics.DrawLine(olovka, gornjiLevi.X, 5 * strKvad, gornjiLevi.X + duzinaStr, 5 * strKvad);
@@ -180,6 +202,8 @@ namespace AgeomProj
                 lblIgraj.Enabled = false;
                 btnFormule.Visible = false;
                 btnFormule.Enabled = false;
+                lblAgeom.Visible = false;
+                lblAgeom.Enabled = false;
             }
 
 
@@ -380,6 +404,12 @@ namespace AgeomProj
             n.UnosIzFajla(Resources.paKviz);
             formaKvizZadatak = new frmKvizNivo(n);
             formaKvizZadatak.Show();
+        }
+
+        private void btnNazad_Click(object sender, EventArgs e)
+        {
+            pocetniMeni = true;
+            this.Refresh();
         }
     }
 }
