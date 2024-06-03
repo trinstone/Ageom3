@@ -31,11 +31,6 @@ namespace AgeomProj
         {
             RadnaPovrsina.IzracunajPolja(this,out gornjiLevi,out centar,out duzinaStr);
             pocetniMeni = true;
-
-            //ODAVDE TESTIRAJTE NIVOE
-            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 0, "p1.txt");
-            formaSlobZadatak = new frmSlobodanNivo(n);
-            formaSlobZadatak.Show();
         }
         public void VeLicinaLokacijaSvega()
         {
@@ -254,7 +249,7 @@ namespace AgeomProj
 
         private void lblp1_Click(object sender, EventArgs e)
         {
-            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3,3,1);
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 1);
             n.UnosIzFajla("p1.txt");
             formaSlobZadatak = new frmSlobodanNivo(n);
             formaSlobZadatak.Show();
@@ -262,7 +257,7 @@ namespace AgeomProj
 
         private void lblp2_Click(object sender, EventArgs e)
         {
-            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 2);
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 2);
             n.UnosIzFajla("p2.txt");
             formaSlobZadatak = new frmSlobodanNivo(n);
             formaSlobZadatak.Show();
@@ -270,7 +265,7 @@ namespace AgeomProj
 
         private void lblp3_Click(object sender, EventArgs e)
         {
-            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(1, 1, 3);
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3);
             n.UnosIzFajla("p3.txt");
             formaSlobZadatak = new frmSlobodanNivo(n);
             formaSlobZadatak.Show();
@@ -278,7 +273,7 @@ namespace AgeomProj
 
         private void lblk1_Click(object sender, EventArgs e)
         {
-            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 1);
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 1);
             n.UnosIzFajla("k1.txt");
             formaSlobZadatak = new frmSlobodanNivo(n);
             formaSlobZadatak.Show();
@@ -286,7 +281,7 @@ namespace AgeomProj
 
         private void lblk2_Click(object sender, EventArgs e)
         {
-            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 2);
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 2);
             n.UnosIzFajla("k2.txt");
             formaSlobZadatak = new frmSlobodanNivo(n);
             formaSlobZadatak.Show();
@@ -294,7 +289,7 @@ namespace AgeomProj
 
         private void lblk3_Click(object sender, EventArgs e)
         {
-            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 3);
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3);
             n.UnosIzFajla("k3.txt");
             formaSlobZadatak = new frmSlobodanNivo(n);
             formaSlobZadatak.Show();
@@ -302,7 +297,7 @@ namespace AgeomProj
 
         private void lbleh1_Click(object sender, EventArgs e)
         {
-            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 1);
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 1);
             n.UnosIzFajla("eh1.txt");
             formaSlobZadatak = new frmSlobodanNivo(n);
             formaSlobZadatak.Show();
@@ -310,7 +305,7 @@ namespace AgeomProj
 
         private void lbleh2_Click(object sender, EventArgs e)
         {
-            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 2);
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 2);
             n.UnosIzFajla("eh2.txt");
             formaSlobZadatak = new frmSlobodanNivo(n);
             formaSlobZadatak.Show();
@@ -318,7 +313,7 @@ namespace AgeomProj
 
         private void lbleh3_Click(object sender, EventArgs e)
         {
-            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 3);
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3);
             n.UnosIzFajla("eh3.txt");
             formaSlobZadatak = new frmSlobodanNivo(n);
             formaSlobZadatak.Show();
@@ -326,7 +321,7 @@ namespace AgeomProj
 
         private void lblpa1_Click(object sender, EventArgs e)
         {
-            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 1);
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 1);
             n.UnosIzFajla("pa1.txt");
             formaSlobZadatak = new frmSlobodanNivo(n);
             formaSlobZadatak.Show();
@@ -334,7 +329,7 @@ namespace AgeomProj
 
         private void lblpa2_Click(object sender, EventArgs e)
         {
-            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 2);
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 2);
             n.UnosIzFajla("pa2.txt");
             formaSlobZadatak = new frmSlobodanNivo(n);
             formaSlobZadatak.Show();
@@ -342,7 +337,7 @@ namespace AgeomProj
 
         private void lblpa3_Click(object sender, EventArgs e)
         {
-            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3, 3);
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3);
             n.UnosIzFajla("pa3.txt");
             formaSlobZadatak = new frmSlobodanNivo(n);
             formaSlobZadatak.Show();
@@ -350,7 +345,7 @@ namespace AgeomProj
 
         private void lblpKviz_Click(object sender, EventArgs e)
         {
-            Nivo<KvizZadatak> n = new Nivo<KvizZadatak>(3, 3, 2);
+            Nivo<KvizZadatak> n = new Nivo<KvizZadatak>(3, 2);
             n.UnosIzFajla("pKviz.txt");
             formaKvizZadatak = new frmKvizNivo(n);
             formaKvizZadatak.Show();
@@ -358,7 +353,7 @@ namespace AgeomProj
 
         private void lblkKviz_Click(object sender, EventArgs e)
         {
-            Nivo<KvizZadatak> n = new Nivo<KvizZadatak>(3, 3, 2);
+            Nivo<KvizZadatak> n = new Nivo<KvizZadatak>(3, 2);
             n.UnosIzFajla("kKviz.txt");
             formaKvizZadatak = new frmKvizNivo(n);
             formaKvizZadatak.Show();
@@ -366,7 +361,7 @@ namespace AgeomProj
 
         private void lblehKviz_Click(object sender, EventArgs e)
         {
-            Nivo<KvizZadatak> n = new Nivo<KvizZadatak>(3, 3, 2);
+            Nivo<KvizZadatak> n = new Nivo<KvizZadatak>(3, 2);
             n.UnosIzFajla("ehKviz.txt");
             formaKvizZadatak = new frmKvizNivo(n);
             formaKvizZadatak.Show();
@@ -374,7 +369,7 @@ namespace AgeomProj
 
         private void lblpaKviz_Click(object sender, EventArgs e)
         {
-            Nivo<KvizZadatak> n = new Nivo<KvizZadatak>(3, 3, 2);
+            Nivo<KvizZadatak> n = new Nivo<KvizZadatak>(3, 2);
             n.UnosIzFajla("paKviz.txt");
             formaKvizZadatak = new frmKvizNivo(n);
             formaKvizZadatak.Show();

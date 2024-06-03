@@ -11,7 +11,6 @@ namespace AgeomProj
     public class Nivo<T> where T : Zadatak
     {
         public int TrenutniBrojSrca { get; set; } = 3;
-        public float TrenutniBrojZvezda { get; set; } = 3;
         public int Tezina { get; set; } 
         public TimeSpan VremeNivo 
         {  get
@@ -100,17 +99,15 @@ namespace AgeomProj
 
             Zadaci = zadaci;
         }
-        public Nivo(int trenutniBrojSrca, float trenutniBrojZvezda, int tezina, params T[] zadaci)
+        public Nivo(int trenutniBrojSrca, int tezina, params T[] zadaci)
         {
             TrenutniBrojSrca = trenutniBrojSrca;
-            TrenutniBrojZvezda = trenutniBrojZvezda;
             Tezina = tezina;
             Zadaci = zadaci;
         }
-        public Nivo(int trenutniBrojSrca, float trenutniBrojZvezda, int tezina, string imeFajla)
+        public Nivo(int trenutniBrojSrca, int tezina, string imeFajla)
         {
             TrenutniBrojSrca = trenutniBrojSrca;
-            TrenutniBrojZvezda = trenutniBrojZvezda;
             Tezina = tezina;
             UnosIzFajla(imeFajla);
         }

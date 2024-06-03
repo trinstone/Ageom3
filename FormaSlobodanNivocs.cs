@@ -45,7 +45,6 @@ namespace AgeomProj
             RadnaPovrsina.IzracunajPolja(this, out gornjiLevi, out centar, out duzinaStr);
             visinaForme = this.Height;
             sirinaForme = this.Width;
-            VeLicinaLokacijaSvega();
             pocetakZadatka = DateTime.Now;
             timer1.Start();
         }
@@ -55,6 +54,7 @@ namespace AgeomProj
             RadnaPovrsina.ucitajPozadinu(e.Graphics, this);
             pozadina = e.Graphics;
             UcitajZadatak();
+            VeLicinaLokacijaSvega();
         }
         public void VeLicinaLokacijaSvega()
         {
@@ -83,9 +83,9 @@ namespace AgeomProj
             lblOdg1.Left = 5;
             lblOdg2.Left = 5;
             lblOdg3.Left = 5;
-            tbxOdg1.Top = btnPosalji.Top - duzinaStr / 20 - 5;
-            tbxOdg2.Top = tbxOdg1.Top - duzinaStr / 20 - 5;
-            tbxOdg3.Top = tbxOdg2.Top - duzinaStr / 20 - 5;
+            tbxOdg3.Top = btnPosalji.Top - duzinaStr / 20 - 5;
+            tbxOdg2.Top = tbxOdg3.Top - duzinaStr / 20 - 5;
+            tbxOdg1.Top = tbxOdg2.Top - duzinaStr / 20 - 5;
             lblOdg1.Top = tbxOdg1.Top;
             lblOdg1.Width = tbxOdg1.Width;
             lblOdg2.Top = tbxOdg2.Top;
@@ -98,7 +98,7 @@ namespace AgeomProj
             pbxSrce2.Height = (int)1.5 * duzinaStr / 20;
             pbxSrce3.Width = (int)1.5 * duzinaStr / 20;
             pbxSrce3.Height = (int)1.5 * duzinaStr / 20;
-            pbxSrce1.Left = sirinaForme - 5 - pbxSrce1.Width;
+            pbxSrce1.Left = sirinaForme - 25 - pbxSrce1.Width;
             pbxSrce2.Left = pbxSrce1.Left - 5 - pbxSrce2.Width;
             pbxSrce3.Left = pbxSrce2.Left - 5 - pbxSrce3.Width;
             pbxSrce1.Top = 5;
@@ -115,7 +115,7 @@ namespace AgeomProj
             lblOdg2.Font = new Font("Georgia", duzinaStr / 45);
             lblOdg3.Font = new Font("Georgia", duzinaStr / 45);
             lblPitanje.Font = new Font("Georgia", duzinaStr / 45);
-            lblTimer.Font = new Font("Georgia", duzinaStr / 45);
+            lblTimer.Font = new Font("Georgia", duzinaStr / 30);
             if (sirinaForme > visinaForme)
             {
                 if (gornjiLevi.X > duzinaStr / 20 * 3 + 10)
@@ -152,7 +152,11 @@ namespace AgeomProj
             btnObrisi.Height = btnSveska.Height;
             btnObrisi.Width = btnSveska.Width;
             btnObrisi.Top = btnPosalji.Top;
-            btnObrisi.Left = btnPosalji.Left;
+            btnObrisi.Left = btnPosalji.Left; 
+            lblPitanje.Top = 5;
+            lblPitanje.Left = btnSveska.Right + 5;
+            lblPitanje.Width = pbxSrce3.Left - 5 - lblPitanje.Left;
+            lblPitanje.Height = duzinaStr / 20 * 3;
         }
         private void frmSlobodanNivo_SizeChanged(object sender, EventArgs e)
         {
