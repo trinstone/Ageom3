@@ -239,7 +239,13 @@ namespace AgeomProj
                 tmrKviz.Stop();
 
             }
-            else lblTajmer.Text = $"{ostalo.Minutes}:{ostalo.Seconds}";
+            else
+            {
+                if (ostalo.Seconds > 9)
+                    lblTajmer.Text = $"{ostalo.Minutes}:{ostalo.Seconds}";
+                else
+                    lblTajmer.Text = $"{ostalo.Minutes}:0{ostalo.Seconds}";
+            }
         }
     }
 }
