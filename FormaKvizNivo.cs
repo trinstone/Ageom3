@@ -20,15 +20,11 @@ namespace AgeomProj
         public int indexTacnog;
         DateTime pocetakZadatka;
         public bool krajZadatka = false;
-<<<<<<< HEAD
         KvizZadatak trenutni;
         private Label lblKraj;
         private Button btnNazad;
         private Button btnPonovo;
         Stopwatch stoperica =new Stopwatch();    
-=======
-        KvizZadatak trenutni;   
->>>>>>> 7392152939f23302139fe20c8818f17698843648
         private void frmKvizNivo_Load(object sender, EventArgs e)
         {
             RadnaPovrsina.IzracunajPolja(this, out gornjiLevi, out centar, out duzinaStr);
@@ -94,7 +90,6 @@ namespace AgeomProj
             lblOdg4.Left = levaStrana;
             lblOdg4.Top = lblOdg3.Bottom + duzinaStr / 20;
             lblOdg4.Font = new Font("Georgia", (int)(duzinaStr / 30));
-<<<<<<< HEAD
             lblKraj.Font = new Font("Georgia", duzinaStr / 30);
             btnPonovo.Font = new Font("Georgia", duzinaStr / 45);
             btnNazad.Font = new Font("Georgia", duzinaStr / 45);
@@ -107,11 +102,9 @@ namespace AgeomProj
             btnPonovo.Top = gornjiLevi.Y + duzinaStr / 20 * 13;
             btnPonovo.Left = gornjiLevi.X + duzinaStr / 20 * 8;
             lblKraj.Top = gornjiLevi.Y + duzinaStr / 20 * 8;
-=======
             lblTajmer.Left = levaStrana;
             lblTajmer.Top = lblOdg4.Bottom + duzinaStr / 20;
             lblTajmer.Font = new Font("Georgia", (int)(duzinaStr / 30));
->>>>>>> 7392152939f23302139fe20c8818f17698843648
         }
         public void OkviriOdgovora(PaintEventArgs e)
         {
