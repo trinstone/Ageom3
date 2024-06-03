@@ -22,11 +22,11 @@ namespace AgeomProj
         }
         public Point gornjiLevi;
         public int duzinaStr;
-        int visinaForme;
-        int sirinaForme;
         public Point centar;
         public Nivo<SlobodanZadatak> nivo;
         public int indexZadatka;
+        int visinaForme;
+        int sirinaForme;
         bool crtanjeUSvesci = false;
         bool otvorenaSveska = false;
         Point prethodna;
@@ -45,6 +45,7 @@ namespace AgeomProj
             RadnaPovrsina.IzracunajPolja(this, out gornjiLevi, out centar, out duzinaStr);
             visinaForme = this.Height;
             sirinaForme = this.Width;
+            VeLicinaLokacijaSvega();
             pocetakZadatka = DateTime.Now;
             timer1.Start();
         }
@@ -54,7 +55,6 @@ namespace AgeomProj
             RadnaPovrsina.ucitajPozadinu(e.Graphics, this);
             pozadina = e.Graphics;
             UcitajZadatak();
-            VeLicinaLokacijaSvega();
         }
         public void VeLicinaLokacijaSvega()
         {
@@ -152,7 +152,7 @@ namespace AgeomProj
             btnObrisi.Height = btnSveska.Height;
             btnObrisi.Width = btnSveska.Width;
             btnObrisi.Top = btnPosalji.Top;
-            btnObrisi.Left = btnPosalji.Left; 
+            btnObrisi.Left = btnPosalji.Left;
             lblPitanje.Top = 5;
             lblPitanje.Left = btnSveska.Right + 5;
             lblPitanje.Width = pbxSrce3.Left - 5 - lblPitanje.Left;
@@ -383,9 +383,10 @@ namespace AgeomProj
                 {
                     indexZadatka++;
                     UcitajZadatak();
+                    VeLicinaLokacijaSvega();
                     pocetakZadatka = DateTime.Now;
-                    tbxOdg2.Text = null;
                     tbxOdg1.Text = null;
+                    tbxOdg2.Text = null;
                     tbxOdg3.Text = null;
                 }
             }
