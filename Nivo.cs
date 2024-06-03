@@ -88,7 +88,7 @@ namespace AgeomProj
                                     temp = infoZad[i + 1].Split(';');
                                     if (float.Parse(temp[1]) < 0)
                                     {
-                                        Hiperbola k = new Hiperbola(Convert.ToSingle(Math.Sqrt(float.Parse(temp[0]))), Convert.ToSingle(Math.Sqrt(float.Parse(temp[1]))));
+                                        Hiperbola k = new Hiperbola(Convert.ToSingle(Math.Sqrt(float.Parse(temp[0]))), Convert.ToSingle(Math.Sqrt(Math.Abs(float.Parse(temp[1])))));
                                         elementi.Add(k);
                                     }
                                     else
