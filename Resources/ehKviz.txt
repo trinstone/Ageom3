@@ -1,4 +1,4 @@
-Opšta jednačina elipse je:!00:30!x²/a² + y²/b² = 1!x²/a² + y²/b² = 1!x²/a² - y²/b² = 1!x²/r² + y²/r² = 1!x²/r² - y²/r² = 1
-Koja je formula za uslov dodira elipse i prave(y=kx+n)?!00:40!a²k²+b²=n²!a²k²-b²=n²!a²b²+k²=n²!a²b²-k²=n²
-Opšta jednačina hiperbole je:!00:30!x²/a² - y²/b² = 1!x²/a² + y²/b² = 1!x²/a² - y²/b² = 0!x²/a² + y²/b² = 0
-Koja je formula za tangentu hiperbole ako znamo tačku dodira(x1,y1)?!00:45!x*x1/a² - y*y1/b²=1!x*x1/a² + y*y1/b²=1!x*x1/(a²+b²) - y*y1/(a²+b²)=1!x*x1/(a²+b²)-y*y1 /(a²+b²)=1
+Opšta jednačina elipse je:!00:00:30!x²/a² + y²/b² = 1!x²/a² + y²/b² = 1!x²/a² - y²/b² = 1!x²/r² + y²/r² = 1!x²/r² - y²/r² = 1
+Koja je formula za uslov dodira elipse i prave(y=kx+n)?!00:00:40!a²k²+b²=n²!a²k²-b²=n²!a²b²+k²=n²!a²b²-k²=n²
+Opšta jednačina hiperbole je:!00:00:30!x²/a² - y²/b² = 1!x²/a² + y²/b² = 1!x²/a² - y²/b² = 0!x²/a² + y²/b² = 0
+Koja je formula za tangentu hiperbole ako znamo tačku dodira(x1,y1)?!00:00:45!x*x1/a² - y*y1/b²=1!x*x1/a² + y*y1/b²=1!x*x1/(a²+b²) - y*y1/(a²+b²)=1!x*x1/(a²+b²)-y*y1 /(a²+b²)=1

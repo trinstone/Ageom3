@@ -20,8 +20,7 @@ namespace AgeomProj
         public int indexTacnog;
         DateTime pocetakZadatka;
         public bool krajZadatka = false;
-        KvizZadatak trenutni;
-        Stopwatch stoperica=new Stopwatch();    
+        KvizZadatak trenutni;   
         private void frmKvizNivo_Load(object sender, EventArgs e)
         {
             RadnaPovrsina.IzracunajPolja(this, out gornjiLevi, out centar, out duzinaStr);
@@ -41,6 +40,8 @@ namespace AgeomProj
         }
         public void UcitajZadatak()
         {
+            
+            ObrisiBoje();
             trenutni = nivo.Zadaci[indexZadatka];
             (int index, string[] odgovori) = trenutni.PromesajOdgovore();
             indexTacnog = index;
@@ -85,6 +86,9 @@ namespace AgeomProj
             lblOdg4.Left = levaStrana;
             lblOdg4.Top = lblOdg3.Bottom + duzinaStr / 20;
             lblOdg4.Font = new Font("Georgia", (int)(duzinaStr / 30));
+            lblTajmer.Left = levaStrana;
+            lblTajmer.Top = lblOdg4.Bottom + duzinaStr / 20;
+            lblTajmer.Font = new Font("Georgia", (int)(duzinaStr / 30));
         }
         public void OkviriOdgovora(PaintEventArgs e)
         {
@@ -134,13 +138,14 @@ namespace AgeomProj
             {
                 if (indexZadatka < 3)
                 {
-                    ObrisiBoje();
+
                     indexZadatka++;
                     UcitajZadatak();
                     pocetakZadatka = DateTime.Now;                   
                 }
                 else
                 {
+                    ObrisiBoje();
                     tmrKviz.Stop();
                     MessageBox.Show("Cestitamo! Uspesno ste presli nivo.");
                     this.Close();
@@ -160,13 +165,13 @@ namespace AgeomProj
             {
                 if (indexZadatka < 3)
                 {                    
-                    ObrisiBoje();
                     indexZadatka++;
                     UcitajZadatak();
                     pocetakZadatka = DateTime.Now;
                 }
                 else
                 {
+                    ObrisiBoje();
                     tmrKviz.Stop();
                     MessageBox.Show("Cestitamo! Uspesno ste presli nivo.");
                     this.Close();
@@ -186,13 +191,13 @@ namespace AgeomProj
             {
                 if (indexZadatka < 3)
                 {                    
-                    ObrisiBoje();
                     indexZadatka++;
                     UcitajZadatak();
                     pocetakZadatka = DateTime.Now;                       
                 }
                 else
                 {
+                    ObrisiBoje();
                     tmrKviz.Stop();
                     MessageBox.Show("Cestitamo! Uspesno ste presli nivo.");
                     this.Close();
@@ -211,14 +216,15 @@ namespace AgeomProj
             if (indexTacnog == 3)
             {
                 if (indexZadatka < 3)
-                {                   
-                    ObrisiBoje();
+                {             
+                    
                     indexZadatka++;
                     UcitajZadatak();
                     pocetakZadatka = DateTime.Now;
                 }
                 else
                 {
+                    ObrisiBoje();
                     tmrKviz.Stop();
                     MessageBox.Show("Cestitamo! Uspesno ste presli nivo.");
                     this.Close();
