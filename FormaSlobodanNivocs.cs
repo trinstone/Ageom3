@@ -54,6 +54,12 @@ namespace AgeomProj
         private void frmSlobodanNivo_Paint(object sender, PaintEventArgs e)
         {
             RadnaPovrsina.ucitajPozadinu(e.Graphics, this);
+            Duz d1 = new Duz(new Tacka(new PointF(-10, 0), ""), new Tacka(new PointF(10, 0), ""));
+            Duz d2 = new Duz(new Tacka(new PointF(0, -10), ""), new Tacka(new PointF(0, 10), ""));
+            Tacka o = new Tacka(new PointF(0, 0), "");
+            d1.Nacrtaj(e.Graphics,centar, duzinaStr/20);
+            d2.Nacrtaj(e.Graphics, centar, duzinaStr / 20);
+            o.Nacrtaj(e.Graphics, centar, duzinaStr / 20);
             pozadina = e.Graphics;
             UcitajZadatak();
         }

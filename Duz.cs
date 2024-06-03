@@ -22,7 +22,7 @@ namespace AgeomProj
         {
             new Tacka(PozicijaEl[0], OznakeTemena[0]).Nacrtaj(g, centar, strKvad);
             new Tacka(PozicijaEl[1], OznakeTemena[1]).Nacrtaj(g, centar, strKvad);
-            Pen olovka = new Pen(Color.Black, 3);
+            Pen olovka = new Pen(Color.Black, 2);
             PointF t1 = new PointF(centar.X + PozicijaEl[0].X * strKvad, centar.Y - PozicijaEl[0].Y * strKvad);
             PointF t2 = new PointF(centar.X + PozicijaEl[1].X * strKvad, centar.Y - PozicijaEl[1].Y * strKvad);
             g.DrawLine(olovka, t1, t2);
