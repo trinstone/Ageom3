@@ -121,6 +121,15 @@
   <data name="AnalitickaFormule" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Analiticka - formule.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="eh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eh1.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="eh2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eh2.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="eh3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eh3.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="ehKviz" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ehKviz.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
@@ -132,6 +141,9 @@
   </data>
   <data name="k2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\k2.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="k3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\k3.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="kKviz" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kKviz.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
@@ -147,6 +159,12 @@
   </data>
   <data name="pa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pa1.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="pa2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pa2.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="pa3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pa3.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="paKviz" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paKviz.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>

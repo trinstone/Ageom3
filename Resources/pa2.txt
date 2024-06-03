@@ -1,0 +1,5 @@
+Tetiva parabole y²=2x na pravoj x - y - 4 = 0 je osnovica jednakokrakog trougla čiji vrh je na x-osi. Naći površinu tog trougla.!03:00!Formula za površinu trougla pomoću datih tačaka: P=1/2 * ∣ x1 * (y2−y3) +x2 * (y3−y1) + x3 * (y1−y2) ∣!0!6!-9;-3!-2;-3!6!1!3!1;-1;-4
+Odrediti jednačinu tangente date parabole  P: y² = 4x u tački M (1, 2).!03:15!Formula za tangentu parabole: y*y1=p*(x + x1)!3!1;-1;1!-9;-3!-2;-3!6!2!1!M;1;2
+Naći jednačinu tangente parabole P: y² = 4x koja je normalna na pravoj 2x + y - 5.!03:30!Formula za dodirnu tačku p = 2*k*n!3!1;-2;4!-9;-3!-2;-3!6!2!3!1;-2;4
+Izračunati površinu trougla ograničenog x-osom, tangentom i normalom parabole  y² = 16x u tački M(1, 4)!04:00!Formula za tangentu parabole: y*y1=p*(x + x1)!0!20!-9;-3!-2;-3!6!8!1!M;1;4
+

@@ -118,6 +118,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="p1.txt" />
+    <None Include="Resources\pa2.txt" />
+    <None Include="Resources\pa3.txt" />
+    <None Include="Resources\k3.txt" />
+    <None Include="Resources\eh3.txt" />
+    <None Include="Resources\eh2.txt" />
+    <None Include="Resources\eh1.txt" />
     <None Include="Resources\Analiticka - formule.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

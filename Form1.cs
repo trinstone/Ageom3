@@ -314,38 +314,34 @@ namespace AgeomProj
 
         private void lblk3_Click(object sender, EventArgs e)
         {
-            //OVO OD KOMENTARISI KADA DODAS ZADATAK
-            //Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3);
-            //n.UnosIzFajla(Resources.k3);
-            //formaSlobZadatak = new frmSlobodanNivo(n);
-            //formaSlobZadatak.Show();
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3);
+            n.UnosIzFajla(Resources.k3);
+            formaSlobZadatak = new frmSlobodanNivo(n);
+            formaSlobZadatak.Show();
         }
 
         private void lbleh1_Click(object sender, EventArgs e)
         {
-            //OVO OD KOMENTARISI KADA DODAS ZADATAK
-            //Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 1);
-            //n.UnosIzFajla(Resources.eh1);
-            //formaSlobZadatak = new frmSlobodanNivo(n);
-            //formaSlobZadatak.Show();
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 1);
+            n.UnosIzFajla(Resources.eh1);
+            formaSlobZadatak = new frmSlobodanNivo(n);
+            formaSlobZadatak.Show();
         }
 
         private void lbleh2_Click(object sender, EventArgs e)
         {
-            //OVO OD KOMENTARISI KADA DODAS ZADATAK
-            //Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 2);
-            //n.UnosIzFajla(Resources.eh2);
-            //formaSlobZadatak = new frmSlobodanNivo(n);
-            //formaSlobZadatak.Show();
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 2);
+            n.UnosIzFajla(Resources.eh2);
+            formaSlobZadatak = new frmSlobodanNivo(n);
+            formaSlobZadatak.Show();
         }
 
         private void lbleh3_Click(object sender, EventArgs e)
         {
-            //OVO OD KOMENTARISI KADA DODAS ZADATAK
-            //Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3);
-            //n.UnosIzFajla(Resources.eh3);
-            //formaSlobZadatak = new frmSlobodanNivo(n);
-            //formaSlobZadatak.Show();
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3);
+            n.UnosIzFajla(Resources.eh3);
+            formaSlobZadatak = new frmSlobodanNivo(n);
+            formaSlobZadatak.Show();
         }
 
         private void lblpa1_Click(object sender, EventArgs e)
@@ -358,20 +354,18 @@ namespace AgeomProj
 
         private void lblpa2_Click(object sender, EventArgs e)
         {
-            //OVO OD KOMENTARISI KADA DODAS ZADATAK
-            //Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 2);
-            //n.UnosIzFajla(Resources.pa2);
-            //formaSlobZadatak = new frmSlobodanNivo(n);
-            //formaSlobZadatak.Show();
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 2);
+            n.UnosIzFajla(Resources.pa2);
+            formaSlobZadatak = new frmSlobodanNivo(n);
+            formaSlobZadatak.Show();
         }
 
         private void lblpa3_Click(object sender, EventArgs e)
         {
-            //OVO OD KOMENTARISI KADA DODAS ZADATAK
-            //Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3);
-            //n.UnosIzFajla(Resources.pa3);
-            //formaSlobZadatak = new frmSlobodanNivo(n);
-            //formaSlobZadatak.Show();
+            Nivo<SlobodanZadatak> n = new Nivo<SlobodanZadatak>(3, 3);
+            n.UnosIzFajla(Resources.pa3);
+            formaSlobZadatak = new frmSlobodanNivo(n);
+            formaSlobZadatak.Show();
         }
 
         private void lblpKviz_Click(object sender, EventArgs e)

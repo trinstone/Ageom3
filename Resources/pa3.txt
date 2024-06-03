@@ -1,0 +1,4 @@
+Prava 2x + y - 12 = 0 seče parabolu y² = 4x. Odrediti ugao izmedju tangenti u tim tačkama.!05:30!Potrebno je iskoristiti formulu za tačku dodira p = 2*k*n i formulu za izračunavanje ugla preko koeficijenata α = arctan(∣ (k1−k2) / (1 + k1*k2) ∣)!0!45!9;-3!-2;-3!6!2!3!2;1;-12
+Odredi koordinate tačke koja pripada paraboli y² = 4x i najbliža je pravoj y= x +3.!05:00!Potrebno je iskoristiti formulu za tačku dodira p = 2*k*n!1!1;2!9;-3!-2;-3!6!2!2!1;3
+Napisati jednačinu tangente parabole y² = 12x ako je poznato da je paralelna sa pravom 3x – y – 4 = 0.!05:00!Potrebno je iskoristiti formulu za tačku dodira p = 2*k*n!2!3;1!9;-3!-2;-3!6!6!3!3;-1;-4
+U kojoj tački parabole y² = 16x tangenta nagnuta pod uglom od 135 prema x-osi?!05:30!Formula za izračunavanje ugla preko koeficijenata α = arctan(∣ (k1−k2) / (1 + k1*k2) ∣)!1!4;-8!9;-3!-2;-3!6!8

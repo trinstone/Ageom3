@@ -103,9 +103,8 @@
             this.lblTimer.AutoSize = true;
             this.lblTimer.Location = new System.Drawing.Point(51, 112);
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(36, 16);
+            this.lblTimer.Size = new System.Drawing.Size(0, 16);
             this.lblTimer.TabIndex = 27;
-            this.lblTimer.Text = "timer";
             // 
             // btnPomoc
             // 
