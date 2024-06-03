@@ -1,0 +1,4 @@
+Saberi koordinate centra i poluprečnik kruga čija je jednačina x² + y² - 4y - 21 = 0.!01:40!Formula za krug: (x-p)²+(y-q)²=r², koordinate centra su (p,q)!0!7!-4;0!4;0!4!0;2;25
+Odrediti jednačinu kružne linije kojoj je duž AB prečnik, gde je A(1, 1), B(5, 3).!02:00!Formula za sredinu duži: S((xa+xb)/2, (ya+yb)/2), formula za krug: (x-p)²+(y-q)²=r²!4!3;2;5!1;1!5;3!1!A;1;1!1!B;5;3
+Odrediti jednačinu zajedničke tetive krugova x² + y² = 10 i x² + y² - 6x - 6y + 2 =0.!02:40!Formula za jednačinu prave kroz dve tačke: y - y1= y2 - y1/x2 - x1 * (x - x1)!3!1;1;-2!-8;0!-2;0!4!0;0;10!4!3;3;16
+Napisati jednačinu kruga sa centrom C(3, -1) koji na pravoj 2x - 5y + 18 = 0 odseca tetivu dužine 6.!03:30!Formula za udaljenost tačke (M(x1,y1)) i prave (A*x + B*y + C = 0): d = |A*x1 + B*y1 + C| / √(A² + B²), Pitagorina teorema c²=a² + b²!4!3;-1;38!3;-1!8;2!1!C;3;-1!3!2;-5;18!0!6

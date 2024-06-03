@@ -1,0 +1,4 @@
+Opšta jednačina parabole je:!00:30!y²=2px!y=2px!y²=2px²!y=px
+Koja je formula za uslov dodira parabole i prave(y=kx+n)?!00:40!p=2kn!p=-2kn!p=kn!p=-kn
+Koja je formula za tangentu parabole ako znamo tačku dodira(x1,y1)?!00:45!y*y1=p(x+x1)!y+y1=p(x+x1)!y*y1=p(x-x1)!y-y1=p(x-x1)
+Kako glasi formula parabole kojoj centar nije u koordinantnom početku već u tački(x1,y1)?!00:45!(y-y1)²=2p(x-x1)!(y-y1)=p(x-x1)!(y-y1)²=2p(x-x1)²!(y-y1)=2p(x-x1)²

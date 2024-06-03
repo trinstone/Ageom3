@@ -1,0 +1,4 @@
+Izračunati površinu trougla ABC ako je A (-3, 8), B(1, 5) i C(4, 1).!04:30!Formula za rastojanje tačaka: |AB|=√(xa-xb)²+(ya-yb)², Formula za površinu trougla pomoću datih tačaka: P=1/2 * ∣ x1 * (y2−y3) + x2 * (y3−y1) + x3 * (y1−y2) ∣!0!3.5!1;5!4;1!1!A;-3;8!1!B;1;5!1!C;4;1
+Naći ugao između pravih y = 3*x i y = -2*x + 5!03:00!Formula za ugao pod kojim se seku dve prave: α = arctan(∣ (k1−k2) / (1 + k1*k2) ∣)!0!45!2;0!6;0!2!3;0!2!-2;5
+Odrediti rastojanje između dveju paralelnih pravih 3*x - 4*y - 10 = 0 i 6*x - 8*y + 5 = 0.!03:30!Formula za udaljenost tačke (M(x1,y1)) i prave (A*x + B*y + C = 0): d = |A*x1 + B*y1 + C| / √(A² + B²)!0!2.5!-4;0!2;-1!3!3;-4;-10!3!6;-8;5
+Naći jednačinu prave koja sadrži presečnu tačku pravih (l): 2*x + 3*y - 7 = 0 i (m): x + 2*y - 5 = 0 i normalna je na pravu (q): x - y + 7 = 0.!04:10!Ako jedna prava gradi prav ugao sa drugom tad koristimo formulu: k1 * k2 = -1!3!1;1;-2!4;0!7;0!3!2;3;-7!3!1;2;-5!3!1;-1;7

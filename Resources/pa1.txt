@@ -1,0 +1,4 @@
+Naći koordinate fokusa parabole y² = 24x.!00:40!Koordinate fokus elipse je F(p/2, 0).!1!6;0!6;0!9;0!6!12
+Naći jednačinu parabole ako su dati fokus F(3,0) i direktrisa x=-3.!01:00!Opšta jednačina parabole je:y²=2px!6!6!4;0!7;0!1!F;3;0!0!-3
+Prava 2x - y - 4 = 0 seče parabolu y² = 4x u tačkama A i B. Izračunati površinu trougla OAB.!03:00!Formula za površinu trougla pomoću datih tačaka: P=1/2 * ∣ x1 * (y2−y3) + x2 * (y3−y1) + x3 * (y1−y2) ∣!0!6!1;-4!7;0!3!2;-1;-4!6!2
+Naći koordinate prsečne tačake (koja ima obe pozitivne koordinate) elipse x²/100 +y²/225=1 i parabole y²=24x.!03:00!Uraditi sistem sa ove dve jednačine!1!6;12!-7;0!-3;0!5!100;225!6!12
