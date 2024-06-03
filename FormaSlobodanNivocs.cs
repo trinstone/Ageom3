@@ -176,6 +176,7 @@ namespace AgeomProj
             lblPitanje.Width = pbxSrce3.Left - 5 - lblPitanje.Left;
             lblPitanje.Height = duzinaStr / 20 * 2;
             lblKraj.Top = gornjiLevi.Y + duzinaStr / 20 * 8;
+            lblKraj.Left = gornjiLevi.X + duzinaStr / 2 - lblKraj.Width / 2;
         }
         private void frmSlobodanNivo_SizeChanged(object sender, EventArgs e)
         {

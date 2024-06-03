@@ -37,6 +37,11 @@ namespace AgeomProj
                 this.Refresh();
 
             }
+            lblFinito.Visible = false;
+            btnNZD.Visible = false;
+            btnNZD.Enabled = false;
+            btnPonovofin.Visible = false;
+            btnPonovofin.Enabled = false;
             pocetakZadatka = DateTime.Now;
             tmrKviz.Start();
         }
@@ -73,7 +78,7 @@ namespace AgeomProj
         public void VelicinaLokacijaSvega()
         {
             int levaStrana = gornjiLevi.X + duzinaStr / 40;
-            lblPitanje.Left = levaStrana;
+            lblPitanje.Left = gornjiLevi.X + duzinaStr / 2 - lblPitanje.Width / 2;
             lblPitanje.Top = gornjiLevi.Y + duzinaStr / 20;
             lblPitanje.Font = new Font("Georgia", (int)(duzinaStr / 30));
             lblOdg1.Left = levaStrana;
@@ -93,16 +98,17 @@ namespace AgeomProj
             btnNZD.Font = new Font("Georgia", duzinaStr / 45);
             btnNZD.Height = duzinaStr / 10;
             btnNZD.Width = duzinaStr / 5;
-            btnNZD.Top = gornjiLevi.Y + duzinaStr / 2;
+            btnNZD.Top = gornjiLevi.Y + duzinaStr / 20 * 14;
             btnNZD.Left = gornjiLevi.X + duzinaStr / 20 * 8;
             btnPonovofin.Height = duzinaStr / 10;
             btnPonovofin.Width = duzinaStr / 5;
-            btnPonovofin.Top = gornjiLevi.Y + duzinaStr / 20 * 13;
+            btnPonovofin.Top = gornjiLevi.Y + duzinaStr / 20 * 17;
             btnPonovofin.Left = gornjiLevi.X + duzinaStr / 20 * 8;
-            lblFinito.Top = gornjiLevi.Y + duzinaStr / 20 * 8;
+            lblFinito.Top = gornjiLevi.Y + duzinaStr / 20 * 12;
             lblTajmer.Left = levaStrana;
             lblTajmer.Top = lblOdg4.Bottom + duzinaStr / 20;
             lblTajmer.Font = new Font("Georgia", (int)(duzinaStr / 30));
+            lblFinito.Left = gornjiLevi.X + duzinaStr / 2 - lblFinito.Width / 2;
         }
         public void OkviriOdgovora(PaintEventArgs e)
         {
@@ -302,7 +308,7 @@ namespace AgeomProj
             lblOdg3.Enabled = true;
             lblOdg4.Enabled = true;
             indexZadatka = 0;
-            this.Refresh();
+            UcitajZadatak();
             pocetakZadatka = DateTime.Now;
             tmrKviz.Start();
         }
