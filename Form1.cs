@@ -245,7 +245,7 @@ namespace AgeomProj
 
         private void btnFormule_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("Analiticka - formule.pdf");
+            System.Diagnostics.Process.Start("Resources\\Analiticka - formule.pdf");
         }
 
         private void lblp1_Click(object sender, EventArgs e)
