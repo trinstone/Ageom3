@@ -448,6 +448,7 @@ namespace AgeomProj
 
         private void btnPomoc_Click(object sender, EventArgs e)
         {
+            pocetakZadatka = pocetakZadatka - new TimeSpan(0, 0, 20);
             MessageBox.Show(nivo.Zadaci[indexZadatka].Hint, "POMOC");
         }
 
