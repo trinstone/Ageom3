@@ -119,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="p1.txt" />
+    <None Include="Resources\p1.txt" />
     <None Include="Resources\ehKviz.txt" />
     <None Include="Resources\k1.txt" />
     <None Include="Resources\k2.txt" />

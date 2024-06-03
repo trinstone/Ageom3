@@ -382,8 +382,7 @@ namespace AgeomProj
                 else
                 {
                     indexZadatka++;
-                    UcitajZadatak();
-                    VeLicinaLokacijaSvega();
+                    this.Refresh();
                     pocetakZadatka = DateTime.Now;
                     tbxOdg1.Text = null;
                     tbxOdg2.Text = null;

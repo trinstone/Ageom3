@@ -25,16 +25,22 @@ namespace AgeomProj
             } 
         }
         public T[] Zadaci { get; set; }
-        public void UnosIzFajla(string imeFajla)
+        public void UnosIzFajla(string Sadrzaj)
         {
-            T[] zadaci = new T[4];
-            StreamReader red = new StreamReader(imeFajla);
+            T[] zadaci = new T[4]; 
+            string[] redovi = new string[4];
+            for (int i = 0; i < 3; i++)
+            {
+                redovi[i] = Sadrzaj.Substring(0, Sadrzaj.IndexOf("\r\n"));
+                Sadrzaj = Sadrzaj.Remove(0, Sadrzaj.IndexOf("\r\n")+2);
+            }
+            redovi[3] = Sadrzaj;
             int brojac = 0;
             if (typeof(T)==typeof(SlobodanZadatak))
             {
-                while (!red.EndOfStream)
+                while (brojac != 4)
                 {
-                    string[] infoZad = red.ReadLine().Split('!');
+                    string[] infoZad = redovi[brojac].Split('!');
                     string[] temp = infoZad[5].Split(';');
                     PointF pocetnaPoz = new PointF(float.Parse(temp[0]), float.Parse(temp[1]));
                     temp = infoZad[6].Split(';');
@@ -86,16 +92,15 @@ namespace AgeomProj
             }
             else if (typeof(T) == typeof(KvizZadatak))
             {
-                while (!red.EndOfStream)
+                while (brojac != 4)
                 {
-                    string[] infoZad = red.ReadLine().Split('!');
+                    string[] infoZad = redovi[brojac].Split('!');
                     string[] netacniOdg = { infoZad[3], infoZad[4], infoZad[5] };
                     KvizZadatak a = new KvizZadatak(infoZad[0], TimeSpan.Parse(infoZad[1]), infoZad[2], netacniOdg); 
                     zadaci[brojac] = a as T;
                     brojac++;
                 }
             }
-            red.Close();
 
             Zadaci = zadaci;
         }

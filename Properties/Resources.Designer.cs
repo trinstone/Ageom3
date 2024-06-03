@@ -116,6 +116,17 @@ namespace AgeomProj.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Data je duž sa temenima A(3, 2) i B(-1, -1). Odrediti rastojanje tačaka A i B.!01:30!Formula za rastojanje tačaka: |AB|=√(xa-xb)²+(ya-yb)²!0!5!3;2!-1;-1!1!A;3;2!1!B;-1;-1
+        ///Duž AB, gde je A (-3, -2), B(9, 10) podeliti tačkom D u odnosu 5 : 7.!01:50!Formula za podelu duži u odnosu: x=x’+λx’’/1+λ ; y=y’+λy’’/1+λ!1!2;3!-5;0!2;3!1!A;-3;-2!1!B;9;10
+        ///Težište trougla ABC poklapa se sa koordinatnim početkom, tačke A i B imaju koordinate A(6, 0), B(0, -2). Odrediti koordinate temena C.!02:15!Formula za težišnu tačku: [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string p1 {
+            get {
+                return ResourceManager.GetString("p1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Izračunati površinu trougla ABC ako je A (-3, 8), B(1, 5) i C(4, 1).!04:30!Formula za rastojanje tačaka: |AB|=√(xa-xb)²+(ya-yb)², Formula za površinu trougla pomoću datih tačaka: P=1/2 * ∣ x1 * (y2−y3) + x2 * (y3−y1) + x3 * (y1−y2) ∣!0!3.5!1;5!4;1!1!A;-3;8!1!B;1;5!1!C;4;1
         ///Naći ugao između pravih y = 3*x i y = -2*x + 5!03:00!Formula za ugao pod kojim se seku dve prave: α = arctan(∣ (k1−k2) / (1 + k1*k2) ∣)!0!45!2;0!6;0!2!3;0!2!-2;5
         ///Odrediti rastojanje između dveju paralelnih pravih 3*x - 4*y - 10 = 0 i 6*x [rest of string was truncated]&quot;;.
