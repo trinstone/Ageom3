@@ -46,7 +46,6 @@
             this.tbxOdg1 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblPitanje = new System.Windows.Forms.Label();
-            this.tmrSkok = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbxSrce3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSrce2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSrce1)).BeginInit();
@@ -55,7 +54,7 @@
             // btnPosalji
             // 
             this.btnPosalji.Location = new System.Drawing.Point(16, 416);
-            this.btnPosalji.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPosalji.Margin = new System.Windows.Forms.Padding(2);
             this.btnPosalji.Name = "btnPosalji";
             this.btnPosalji.Size = new System.Drawing.Size(135, 19);
             this.btnPosalji.TabIndex = 31;
@@ -68,7 +67,7 @@
             this.pbxSrce3.BackgroundImage = global::AgeomProj.Properties.Resources.Heart_corazón_svg;
             this.pbxSrce3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbxSrce3.Location = new System.Drawing.Point(683, 15);
-            this.pbxSrce3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbxSrce3.Margin = new System.Windows.Forms.Padding(2);
             this.pbxSrce3.Name = "pbxSrce3";
             this.pbxSrce3.Size = new System.Drawing.Size(29, 29);
             this.pbxSrce3.TabIndex = 30;
@@ -79,7 +78,7 @@
             this.pbxSrce2.BackgroundImage = global::AgeomProj.Properties.Resources.Heart_corazón_svg;
             this.pbxSrce2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbxSrce2.Location = new System.Drawing.Point(717, 15);
-            this.pbxSrce2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbxSrce2.Margin = new System.Windows.Forms.Padding(2);
             this.pbxSrce2.Name = "pbxSrce2";
             this.pbxSrce2.Size = new System.Drawing.Size(32, 29);
             this.pbxSrce2.TabIndex = 29;
@@ -90,7 +89,7 @@
             this.pbxSrce1.BackgroundImage = global::AgeomProj.Properties.Resources.Heart_corazón_svg;
             this.pbxSrce1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbxSrce1.Location = new System.Drawing.Point(753, 15);
-            this.pbxSrce1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbxSrce1.Margin = new System.Windows.Forms.Padding(2);
             this.pbxSrce1.Name = "pbxSrce1";
             this.pbxSrce1.Size = new System.Drawing.Size(32, 29);
             this.pbxSrce1.TabIndex = 28;
@@ -109,7 +108,7 @@
             // btnPomoc
             // 
             this.btnPomoc.Location = new System.Drawing.Point(16, 50);
-            this.btnPomoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPomoc.Margin = new System.Windows.Forms.Padding(2);
             this.btnPomoc.Name = "btnPomoc";
             this.btnPomoc.Size = new System.Drawing.Size(80, 28);
             this.btnPomoc.TabIndex = 26;
@@ -150,7 +149,7 @@
             // tbxOdg3
             // 
             this.tbxOdg3.Location = new System.Drawing.Point(76, 390);
-            this.tbxOdg3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxOdg3.Margin = new System.Windows.Forms.Padding(2);
             this.tbxOdg3.Name = "tbxOdg3";
             this.tbxOdg3.Size = new System.Drawing.Size(76, 20);
             this.tbxOdg3.TabIndex = 22;
@@ -159,7 +158,7 @@
             // tbxOdg2
             // 
             this.tbxOdg2.Location = new System.Drawing.Point(76, 367);
-            this.tbxOdg2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxOdg2.Margin = new System.Windows.Forms.Padding(2);
             this.tbxOdg2.Name = "tbxOdg2";
             this.tbxOdg2.Size = new System.Drawing.Size(76, 20);
             this.tbxOdg2.TabIndex = 21;
@@ -169,7 +168,7 @@
             // 
             this.btnObrisi.Enabled = false;
             this.btnObrisi.Location = new System.Drawing.Point(622, 383);
-            this.btnObrisi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnObrisi.Margin = new System.Windows.Forms.Padding(2);
             this.btnObrisi.Name = "btnObrisi";
             this.btnObrisi.Size = new System.Drawing.Size(80, 31);
             this.btnObrisi.TabIndex = 20;
@@ -181,7 +180,7 @@
             // btnSveska
             // 
             this.btnSveska.Location = new System.Drawing.Point(16, 15);
-            this.btnSveska.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSveska.Margin = new System.Windows.Forms.Padding(2);
             this.btnSveska.Name = "btnSveska";
             this.btnSveska.Size = new System.Drawing.Size(80, 29);
             this.btnSveska.TabIndex = 19;
@@ -193,7 +192,7 @@
             // 
             this.pnlSveska.Enabled = false;
             this.pnlSveska.Location = new System.Drawing.Point(457, 195);
-            this.pnlSveska.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlSveska.Margin = new System.Windows.Forms.Padding(2);
             this.pnlSveska.Name = "pnlSveska";
             this.pnlSveska.Size = new System.Drawing.Size(51, 35);
             this.pnlSveska.TabIndex = 18;
@@ -225,10 +224,6 @@
             this.lblPitanje.Size = new System.Drawing.Size(38, 13);
             this.lblPitanje.TabIndex = 32;
             this.lblPitanje.Text = "pitanje";
-            // 
-            // tmrSkok
-            // 
-            this.tmrSkok.Tick += new System.EventHandler(this.tmrSkok_Tick);
             // 
             // frmSlobodanNivo
             // 
@@ -283,6 +278,5 @@
         private System.Windows.Forms.TextBox tbxOdg1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblPitanje;
-        private System.Windows.Forms.Timer tmrSkok;
     }
 }
