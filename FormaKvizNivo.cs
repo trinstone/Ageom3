@@ -21,7 +21,10 @@ namespace AgeomProj
         DateTime pocetakZadatka;
         public bool krajZadatka = false;
         KvizZadatak trenutni;
-        Stopwatch stoperica=new Stopwatch();    
+        private Label lblKraj;
+        private Button btnNazad;
+        private Button btnPonovo;
+        Stopwatch stoperica =new Stopwatch();    
         private void frmKvizNivo_Load(object sender, EventArgs e)
         {
             RadnaPovrsina.IzracunajPolja(this, out gornjiLevi, out centar, out duzinaStr);
@@ -41,6 +44,8 @@ namespace AgeomProj
         }
         public void UcitajZadatak()
         {
+            
+            ObrisiBoje();
             trenutni = nivo.Zadaci[indexZadatka];
             (int index, string[] odgovori) = trenutni.PromesajOdgovore();
             indexTacnog = index;
@@ -85,6 +90,21 @@ namespace AgeomProj
             lblOdg4.Left = levaStrana;
             lblOdg4.Top = lblOdg3.Bottom + duzinaStr / 20;
             lblOdg4.Font = new Font("Georgia", (int)(duzinaStr / 30));
+            lblKraj.Font = new Font("Georgia", duzinaStr / 30);
+            btnPonovo.Font = new Font("Georgia", duzinaStr / 45);
+            btnNazad.Font = new Font("Georgia", duzinaStr / 45);
+            btnNazad.Height = duzinaStr / 10;
+            btnNazad.Width = duzinaStr / 5;
+            btnNazad.Top = gornjiLevi.Y + duzinaStr / 2;
+            btnNazad.Left = gornjiLevi.X + duzinaStr / 20 * 8;
+            btnPonovo.Height = duzinaStr / 10;
+            btnPonovo.Width = duzinaStr / 5;
+            btnPonovo.Top = gornjiLevi.Y + duzinaStr / 20 * 13;
+            btnPonovo.Left = gornjiLevi.X + duzinaStr / 20 * 8;
+            lblKraj.Top = gornjiLevi.Y + duzinaStr / 20 * 8;
+            lblTajmer.Left = levaStrana;
+            lblTajmer.Top = lblOdg4.Bottom + duzinaStr / 20;
+            lblTajmer.Font = new Font("Georgia", (int)(duzinaStr / 30));
         }
         public void OkviriOdgovora(PaintEventArgs e)
         {
@@ -134,21 +154,24 @@ namespace AgeomProj
             {
                 if (indexZadatka < 3)
                 {
-                    ObrisiBoje();
+
                     indexZadatka++;
                     UcitajZadatak();
                     pocetakZadatka = DateTime.Now;                   
                 }
                 else
                 {
+                    ObrisiBoje();
                     tmrKviz.Stop();
-                    MessageBox.Show("Cestitamo! Uspesno ste presli nivo.");
+                    lblKraj.Text = "Cestitamo! Pobedili ste :)";
+                    Kraj(false);
                 }
             }
             else
             {
-                MessageBox.Show("Netacan odgovor! Kraj nivoa.");
-               this.Close();
+                tmrKviz.Stop();
+                lblKraj.Text = "Netacan odgovor! Izgubili ste :(";
+                Kraj(true);
             }
         }
 
@@ -159,21 +182,23 @@ namespace AgeomProj
             {
                 if (indexZadatka < 3)
                 {                    
-                    ObrisiBoje();
                     indexZadatka++;
                     UcitajZadatak();
                     pocetakZadatka = DateTime.Now;
                 }
                 else
                 {
+                    ObrisiBoje();
                     tmrKviz.Stop();
-                    MessageBox.Show("Cestitamo! Uspesno ste presli nivo.");
+                    lblKraj.Text = "Cestitamo! Pobedili ste :)";
+                    Kraj(false);
                 }
             }
             else
             {
-                MessageBox.Show("Netacan odgovor! Kraj nivoa.");
-                this.Close();
+                tmrKviz.Stop();
+                lblKraj.Text = "Netacan odgovor! Izgubili ste :(";
+                Kraj(true);
             }
         }
 
@@ -184,21 +209,23 @@ namespace AgeomProj
             {
                 if (indexZadatka < 3)
                 {                    
-                    ObrisiBoje();
                     indexZadatka++;
                     UcitajZadatak();
                     pocetakZadatka = DateTime.Now;                       
                 }
                 else
                 {
+                    ObrisiBoje();
                     tmrKviz.Stop();
-                    MessageBox.Show("Cestitamo! Uspesno ste presli nivo.");
+                    lblKraj.Text = "Cestitamo! Pobedili ste :)";
+                    Kraj(false);
                 }
             }
             else
             {
-                MessageBox.Show("Netacan odgovor! Kraj nivoa.");
-                this.Close();
+                tmrKviz.Stop();
+                lblKraj.Text = "Netacan odgovor! Izgubili ste :(";
+                Kraj(true);
             }
         }
 
@@ -208,22 +235,25 @@ namespace AgeomProj
             if (indexTacnog == 3)
             {
                 if (indexZadatka < 3)
-                {                   
-                    ObrisiBoje();
+                {             
+                    
                     indexZadatka++;
                     UcitajZadatak();
                     pocetakZadatka = DateTime.Now;
                 }
                 else
                 {
+                    ObrisiBoje();
                     tmrKviz.Stop();
-                    MessageBox.Show("Cestitamo! Uspesno ste presli nivo.");
+                    lblKraj.Text = "Cestitamo! Pobedili ste :)";
+                    Kraj(false);
                 }
             }
             else
             {
-                MessageBox.Show("Netacan odgovor! Kraj nivoa.");
-                this.Close();
+                tmrKviz.Stop();
+                lblKraj.Text = "Netacan odgovor! Izgubili ste :(";
+                Kraj(true);
             }
         }
 
@@ -235,7 +265,48 @@ namespace AgeomProj
                 tmrKviz.Stop();
 
             }
-            else lblTajmer.Text = $"{ostalo.Minutes}:{ostalo.Seconds}";
+            else
+            {
+                if (ostalo.Seconds > 9)
+                    lblTajmer.Text = $"{ostalo.Minutes}:{ostalo.Seconds}";
+                else
+                    lblTajmer.Text = $"{ostalo.Minutes}:0{ostalo.Seconds}";
+            }
+        }
+        private void Kraj(bool izgubio)
+        {
+            lblOdg1.Enabled = false;
+            lblOdg2.Enabled = false;
+            lblOdg3.Enabled = false;
+            lblOdg4.Enabled = false;
+            lblKraj.Visible = true;
+            lblKraj.Left = gornjiLevi.X + duzinaStr / 2 - lblKraj.Width / 2;
+            btnNazad.Visible = true;
+            btnNazad.Enabled = true;
+            btnPonovo.Visible = izgubio;
+            btnPonovo.Enabled = izgubio;
+        }
+        
+        private void btnNazad_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnPonovo_Click(object sender, EventArgs e)
+        {
+            lblKraj.Visible = false;
+            btnNazad.Visible = false;
+            btnNazad.Enabled = false;
+            btnPonovo.Visible = false;
+            btnPonovo.Enabled = false;
+            lblOdg1.Enabled = true;
+            lblOdg2.Enabled = true;
+            lblOdg3.Enabled = true;
+            lblOdg4.Enabled = true;
+            indexZadatka = 0;
+            this.Refresh();
+            pocetakZadatka = DateTime.Now;
+            tmrKviz.Start();
         }
     }
 }

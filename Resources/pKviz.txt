@@ -1,4 +1,4 @@
-Kako glasi formula za rastojanje 2 tačke?!00:45!|AB|=√(xa-xb)²+(ya-yb)²!|AB|=√(xa-xb)²*(ya-yb)²!|AB|=√(xa-xb)+(ya-yb)!|AB|=√(xa+xb)²+(ya+yb)²
-Kako glasi formula za pravu koja prolazi kroz dve tacke?!00:45!y - y1= (y2 - y1)/(x2 - x1) * (x - x1)!x - x1=(y2 - y1)/(x2 - x1) * (y - y1)!y - y1= (y1- y2)/(x1 - x2) * (x - x1)!x - x1=(x2 - x1)/(y2 - y1) * (y - y1)
-Kako glasi formula za ugao pod kojim se seku dve prave?!00:45!α = arctan(∣ (k1−k2) / (1 + k1*k2) ∣)!α = arcsin(∣ (k1−k2) / (1 + k1*k2) ∣)!α = arctan(∣ (k1+k2) / (1 + k1*k2) ∣)!α = arcsin(∣ (k1−k2) / (k1*k2) ∣)
-Kako glasi formula za rastojanje tačke (x1,y1) od prave ax+ by +c = 0?!00:45! d = |A*x1 + B*y1 + C| / √(A² + B²)!d = |A*x + B*y + C| / √(A² + B²)!d = |A*x1 + B*y1 + C| / √(A+ B)!d = A*x1 + B*y1+ C / √(A² + B²)!
+Kako glasi formula za rastojanje 2 tačke?!00:00:45!|AB|=√(xa-xb)²+(ya-yb)²!|AB|=√(xa-xb)²*(ya-yb)²!|AB|=√(xa-xb)+(ya-yb)!|AB|=√(xa+xb)²+(ya+yb)²
+Kako glasi formula za pravu koja prolazi kroz dve tacke?!00:00:45!y - y1= (y2 - y1)/(x2 - x1) * (x - x1)!x - x1=(y2 - y1)/(x2 - x1) * (y - y1)!y - y1= (y1- y2)/(x1 - x2) * (x - x1)!x - x1=(x2 - x1)/(y2 - y1) * (y - y1)
+Kako glasi formula za ugao pod kojim se seku dve prave?!00:00:45!α = arctan(∣ (k1−k2) / (1 + k1*k2) ∣)!α = arcsin(∣ (k1−k2) / (1 + k1*k2) ∣)!α = arctan(∣ (k1+k2) / (1 + k1*k2) ∣)!α = arcsin(∣ (k1−k2) / (k1*k2) ∣)
+Kako glasi formula za rastojanje tačke (x1,y1) od prave ax+ by +c = 0?!00:00:45! d = |A*x1 + B*y1 + C| / √(A² + B²)!d = |A*x + B*y + C| / √(A² + B²)!d = |A*x1 + B*y1 + C| / √(A+ B)!d = A*x1 + B*y1+ C / √(A² + B²)!

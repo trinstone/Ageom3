@@ -83,6 +83,28 @@ namespace AgeomProj
                                     elementi.Add(k);
                                     break;
                                 }
+                            case 5:
+                                {
+                                    temp = infoZad[i + 1].Split(';');
+                                    if (float.Parse(temp[1]) < 0)
+                                    {
+                                        Hiperbola k = new Hiperbola(Convert.ToSingle(Math.Sqrt(float.Parse(temp[0]))), Convert.ToSingle(Math.Sqrt(float.Parse(temp[1]))));
+                                        elementi.Add(k);
+                                    }
+                                    else
+                                    {
+                                        Elipsa k = new Elipsa(new Point(0,0),Convert.ToSingle(Math.Sqrt(float.Parse(temp[0]))), Convert.ToSingle(Math.Sqrt(float.Parse(temp[1]))));
+                                        elementi.Add(k);
+                                    }
+                                    break;
+                                }
+                            case 6:
+                                {
+                                    temp = infoZad[i + 1].Split(';');
+                                    Parabola p = new Parabola(float.Parse(temp[0]));
+                                    elementi.Add(p);
+                                    break;
+                                }
                         }
                     }
                     SlobodanZadatak a = new SlobodanZadatak(infoZad[0], TimeSpan.Parse("00:" + infoZad[1]), infoZad[2], (FormaResenja)(Convert.ToInt32(infoZad[3])), infoZad[4],pocetnaPoz,krajnjaPoz,elementi.ToArray());
