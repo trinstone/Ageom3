@@ -1,0 +1,4 @@
+Data je hiperbola x²/9 - y²/16 = 1, nađi pozitivnu koordinatu fokusa.!02:00!Koordinata fokusa je(c,0),c²=a²+b².!1!5;0!6;0!9;0!5!9;-16
+Izračunati površinu trougla određenog asimptotama hiperbole x²/4 - y²/9 = 1 i pravom 9x + 2y - 24 = 0.!03:30!Formula za površinu trougla pomoću datih tačaka: P=1/2 * ∣ x1 * (y2−y3) + x2 * (y3−y1) + x3 * (y1−y2) ∣!0!12!0;0!5;0!5!4;-9!3!9;2;-24
+Napisati jednačinu elipse ako je velika osa 2a = 6, a numerički ekscentricitet e = 1/2.!02:20!Formula za numerički ekscentritet:e = √(a²-b²)/a!5!9;6.75!-3;0!0;3!0!3!0!0.5
+Rastojanja žiže elipse od krajeva velike ose iznose 7 i 1. Naći jednačinu ove elipse.!03:30!Rešenje sistema jednačina a + c = 7 i a - c = 1!5!16;7!4;0!6;0!0!7!0!1
