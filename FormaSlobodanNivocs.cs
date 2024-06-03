@@ -37,6 +37,7 @@ namespace AgeomProj
         string odg1;
         string odg2;
         string odg3;
+        bool kraj;
         //U OVU STATICKU PROMENLJIVU SE CUVA NAZIV NIVOA KOJI TREBA DA SE UCITA
         //TREBA ONA DA SE AZURIRA PRE NEGO STO SE PRITISNE DUGME ZA ULAZAK U NIVO
         public static string nazivFajlaNivoa;
@@ -80,9 +81,6 @@ namespace AgeomProj
             tbxOdg1.Width = duzinaStr / 20 * 3;
             tbxOdg2.Width = duzinaStr / 20 * 3;
             tbxOdg3.Width = duzinaStr / 20 * 3;
-            lblOdg1.Left = 5;
-            lblOdg2.Left = 5;
-            lblOdg3.Left = 5;
             tbxOdg3.Top = btnPosalji.Top - duzinaStr / 20 - 5;
             tbxOdg2.Top = tbxOdg3.Top - duzinaStr / 20 - 5;
             tbxOdg1.Top = tbxOdg2.Top - duzinaStr / 20 - 5;
@@ -115,7 +113,10 @@ namespace AgeomProj
             lblOdg2.Font = new Font("Georgia", duzinaStr / 45);
             lblOdg3.Font = new Font("Georgia", duzinaStr / 45);
             lblPitanje.Font = new Font("Georgia", duzinaStr / 45);
-            lblTimer.Font = new Font("Georgia", duzinaStr / 30);
+            lblTimer.Font = new Font("Georgia", duzinaStr / 30); 
+            lblKraj.Font = new Font("Georgia", duzinaStr / 30);
+            btnPonovo.Font = new Font("Georgia", duzinaStr / 45);
+            btnNazad.Font = new Font("Georgia", duzinaStr / 45);
             if (sirinaForme > visinaForme)
             {
                 if (gornjiLevi.X > duzinaStr / 20 * 3 + 10)
@@ -123,9 +124,6 @@ namespace AgeomProj
                     tbxOdg1.Left = gornjiLevi.X - duzinaStr / 20 * 3 - 5;
                     tbxOdg2.Left = gornjiLevi.X - duzinaStr / 20 * 3 - 5;
                     tbxOdg3.Left = gornjiLevi.X - duzinaStr / 20 * 3 - 5;
-                    lblOdg1.Left = tbxOdg1.Left - lblOdg1.Width - 5;
-                    lblOdg2.Left = tbxOdg2.Left - lblOdg2.Width - 5;
-                    lblOdg3.Left = tbxOdg3.Left - lblOdg3.Width - 5;
                     btnSveska.Width = gornjiLevi.X - 10;
                     btnPomoc.Width = gornjiLevi.X - 10;
                     btnPosalji.Width = gornjiLevi.X - 10;
@@ -139,6 +137,9 @@ namespace AgeomProj
                     btnPomoc.Width = duzinaStr / 20 * 3;
                     btnSveska.Width = duzinaStr / 20 * 3;
                 }
+                lblOdg1.Left = tbxOdg1.Left - lblOdg1.Width - 15;
+                lblOdg2.Left = tbxOdg2.Left - lblOdg2.Width - 15;
+                lblOdg3.Left = tbxOdg3.Left - lblOdg3.Width - 15;
             }
             else
             {
@@ -148,15 +149,27 @@ namespace AgeomProj
                 btnSveska.Width = duzinaStr / 4;
                 btnPomoc.Width = duzinaStr / 4;
                 btnPosalji.Width = duzinaStr / 4;
+                lblOdg1.Left = 0;
+                lblOdg2.Left = 0;
+                lblOdg3.Left = 0;
             }
             btnObrisi.Height = btnSveska.Height;
             btnObrisi.Width = btnSveska.Width;
             btnObrisi.Top = btnPosalji.Top;
             btnObrisi.Left = btnPosalji.Left;
+            btnNazad.Height = duzinaStr / 10;
+            btnNazad.Width = duzinaStr / 5;
+            btnNazad.Top = gornjiLevi.Y + duzinaStr / 2;
+            btnNazad.Left = gornjiLevi.X + duzinaStr / 20 * 8;
+            btnPonovo.Height = duzinaStr / 10;
+            btnPonovo.Width = duzinaStr / 5;
+            btnPonovo.Top = gornjiLevi.Y + duzinaStr / 20 * 13;
+            btnPonovo.Left = gornjiLevi.X + duzinaStr / 20 * 8;
             lblPitanje.Top = 5;
             lblPitanje.Left = btnSveska.Right + 5;
             lblPitanje.Width = pbxSrce3.Left - 5 - lblPitanje.Left;
             lblPitanje.Height = duzinaStr / 20 * 2;
+            lblKraj.Top = gornjiLevi.Y + duzinaStr / 20 * 8;
         }
         private void frmSlobodanNivo_SizeChanged(object sender, EventArgs e)
         {
@@ -279,17 +292,35 @@ namespace AgeomProj
         {
             pnlSveska.Refresh();
         }
+        private void Kraj(bool izgubio)
+        {
+            kraj = true;
+            btnSveska.Enabled = false;
+            btnPosalji.Enabled = false;
+            btnPomoc.Enabled = false;
+            tbxOdg1.Enabled = false;
+            tbxOdg2.Enabled = false;
+            tbxOdg3.Enabled = false;
+            btnObrisi.Enabled = false;
+            lblKraj.Visible = true;
+            lblKraj.Left = gornjiLevi.X + duzinaStr / 2 - lblKraj.Width / 2;
+            btnNazad.Visible = true;
+            btnNazad.Enabled = true;
+            btnPonovo.Visible = izgubio;
+            btnPonovo.Enabled = izgubio;
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             TimeSpan ostalo = nivo.Zadaci[indexZadatka].VremeZadatak - (DateTime.Now - pocetakZadatka);
             if (ostalo <= new TimeSpan(0, 0, 0))
             {
                 timer1.Stop();
-                //izgubio
+                lblKraj.Text = "Isteklo je vreme! Izgubili ste :(";
+                Kraj(true);
             }
             else 
             {
-                if(ostalo.Seconds>9)
+                if (ostalo.Seconds > 9) 
                    lblTimer.Text = $"{ostalo.Minutes}:{ostalo.Seconds}";
                 else
                     lblTimer.Text = $"{ostalo.Minutes}:0{ostalo.Seconds}";
@@ -316,7 +347,7 @@ namespace AgeomProj
                 case FormaResenja.broj:
                 case FormaResenja.tekst:
                     {
-                        if (!otvorenaSveska)
+                        if (!otvorenaSveska && !kraj)
                         {
                             BrojOdgovora(false, false);
                             lblOdg1.Text = null;
@@ -327,7 +358,7 @@ namespace AgeomProj
                     }
                 case FormaResenja.tacka:
                     {
-                        if (!otvorenaSveska)
+                        if (!otvorenaSveska && !kraj)
                         {
                             BrojOdgovora(false, true);
                             lblOdg1.Text = null;
@@ -338,7 +369,7 @@ namespace AgeomProj
                     }
                 case FormaResenja.pravaEks:
                     {
-                        if (!otvorenaSveska)
+                        if (!otvorenaSveska && !kraj)
                         {
                             BrojOdgovora(false, true);
                             lblOdg1.Text = null;
@@ -349,7 +380,7 @@ namespace AgeomProj
                     }
                 case FormaResenja.pravaImp:
                     {
-                        if (!otvorenaSveska)
+                        if (!otvorenaSveska && !kraj)
                         {
                             BrojOdgovora(true, true);
                             lblOdg1.Text = "A:";
@@ -360,7 +391,7 @@ namespace AgeomProj
                     }
                 case FormaResenja.krug:
                     {
-                        if (!otvorenaSveska)
+                        if (!otvorenaSveska && !kraj)
                         {
                             BrojOdgovora(true, true);
                             lblOdg1.Text = "P:";
@@ -371,7 +402,7 @@ namespace AgeomProj
                     }
                 case FormaResenja.elipsaHiperbola:
                     {
-                        if (!otvorenaSveska)
+                        if (!otvorenaSveska && !kraj)
                         {
                             BrojOdgovora(false, true);
                             lblOdg1.Text = null;
@@ -382,7 +413,7 @@ namespace AgeomProj
                     }
                 case FormaResenja.parabola:
                     {
-                        if (!otvorenaSveska)
+                        if (!otvorenaSveska && !kraj)
                         {
                             BrojOdgovora(false, false);
                             lblOdg1.Text = null;
@@ -401,11 +432,11 @@ namespace AgeomProj
                 odg2 == nivo.Zadaci[indexZadatka].parametri[1] &&
                 odg3 == nivo.Zadaci[indexZadatka].parametri[2])
             {
-                //transliranje
                 if (indexZadatka >= 3)
                 {
                     timer1.Stop();
-                    //pobeda
+                    lblKraj.Text = "Cestitamo! Pobedili ste :)";
+                    Kraj(false);
                 }
                 else
                 {
@@ -433,7 +464,8 @@ namespace AgeomProj
                 {
                     pbxSrce1.Visible = false;
                     timer1.Stop();
-                    //izgubio
+                    lblKraj.Text = "Nemate vise zivota! Izgubili ste :(";
+                    Kraj(true);
                 }
             }
         }
@@ -458,6 +490,42 @@ namespace AgeomProj
             pocetakZadatka = pocetakZadatka - new TimeSpan(0, 0, 20);
             MessageBox.Show(nivo.Zadaci[indexZadatka].Hint, "POMOC");
         }
+        private void btnNazad_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        private void btnPonovo_Click(object sender, EventArgs e)
+        {
+            kraj = false;
+            btnSveska.Enabled = true;
+            btnSveska.Visible = true;
+            btnPosalji.Enabled = true;
+            btnPosalji.Visible = true;
+            btnPomoc.Enabled = true;
+            btnPomoc.Visible = true;
+            tbxOdg1.Enabled = true;
+            tbxOdg2.Enabled = true;
+            tbxOdg3.Enabled = true;
+            btnObrisi.Enabled = false;
+            btnObrisi.Visible = false;
+            lblKraj.Visible = false;
+            btnNazad.Visible = false;
+            btnNazad.Enabled = false;
+            btnPonovo.Visible = false;
+            btnPonovo.Enabled = false;
+            indexZadatka = 0;
+            this.Refresh();
+            VeLicinaLokacijaSvega();
+            nivo.TrenutniBrojSrca = 3;
+            pbxSrce1.Visible = true;
+            pbxSrce2.Visible = true;
+            pbxSrce3.Visible = true;
+            pocetakZadatka = DateTime.Now;
+            timer1.Start();
+            tbxOdg1.Text = null;
+            tbxOdg2.Text = null;
+            tbxOdg3.Text = null;
+        }
     }
 }

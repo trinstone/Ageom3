@@ -46,6 +46,9 @@
             this.tbxOdg1 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblPitanje = new System.Windows.Forms.Label();
+            this.btnNazad = new System.Windows.Forms.Button();
+            this.btnPonovo = new System.Windows.Forms.Button();
+            this.lblKraj = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSrce3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSrce2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSrce1)).BeginInit();
@@ -201,7 +204,7 @@
             // tbxOdg1
             // 
             this.tbxOdg1.Location = new System.Drawing.Point(101, 423);
-            this.tbxOdg1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxOdg1.Margin = new System.Windows.Forms.Padding(4);
             this.tbxOdg1.Name = "tbxOdg1";
             this.tbxOdg1.Size = new System.Drawing.Size(100, 22);
             this.tbxOdg1.TabIndex = 17;
@@ -221,11 +224,48 @@
             this.lblPitanje.Text = "pitanje";
             this.lblPitanje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnNazad
+            // 
+            this.btnNazad.Enabled = false;
+            this.btnNazad.Location = new System.Drawing.Point(496, 173);
+            this.btnNazad.Name = "btnNazad";
+            this.btnNazad.Size = new System.Drawing.Size(75, 23);
+            this.btnNazad.TabIndex = 33;
+            this.btnNazad.Text = "NAZAD";
+            this.btnNazad.UseVisualStyleBackColor = true;
+            this.btnNazad.Visible = false;
+            this.btnNazad.Click += new System.EventHandler(this.btnNazad_Click);
+            // 
+            // btnPonovo
+            // 
+            this.btnPonovo.Enabled = false;
+            this.btnPonovo.Location = new System.Drawing.Point(502, 228);
+            this.btnPonovo.Name = "btnPonovo";
+            this.btnPonovo.Size = new System.Drawing.Size(75, 23);
+            this.btnPonovo.TabIndex = 34;
+            this.btnPonovo.Text = "PONOVO";
+            this.btnPonovo.UseVisualStyleBackColor = true;
+            this.btnPonovo.Visible = false;
+            this.btnPonovo.Click += new System.EventHandler(this.btnPonovo_Click);
+            // 
+            // lblKraj
+            // 
+            this.lblKraj.AutoSize = true;
+            this.lblKraj.Location = new System.Drawing.Point(493, 103);
+            this.lblKraj.Name = "lblKraj";
+            this.lblKraj.Size = new System.Drawing.Size(44, 16);
+            this.lblKraj.TabIndex = 35;
+            this.lblKraj.Text = "label1";
+            this.lblKraj.Visible = false;
+            // 
             // frmSlobodanNivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.lblKraj);
+            this.Controls.Add(this.btnPonovo);
+            this.Controls.Add(this.btnNazad);
             this.Controls.Add(this.lblPitanje);
             this.Controls.Add(this.btnPosalji);
             this.Controls.Add(this.pbxSrce3);
@@ -242,7 +282,7 @@
             this.Controls.Add(this.btnSveska);
             this.Controls.Add(this.pnlSveska);
             this.Controls.Add(this.tbxOdg1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmSlobodanNivo";
             this.Text = "FormaSlobodanNivocs";
             this.Load += new System.EventHandler(this.frmSlobodanNivo_Load);
@@ -275,5 +315,8 @@
         private System.Windows.Forms.TextBox tbxOdg1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblPitanje;
+        private System.Windows.Forms.Button btnNazad;
+        private System.Windows.Forms.Button btnPonovo;
+        private System.Windows.Forms.Label lblKraj;
     }
 }
