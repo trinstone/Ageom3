@@ -1,5 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AgeomProj
@@ -11,13 +19,6 @@ namespace AgeomProj
             InitializeComponent();
             this.nivo = nivo;
             indexZadatka = 0;
-            brojFaza = 40;
-            ugao = 0;
-            dosaoDoVrhunca = false;
-            this.tajmer = new Timer();
-            this.tajmer.Interval = 20;
-            this.tajmer.Tick += new EventHandler(this.tmrSkok_Tick);
-
         }
         public Point gornjiLevi;
         public int duzinaStr;
@@ -36,13 +37,6 @@ namespace AgeomProj
         string odg1;
         string odg2;
         string odg3;
-        Timer tajmer;
-        int trenutniFrejm;
-        int brojFaza;
-        double ugao;
-        bool dosaoDoVrhunca;
-        bool greska = false;
-        bool translacija = true;    
         //U OVU STATICKU PROMENLJIVU SE CUVA NAZIV NIVOA KOJI TREBA DA SE UCITA
         //TREBA ONA DA SE AZURIRA PRE NEGO STO SE PRITISNE DUGME ZA ULAZAK U NIVO
         public static string nazivFajlaNivoa;
@@ -51,6 +45,7 @@ namespace AgeomProj
             RadnaPovrsina.IzracunajPolja(this, out gornjiLevi, out centar, out duzinaStr);
             visinaForme = this.Height;
             sirinaForme = this.Width;
+            VeLicinaLokacijaSvega();
             pocetakZadatka = DateTime.Now;
             timer1.Start();
         }
@@ -60,8 +55,6 @@ namespace AgeomProj
             RadnaPovrsina.ucitajPozadinu(e.Graphics, this);
             pozadina = e.Graphics;
             UcitajZadatak();
-            VeLicinaLokacijaSvega();
-            CrtajCoveka(e.Graphics, trenutniFrejm);
         }
         public void VeLicinaLokacijaSvega()
         {
@@ -90,9 +83,9 @@ namespace AgeomProj
             lblOdg1.Left = 5;
             lblOdg2.Left = 5;
             lblOdg3.Left = 5;
-            tbxOdg3.Top = btnPosalji.Top - duzinaStr / 20 - 5;
-            tbxOdg2.Top = tbxOdg3.Top - duzinaStr / 20 - 5;
-            tbxOdg1.Top = tbxOdg2.Top - duzinaStr / 20 - 5;
+            tbxOdg1.Top = btnPosalji.Top - duzinaStr / 20 - 5;
+            tbxOdg2.Top = tbxOdg1.Top - duzinaStr / 20 - 5;
+            tbxOdg3.Top = tbxOdg2.Top - duzinaStr / 20 - 5;
             lblOdg1.Top = tbxOdg1.Top;
             lblOdg1.Width = tbxOdg1.Width;
             lblOdg2.Top = tbxOdg2.Top;
@@ -105,7 +98,7 @@ namespace AgeomProj
             pbxSrce2.Height = (int)1.5 * duzinaStr / 20;
             pbxSrce3.Width = (int)1.5 * duzinaStr / 20;
             pbxSrce3.Height = (int)1.5 * duzinaStr / 20;
-            pbxSrce1.Left = sirinaForme - 25 - pbxSrce1.Width;
+            pbxSrce1.Left = sirinaForme - 5 - pbxSrce1.Width;
             pbxSrce2.Left = pbxSrce1.Left - 5 - pbxSrce2.Width;
             pbxSrce3.Left = pbxSrce2.Left - 5 - pbxSrce3.Width;
             pbxSrce1.Top = 5;
@@ -122,7 +115,7 @@ namespace AgeomProj
             lblOdg2.Font = new Font("Georgia", duzinaStr / 45);
             lblOdg3.Font = new Font("Georgia", duzinaStr / 45);
             lblPitanje.Font = new Font("Georgia", duzinaStr / 45);
-            lblTimer.Font = new Font("Georgia", duzinaStr / 30);
+            lblTimer.Font = new Font("Georgia", duzinaStr / 45);
             if (sirinaForme > visinaForme)
             {
                 if (gornjiLevi.X > duzinaStr / 20 * 3 + 10)
@@ -160,10 +153,6 @@ namespace AgeomProj
             btnObrisi.Width = btnSveska.Width;
             btnObrisi.Top = btnPosalji.Top;
             btnObrisi.Left = btnPosalji.Left;
-            lblPitanje.Top = 5;
-            lblPitanje.Left = btnSveska.Right + 5;
-            lblPitanje.Width = pbxSrce3.Left - 5 - lblPitanje.Left;
-            lblPitanje.Height = duzinaStr / 20 * 3;
         }
         private void frmSlobodanNivo_SizeChanged(object sender, EventArgs e)
         {
@@ -292,7 +281,7 @@ namespace AgeomProj
             if (ostalo <= new TimeSpan(0, 0, 0))
             {
                 timer1.Stop();
-                tmrSkok.Start();
+                //izgubio
             }
             else lblTimer.Text = $"{ostalo.Minutes}:{ostalo.Seconds}";
         }
@@ -380,12 +369,11 @@ namespace AgeomProj
                 odg2 == nivo.Zadaci[indexZadatka].parametri[1] &&
                 odg3 == nivo.Zadaci[indexZadatka].parametri[2])
             {
-                translacija=true;
-                CrtajCoveka(pozadina, trenutniFrejm);
+                //transliranje
                 if (indexZadatka >= 4)
                 {
                     timer1.Stop();
-                    tmrSkok.Start();
+                    //pobeda
                 }
                 else
                 {
@@ -395,9 +383,6 @@ namespace AgeomProj
                     tbxOdg2.Text = null;
                     tbxOdg1.Text = null;
                     tbxOdg3.Text = null;
-                    tmrSkok.Stop();
-                    greska=false;
-                    translacija = false;
                 }
             }
             else
@@ -415,7 +400,7 @@ namespace AgeomProj
                 {
                     pbxSrce1.Visible = false;
                     timer1.Stop();
-                    greska=true;
+                    //izgubio
                 }
             }
         }
@@ -440,79 +425,5 @@ namespace AgeomProj
             MessageBox.Show(nivo.Zadaci[indexZadatka].Hint, "POMOC");
         }
 
-        private void tmrSkok_Tick(object sender, EventArgs e)
-        {
-            trenutniFrejm++;
-            if (trenutniFrejm > brojFaza)
-            {
-                tmrSkok.Stop();
-                trenutniFrejm = brojFaza;
-
-                if (!translacija)
-                {
-                    trenutniFrejm = 0;
-                    ugao = 0;
-                    dosaoDoVrhunca = false;
-                    translacija = false;
-                }
-            }
-            else
-            {
-                ugao += 2 * Math.PI / brojFaza;
-                if (greska)
-                {
-                    if (!dosaoDoVrhunca)
-                    {
-                        if (trenutniFrejm >= brojFaza / 2)
-                        {
-                            dosaoDoVrhunca = true;
-                        }
-                    }
-                }
-            }
-            Invalidate();
-        }
-        private void CrtajCoveka(Graphics g, int frejm)
-        {
-
-            double t = (double)frejm / brojFaza;
-
-            double x, y;
-
-            if (!translacija)
-            {
-                if (dosaoDoVrhunca&&greska)
-                {
-                    x = (1 - t) * (nivo.Zadaci[indexZadatka].PocetnaPoz.X*duzinaStr/20+centar.X )+ t * (nivo.Zadaci[indexZadatka].KrajnjaPoz.X*duzinaStr/20+centar.X);
-                    y = (centar.Y-nivo.Zadaci[indexZadatka].PocetnaPoz.Y*duzinaStr/20) + 200 * (t - 0.5) * (t - 0.5) * 4 * (Math.PI * Math.PI);
-                }
-                else
-                {
-                    x = (1 - t) * (nivo.Zadaci[indexZadatka].PocetnaPoz.X*duzinaStr/20+centar.X)  + t * (nivo.Zadaci[indexZadatka].KrajnjaPoz.X * duzinaStr / 20 + centar.X);
-                    y = (1 - t) * (centar.Y-nivo.Zadaci[indexZadatka].PocetnaPoz.Y*duzinaStr/20) + t * (centar.Y-nivo.Zadaci[indexZadatka].KrajnjaPoz.Y*duzinaStr/20) - 100 * Math.Sin(Math.PI * t);
-                }
-                g.TranslateTransform((float)x, (float)y);
-                if (frejm < brojFaza)
-                {
-                    g.RotateTransform((float)(ugao * 180 / Math.PI));
-                }
-            }
-            else
-            {
-                x = (1 - t) * (nivo.Zadaci[indexZadatka].KrajnjaPoz.X*duzinaStr/20+centar.X) + t * (nivo.Zadaci[indexZadatka+1].PocetnaPoz.X*duzinaStr/20+centar.X);
-                y = (1 - t) * (centar.Y - nivo.Zadaci[indexZadatka].KrajnjaPoz.Y * duzinaStr / 20) + t * (centar.Y-nivo.Zadaci[indexZadatka+1].PocetnaPoz.Y*duzinaStr/20);
-                g.TranslateTransform((float)x, (float)y);
-
-            }
-            int visinaTelo = 20;
-            int poluprecnikGlava = 8;
-            g.FillEllipse(Brushes.Black, -poluprecnikGlava, -visinaTelo - 2 * poluprecnikGlava, 2 * poluprecnikGlava, 2 * poluprecnikGlava);
-            g.DrawLine(new Pen(Color.Black, 3), 0, -visinaTelo, 0, 0);
-            g.DrawLine(new Pen(Color.Black, 3), 0, -visinaTelo + 3, -10, -visinaTelo + 20);
-            g.DrawLine(new Pen(Color.Black, 3), 0, -visinaTelo + 3, 10, -visinaTelo + 20);
-            g.DrawLine(new Pen(Color.Black, 3), 0, 0, -10, 20);
-            g.DrawLine(new Pen(Color.Black, 3), 0, 0, 10, 20);
-            g.ResetTransform();
-        }
     }
 }

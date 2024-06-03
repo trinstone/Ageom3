@@ -119,6 +119,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="p1.txt" />
+    <None Include="Resources\ehKviz.txt" />
+    <None Include="Resources\k1.txt" />
+    <None Include="Resources\k2.txt" />
+    <None Include="Resources\p3.txt" />
+    <None Include="Resources\kKviz.txt" />
+    <None Include="Resources\paKviz.txt" />
+    <None Include="Resources\pKviz.txt" />
+    <None Include="Resources\p2.txt" />
+    <None Include="Resources\pa1.txt" />
     <None Include="Resources\Heart_corazón.svg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -61,12 +61,113 @@ namespace AgeomProj.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Opšta jednačina elipse je:!00:30!x²/a² + y²/b² = 1!x²/a² + y²/b² = 1!x²/a² - y²/b² = 1!x²/r² + y²/r² = 1!x²/r² - y²/r² = 1
+        ///Koja je formula za uslov dodira elipse i prave(y=kx+n)?!00:40!a²k²+b²=n²!a²k²-b²=n²!a²b²+k²=n²!a²b²-k²=n²
+        ///Opšta jednačina hiperbole je:!00:30!x²/a² - y²/b² = 1!x²/a² + y²/b² = 1!x²/a² - y²/b² = 0!x²/a² + y²/b² = 0
+        ///Koja je formula za tangentu hiperbole ako znamo tačku dodira(x1,y1)?!00:45!x*x1/a² - y*y1/b²=1!x*x1/a² + y*y1/b²=1!x*x1/(a²+b²) - y*y1/(a²+b²)=1!x*x1/(a²+b²)-y*y1 /(a²+b²)= [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ehKviz {
+            get {
+                return ResourceManager.GetString("ehKviz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Heart_corazón_svg {
             get {
                 object obj = ResourceManager.GetObject("Heart_corazón.svg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saberi koordinate centra i poluprečnik kruga čija je jednačina x² + y² - 4y - 21 = 0.!01:40!Formula za krug: (x-p)²+(y-q)²=r², koordinate centra su (p,q)!0!7!-4;0!4;0!4!0;2;25
+        ///Odrediti jednačinu kružne linije kojoj je duž AB prečnik, gde je A(1, 1), B(5, 3).!02:00!Formula za sredinu duži: S((xa+xb)/2, (ya+yb)/2), formula za krug: (x-p)²+(y-q)²=r²!4!3;2;5!1;1!5;3!1!A;1;1!1!B;5;3
+        ///Odrediti jednačinu zajedničke tetive krugova x² + y² = 10 i x² + y² - 6x - 6y + 2 =0.!02:40!Formula za jednačinu prave kroz dve t [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string k1 {
+            get {
+                return ResourceManager.GetString("k1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Naći jednačinu tangente kruga k koja prolazi kroz VI kvadrant koordinatnog sistema i paralelna pravoj l: 2x - y + 1 =0, ako je k: x² + y² = 5.!03:30!Kod paralelnih prava važi da je k1=k2!3!2;-1;-5!-2.5;0!0;5!3!2;-1;1!4!0;0;5
+        ///Iz tačke P (2, -3) konstruisane su tangente kruga (x - 1)²+ (y + 5)² = 4. Naći jednačinu tetive koja sadrži dodirne tačke.!04:00!Naći presečne tačke tangenti i kruga pa iskoristiti formulu za jednačinu prave kroz dve tačke: y - y1= y2 - y1/x2 - x1 * (x - x1)!3!1;2;5!-5;0!2;-3!1!P;2;-3! [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string k2 {
+            get {
+                return ResourceManager.GetString("k2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Koja je formula za uslov dodira kružnice i prave(y=kx+n)?!00:45!r²*(k²+1)=(kp - q + n)²!r²*(k²+1)=(kp + q + n)²!r²*(k²+1)=(kp - q + n)!r²*(k²+1)=(kp + q + n)
+        ///Koja je formula za tangentu kruga ako znamo tačku dodira(x1,y1)?!00:45!(x-p)(x1-p)+(y-q)(y1-q)=r²!(x-p)+(x1-p)+(y-q)+(y1-q)=r²!(x-q)(x1-q)*(y-p)(y1-p)=r²!(x-p)(x1-p)+(y-q)(y1-q)=r
+        ///Opšta jednačina kružnice je:!00:30!(x-p)²+(y-q)²=r²!(x+p)²+(y+q)²=r²!(x-p)+(y-q)=r!(x-p)+(y-q)=r²
+        ///Ako je kružnica data u obliku x² + y² + dx + ey + f = 0, kolika je vredno [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string kKviz {
+            get {
+                return ResourceManager.GetString("kKviz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Izračunati površinu trougla ABC ako je A (-3, 8), B(1, 5) i C(4, 1).!04:30!Formula za rastojanje tačaka: |AB|=√(xa-xb)²+(ya-yb)², Formula za površinu trougla pomoću datih tačaka: P=1/2 * ∣ x1 * (y2−y3) + x2 * (y3−y1) + x3 * (y1−y2) ∣!0!3.5!1;5!4;1!1!A;-3;8!1!B;1;5!1!C;4;1
+        ///Naći ugao između pravih y = 3*x i y = -2*x + 5!03:00!Formula za ugao pod kojim se seku dve prave: α = arctan(∣ (k1−k2) / (1 + k1*k2) ∣)!0!45!2;0!6;0!2!3;0!2!-2;5
+        ///Odrediti rastojanje između dveju paralelnih pravih 3*x - 4*y - 10 = 0 i 6*x [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string p2 {
+            get {
+                return ResourceManager.GetString("p2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date su tačke A(-1, 0) i B (4, 0). Na pravoj 3*x - 2*y - 4 = 0 odrediti tačku C tako da površina trougla ABC bude P = 10.!04:30!Formula za površinu trougla pomoću datih tačaka: P=1/2 * ∣ x1 * (y2−y3) +x2 * (y3−y1) + x3 * (y1−y2) ∣!1!4;4!-1;0!4;4!1!A;-1;0!1!B;4;0!3!3;-2;-4!0!10
+        ///Odrediti jednačinu prave koja sadrži tačku M (8, 1) i sa pravim 7*x + 6*y - 42 = 0 i 9*x + 2*y - 14 = 0 obrazuje jednakokračni trougao.!05:20!Formula za ugao pod kojim se seku dve prave: α = arctan(∣ (k1−k2) / (1 + k1*k2) ∣)!3!1;-2;- [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string p3 {
+            get {
+                return ResourceManager.GetString("p3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Naći koordinate fokusa parabole y² = 24x.!00:40!Koordinate fokus elipse je F(p/2, 0).!1!6;0!6;0!9;0!6!12
+        ///Naći jednačinu parabole ako su dati fokus F(3,0) i direktrisa x=-3.!01:00!Opšta jednačina parabole je:y²=2px!6!6!4;0!7;0!1!F;3;0!0!-3
+        ///Prava 2x - y - 4 = 0 seče parabolu y² = 4x u tačkama A i B. Izračunati površinu trougla OAB.!03:00!Formula za površinu trougla pomoću datih tačaka: P=1/2 * ∣ x1 * (y2−y3) + x2 * (y3−y1) + x3 * (y1−y2) ∣!0!6!1;-4!7;0!3!2;-1;-4!6!2
+        ///Naći koordinate prsečne tačake (koja ima [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string pa1 {
+            get {
+                return ResourceManager.GetString("pa1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Opšta jednačina parabole je:!00:30!y²=2px!y=2px!y²=2px²!y=px
+        ///Koja je formula za uslov dodira parabole i prave(y=kx+n)?!00:40!p=2kn!p=-2kn!p=kn!p=-kn
+        ///Koja je formula za tangentu parabole ako znamo tačku dodira(x1,y1)?!00:45!y*y1=p(x+x1)!y+y1=p(x+x1)!y*y1=p(x-x1)!y-y1=p(x-x1)
+        ///Kako glasi formula parabole kojoj centar nije u koordinantnom početku već u tački(x1,y1)?!00:45!(y-y1)²=2p(x-x1)!(y-y1)=p(x-x1)!(y-y1)²=2p(x-x1)²!(y-y1)=2p(x-x1)².
+        /// </summary>
+        internal static string paKviz {
+            get {
+                return ResourceManager.GetString("paKviz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kako glasi formula za rastojanje 2 tačke?!00:45!|AB|=√(xa-xb)²+(ya-yb)²!|AB|=√(xa-xb)²*(ya-yb)²!|AB|=√(xa-xb)+(ya-yb)!|AB|=√(xa+xb)²+(ya+yb)²
+        ///Kako glasi formula za pravu koja prolazi kroz dve tacke?!00:45!y - y1= (y2 - y1)/(x2 - x1) * (x - x1)!x - x1=(y2 - y1)/(x2 - x1) * (y - y1)!y - y1= (y1- y2)/(x1 - x2) * (x - x1)!x - x1=(x2 - x1)/(y2 - y1) * (y - y1)
+        ///Kako glasi formula za ugao pod kojim se seku dve prave?!00:45!α = arctan(∣ (k1−k2) / (1 + k1*k2) ∣)!α = arcsin(∣ (k1−k2) / (1 + k1*k2) ∣)!α = arctan(∣ ( [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string pKviz {
+            get {
+                return ResourceManager.GetString("pKviz", resourceCulture);
             }
         }
     }
