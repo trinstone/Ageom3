@@ -22,12 +22,12 @@ namespace AgeomProj
         public void Nacrtaj(Graphics g, Point centar, int strKvad)
         {
             Pen olovka = new Pen(Color.Black, 3);
-            int brTacaka = 10;
+            int brTacaka = 30;
             PointF[] leveGornje = new PointF[brTacaka];
             PointF[] leveDonje = new PointF[brTacaka];
             PointF[] DesneGornje = new PointF[brTacaka];
             PointF[] DesneDonje = new PointF[brTacaka];
-            float Pomeraj = (10 - A) / brTacaka-1;
+            float Pomeraj = (10 - A) / (float)brTacaka -1;
             //y=sqrt((x*x*b*b)/(a*a) - b*b)
             for (int i = 0; i < brTacaka; i++)
             {
@@ -44,10 +44,10 @@ namespace AgeomProj
                 DesneGornje[i] = new PointF(centar.X + DesneGornje[i].X * strKvad, centar.Y - DesneGornje[i].Y * strKvad);
                 DesneDonje[i] = new PointF(centar.X + DesneDonje[i].X * strKvad, centar.Y - DesneDonje[i].Y * strKvad);
             }
-            g.DrawCurve(olovka, leveGornje, .4f);
-            g.DrawCurve(olovka, leveDonje, .4f);
-            g.DrawCurve(olovka, DesneGornje, .4f);
-            g.DrawCurve(olovka, DesneDonje, .4f);
+            g.DrawCurve(olovka, leveGornje, .7f);
+            g.DrawCurve(olovka, leveDonje, .7f);
+            g.DrawCurve(olovka, DesneGornje, .7f);
+            g.DrawCurve(olovka, DesneDonje, .7f);
         }
     }
 }
