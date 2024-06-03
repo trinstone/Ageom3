@@ -16,7 +16,6 @@ namespace AgeomProj
         public frmKvizNivo(Nivo<KvizZadatak> nivo)
         {
             InitializeComponent();
-            this.nivo = nivo;
         }
         public Point gornjiLevi;
         public int duzinaStr;
@@ -28,24 +27,20 @@ namespace AgeomProj
         public bool krajZadatka = false;
         private void frmKvizNivo_Load(object sender, EventArgs e)
         {
+            nivo.UnosIzFajla("pKviz.txt");
             RadnaPovrsina.IzracunajPolja(this, out gornjiLevi, out centar, out duzinaStr);
-            while(indexZadatka<4)//OVO NE MOZE PREKO WHILEA
-            {
-                KvizZadatak trenutni = nivo.Zadaci[indexZadatka];
-                (int index, string[]odgovori) = trenutni.PromesajOdgovore();
-                indexTacnog = index;
-                IspisiTekst(trenutni.Pitanje, odgovori);
-                pocetakZadatka = DateTime.Now;
-                tmrKviz.Start();
-                if(krajZadatka)
-                {
-                    tmrKviz.Stop();
-                    krajZadatka = false;
-                    indexZadatka++;
-                }     
-            }
+            pocetakZadatka = DateTime.Now;
+            tmrKviz.Start();
         }
-        public void IspisiTekst(string pitanje, string[]odgovori)
+        public void UcitajZadatak()
+        {
+            KvizZadatak trenutni = nivo.Zadaci[indexZadatka];
+            (int index, string[] odgovori) = trenutni.PromesajOdgovore();
+            indexTacnog = index;
+            this.Refresh();
+            IspisiTekst(trenutni.Pitanje, odgovori);
+        }
+        public void IspisiTekst(string pitanje, string[] odgovori)
         {
             lblPitanje.Text = pitanje;
             for (int i = 0; i < 4; i++)
@@ -72,13 +67,10 @@ namespace AgeomProj
             lblOdg4.Left = levaStrana;
             lblOdg4.Top = lblOdg3.Bottom + duzinaStr / 20;
             lblOdg4.Font = new Font("Georgia", (int)(duzinaStr / 30));
-            lblTajmer.Left = levaStrana;
-            lblTajmer.Top = lblOdg4.Bottom + duzinaStr / 20;
-            lblTajmer.Font = new Font("Georgia", (int)(duzinaStr / 30));
         }
         public void OkviriOdgovora(PaintEventArgs e)
         {
-            for (int i = 0; i < 4; i++) 
+            for (int i = 0; i < 4; i++)
             {
                 Label a = (Label)this.Controls.Find("lbl" + "Odg" + (i + 1), true)[0];
                 Point gornjiLevi = new Point();
@@ -87,7 +79,7 @@ namespace AgeomProj
                 int duzina = a.Width;
                 int visina = a.Height;
                 Pen okvir = new Pen(Color.Black, 3);
-                e.Graphics.DrawRectangle(okvir,gornjiLevi.X,gornjiLevi.Y,duzina,visina);
+                e.Graphics.DrawRectangle(okvir, gornjiLevi.X, gornjiLevi.Y, duzina, visina);
             }
         }
         public void BojenjeOdgovora(int indexTacnog)
@@ -95,7 +87,7 @@ namespace AgeomProj
             for (int i = 0; i < 4; i++)
             {
                 Label a = (Label)this.Controls.Find("lbl" + "Odg" + (i + 1), true)[0];
-                if(indexTacnog == i)
+                if (indexTacnog == i)
                     a.BackColor = Color.Green;
                 else
                     a.BackColor = Color.Red;
@@ -105,7 +97,6 @@ namespace AgeomProj
         {
             VelicinaLokacijaSvega();
             OkviriOdgovora(e);
-            BojenjeOdgovora(0);
             RadnaPovrsina.ucitajPozadinu(e.Graphics, this);
         }
 
@@ -121,25 +112,97 @@ namespace AgeomProj
         private void lblOdg1_Click(object sender, EventArgs e)
         {
             BojenjeOdgovora(indexTacnog);
-            krajZadatka = true;
+            if (indexTacnog == 0)
+            {
+                if (indexZadatka < 3)
+                {
+                    indexZadatka++;
+                    UcitajZadatak();
+                    pocetakZadatka = DateTime.Now;
+                }
+                else
+                {
+                    tmrKviz.Stop();
+                    MessageBox.Show("Cestitamo! Uspesno ste presli nivo.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Netacan odgovor! Kraj nivoa.");
+                nivo.TrenutniBrojSrca--;
+            }
         }
 
         private void lblOdg2_Click(object sender, EventArgs e)
         {
             BojenjeOdgovora(indexTacnog);
-            krajZadatka = true;
+            if (indexTacnog == 1)
+            {
+                if (indexZadatka < 3)
+                {
+                    indexZadatka++;
+                    UcitajZadatak();
+                    pocetakZadatka = DateTime.Now;
+                }
+                else
+                {
+                    tmrKviz.Stop();
+                    MessageBox.Show("Cestitamo! Uspesno ste presli nivo.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Netacan odgovor! Kraj nivoa.");
+                nivo.TrenutniBrojSrca--;
+            }
         }
 
         private void lblOdg3_Click(object sender, EventArgs e)
         {
             BojenjeOdgovora(indexTacnog);
-            krajZadatka = true;
+            if (indexTacnog == 2)
+            {
+                if (indexZadatka < 3)
+                {
+                    indexZadatka++;
+                    UcitajZadatak();
+                    pocetakZadatka = DateTime.Now;
+                }
+                else
+                {
+                    tmrKviz.Stop();
+                    MessageBox.Show("Cestitamo! Uspesno ste presli nivo.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Netacan odgovor! Kraj nivoa.");
+                nivo.TrenutniBrojSrca--;
+            }
         }
 
         private void lblOdg4_Click(object sender, EventArgs e)
         {
             BojenjeOdgovora(indexTacnog);
-            krajZadatka = true;
+            if (indexTacnog == 3)
+            {
+                if (indexZadatka < 3)
+                {
+                    indexZadatka++;
+                    UcitajZadatak();
+                    pocetakZadatka = DateTime.Now;
+                }
+                else
+                {
+                    tmrKviz.Stop();
+                    MessageBox.Show("Cestitamo! Uspesno ste presli nivo.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Netacan odgovor! Kraj nivoa.");
+                nivo.TrenutniBrojSrca--;
+            }
         }
 
         private void tmrKviz_Tick(object sender, EventArgs e)
@@ -148,7 +211,7 @@ namespace AgeomProj
             if (ostalo <= new TimeSpan(0, 0, 0))
             {
                 tmrKviz.Stop();
-                //izgubio
+
             }
             else lblTajmer.Text = $"{ostalo.Minutes}:{ostalo.Seconds}";
         }
