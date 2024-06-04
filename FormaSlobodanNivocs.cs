@@ -56,10 +56,8 @@ namespace AgeomProj
             RadnaPovrsina.ucitajPozadinu(e.Graphics, this);
             Duz d1 = new Duz(new Tacka(new PointF(-10, 0), ""), new Tacka(new PointF(10, 0), ""));
             Duz d2 = new Duz(new Tacka(new PointF(0, -10), ""), new Tacka(new PointF(0, 10), ""));
-            Tacka o = new Tacka(new PointF(0, 0), "");
             d1.Nacrtaj(e.Graphics,centar, duzinaStr/20);
             d2.Nacrtaj(e.Graphics, centar, duzinaStr / 20);
-            o.Nacrtaj(e.Graphics, centar, duzinaStr / 20);
             pozadina = e.Graphics;
             UcitajZadatak();
         }
@@ -479,17 +477,23 @@ namespace AgeomProj
 
         private void tbxOdg1_TextChanged(object sender, EventArgs e)
         {
-            odg1 = tbxOdg1.Text;
+            if (tbxOdg1.Text != "")
+                odg1 = tbxOdg1.Text;
+            else odg1 = null;
         }
 
         private void tbxOdg2_TextChanged(object sender, EventArgs e)
         {
-            odg2 = tbxOdg2.Text;
+            if (tbxOdg2.Text != "")
+                odg2 = tbxOdg2.Text;
+            else odg2 = null;
         }
 
         private void tbxOdg3_TextChanged(object sender, EventArgs e)
         {
-            odg3 = tbxOdg3.Text;
+            if (tbxOdg3.Text != "")
+                odg3 = tbxOdg3.Text;
+            else odg3 = null;
         }
 
         private void btnPomoc_Click(object sender, EventArgs e)

@@ -27,7 +27,7 @@ namespace AgeomProj
             PointF[] leveDonje = new PointF[brTacaka];
             PointF[] DesneGornje = new PointF[brTacaka];
             PointF[] DesneDonje = new PointF[brTacaka];
-            float Pomeraj = (10 - A) / (float)brTacaka -1;
+            float Pomeraj = (float)(10f - A) / (float)(brTacaka -1);
             //y=sqrt((x*x*b*b)/(a*a) - b*b)
             for (int i = 0; i < brTacaka; i++)
             {
@@ -37,7 +37,7 @@ namespace AgeomProj
                 DesneGornje[i] = new PointF(-x, leveGornje[i].Y);
                 DesneDonje[i] = new PointF(-x, -leveGornje[i].Y);
             }
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < brTacaka; i++)
             {
                 leveGornje[i] = new PointF(centar.X + leveGornje[i].X * strKvad, centar.Y - leveGornje[i].Y * strKvad);
                 leveDonje[i] = new PointF(centar.X + leveDonje[i].X * strKvad, centar.Y - leveDonje[i].Y * strKvad);
