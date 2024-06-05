@@ -34,7 +34,7 @@ namespace AgeomProj
         {
             float k, n;
             k = -(A / B);
-            n = -(C / A);
+            n = -(C / B);
             return (k, n);
         }
         public void Nacrtaj(Graphics g, Point centar, int strKvad)
